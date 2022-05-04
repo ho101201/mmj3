@@ -99,7 +99,8 @@ import {
 	width: 24px;
 	height: 24px;
 `;
-    const [show, setShow] = useState(true);
+    const [show1, setShow1] = useState(true);
+    const [show2, setShow2] = useState(true);
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     const [longW] = useMediaQuery(
@@ -122,16 +123,16 @@ import {
                         </Box>
                     </Link>
                     <Spacer/>
-                    <Link href='/Search'>
                         <Box w="20px" h="20px" mr="22px">
-                            <Image src={search} alt="search"/>
+                            <Link href='/Search'>
+                                <Image src={search} alt="search"/>
+                            </Link>
                         </Box>
-                    </Link>
-                    <Link href='/Alarm'>
                         <Box w="20px" h="20px" mr="22px">
-                            <Image src={bell} alt="bell"/>
+                            <Link href='/Alarm'>
+                                <Image src={bell} alt="bell"/>
+                            </Link>
                         </Box>
-                    </Link>
                 </Flex>
 
                 {/* hide or fade out */}
@@ -305,22 +306,22 @@ import {
                 <Box mt="26px" ml="10px">
                     <Text fontSize={f1} fontWeight="bold" >최근에 먹은 것들</Text>
                     <HStack spacing="10px" mt="11px">
-                        <Box w="90px" h="90px" bg="gray.200">
+                        <Box w="90px" h="90px" >
                             <Image src={p1} alt="p1"/>
                         </Box>
-                        <Box w="90px" h="90px" bg="gray.200">
+                        <Box w="90px" h="90px">
                             <Image src={p2} alt="p2"/>
                         </Box>
-                        <Box w="90px" h="90px" bg="gray.200">
+                        <Box w="90px" h="90px">
                             <Image src={p3} alt="p3"/>
                         </Box>
-                        <Box w="90px" h="90px" bg="gray.200">
+                        <Box w="90px" h="90px">
                             <Image src={pd} alt="pd"/>
                         </Box>
                     </HStack>
                 </Box>
 
-                <Flex direction="column" w="vw" h="120px" justifyContent="center" alignItems="center"  ml="10px" mr="10px"mt="40px" border="3px solid #F6E229"
+                <Flex direction="column" w="vw" h="120px" justifyContent="center" alignItems="center" ml="10px" mr="10px" mt="40px" border="3px solid #F6E229"
                  borderTopLeftRadius="30px" borderTopRightRadius="30px" borderBottomLeftRadius="30px">
                      <Flex position="absolute" alignItems="center" justifyContent="center" mb="115px">
                          <Flex position="absolute" w="40px" h="40px">
@@ -349,7 +350,7 @@ import {
                 <Button onClick={onOpen} bg="yellow.200">
                     modal test
                 </Button>
-                <Modal id='alarm' isOpen={isOpen} onClose={onClose} show={show} onHide={() => setShow(false)}>
+                <Modal id='alarm' isOpen={isOpen} onClose={onClose} show={show1} onHide={() => setShow1(false)}>
                     <ModalOverlay/>
                     <ModalContent  borderRadius="30px">
                         <ModalBody >
@@ -366,12 +367,12 @@ import {
                             </Flex>
                         </ModalBody>
                         {/* <ModalFooter>
-                        </ModalFooter> */}
+                        </ModalFooter> */} 
                     </ModalContent>
                 </Modal>
 
                 {/* Modal2 */}
-                {/* <Modal id='alarm' isOpen={isOpen} onClose={onClose} show={show} onHide={() => setShow(false)}>
+                {/* <Modal id='alarm' isOpen={isOpen} onClose={onClose} show={show2} onHide={() => setShow2(false)}>
                     <ModalOverlay/>
                     <ModalContent  borderRadius="30px">
                         <ModalCloseButton w="20px" h="20px" fontSize="20px" m="10px"/>

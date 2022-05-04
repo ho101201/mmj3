@@ -76,13 +76,8 @@ export default function SignIn3() {
         setCheck6( Check6 => !Check6 );
     }
 
-    
-
-
     return(
         <div>
-            <Flex direction="column" h="100vh">
-
                 {/* header */}
                 <Flex w="vw" h="40px" alignItems="center" justifyContent="center" borderBottom="1px solid #DDDDDD">
                     <Flex ml="18px" alignItems="center">
@@ -96,194 +91,194 @@ export default function SignIn3() {
                     </Text>
                 </Flex>
 
-                {/* container1 */}
-                <Flex direction="column" alignItems="center" justifyContent="center" h="138px" pr="20px" pl="20px">
-                    <Spacer/>
+                {/* #FAFAFA */}
+                <Flex w="100%" h="100vh" bg="gray.100" direction="column" alignItems="center" p="10px">
+                    <Flex direction="column" m="10px" mt="10px" p="10px" borderRadius="30px" w="100%" minH="410px" alignItems="center" justifyContent="center" bg="white">
+                        <Text fontSize={f1} fontWeight="bold" mb="1px">
+                            약관동의
+                        </Text>
+                        <Text fontSize={f2} fontWeight="normal"  >
+                            고객님께서는 동의를 거부할 수 있습니다.
+                        </Text>
+                        <Text fontSize={f2} fontWeight="normal">
+                            단, 필수항목 동의 거부 시에는 회원가입이 제한됩니다.
+                        </Text>
+                        <Box w="100%" h='2px' mt="17px" bg='#303030'/>
 
-                    <Text fontSize={f1} fontWeight="bold" letterSpacing="-2px" mb="1px">
-                        약관동의
-                    </Text>
-                    <Text fontSize={f2} fontWeight="normal" letterSpacing="-1.5px" >
-                        고객님께서는 동의를 거부할 수 있습니다.
-                    </Text>
-                    <Text fontSize={f2} fontWeight="normal" letterSpacing="-1.5px" mb="17px">
-                    단, 필수항목 동의 거부 시에는 회원가입이 제한됩니다.
-                    </Text>
-                    <Box w="100%" h='2px' mr="20px" ml="20px" bg='#303030' />
+                        {/* container2 */}
+                        <Flex direction="column" w="100%" mt="26px">
+                            <Flex alignItems="center">
+                            {Check1?
+                                <Flex alignItems='center' justifyContent="center" onClick={()=>checking1()}>
+                                    <Flex h="20px">
+                                        <Image src={circleY} width="20px" height="20px" alt="circleY"/>
+                                    </Flex>
+                                    <Flex position="absolute">
+                                        <Image src={checkB} width="10px" height="8px" alt="checkB"/>
+                                    </Flex>
+                                </Flex>
+                            :
+                                <Flex alignItems='center' justifyContent="center" onClick={()=>checking1()}>
+                                    <Flex h="20px">
+                                        <Image src={circleG} width="20px" height="20px" alt="circleG"/>
+                                    </Flex>
+                                    <Flex position="absolute" >
+                                        <Image src={checkW} width="10px" height="8px" alt="checkW"/>
+                                    </Flex>
+                                </Flex>
+                            }
+                                <Text fontSize={f3} fontWeight="bold" ml="9px">약관 전체 동의</Text>
+                            </Flex>
+
+                            <Box w="100%" h='2px' mt="10px" bg='#F6F6F6'/>
+
+                            <Flex alignItems="center" mt="15px">
+                            {Check2?
+                                <Flex alignItems='center' justifyContent="center" onClick={()=>checking2()}>
+                                    <Box h="20px">
+                                        <Image src={circleY} width="20px" height="20px" alt="circleY"/>
+                                    </Box>
+                                    <Box position="absolute" mb="3px">
+                                        <Image src={checkB} width="10px" height="8px" alt="checkB"/>
+                                    </Box>
+                                </Flex>
+                            :
+                                <Flex alignItems='center' justifyContent="center" onClick={()=>checking2()}>
+                                    <Box h="20px">
+                                        <Image src={circleG} width="20px" height="20px" alt="circleG"/>
+                                    </Box>
+                                    <Box position="absolute" mb="3px">
+                                        <Image src={checkW} width="10px" height="8px" alt="checkW"/>
+                                    </Box>
+                                </Flex>
+                            }
+
+                                <Text fontSize={f3} fontWeight={400} ml="9px">이용약관에 동의 합니다 (필수)</Text>
+                                <Spacer/>
+                                <Button fontSize="10px" fontWeight={400} border="1px solid #303030" borderRadius="4px" bg="#ffffff" w="55px" h="20px">내용보기</Button>
+                            </Flex>
+
+                            <Flex alignItems="center" mt="12px">
+                            {Check3?
+                                <Flex alignItems='center' justifyContent="center" onClick={()=>checking3()}>
+                                    <Box h="20px">
+                                        <Image src={circleY} width="20px" height="20px" alt="circleY"/>
+                                    </Box>
+                                    <Box position="absolute" mb="3px">
+                                        <Image src={checkB} width="10px" height="8px" alt="checkB"/>
+                                    </Box>
+                                </Flex>
+                            :
+                                <Flex alignItems='center' justifyContent="center" onClick={()=>checking3()}>
+                                    <Box h="20px">
+                                        <Image src={circleG} width="20px" height="20px" alt="circleG"/>
+                                    </Box>
+                                    <Box position="absolute" mb="3px">
+                                        <Image src={checkW} width="10px" height="8px" alt="checkW"/>
+                                    </Box>
+                                </Flex>
+                            }
+
+                                <Text fontSize={f3} fontWeight={400} ml="9px">개인정보 수집 및 이용에 동의합니다 (필수)</Text>
+                                <Spacer/>
+                                <Button fontSize="10px" fontWeight={400} border="1px solid #303030" borderRadius="4px" bg="#ffffff" w="55px" h="20px">내용보기</Button>
+                            </Flex>
+                            
+                            <Text fontSize={f3} fontWeight="bold" mt="40px">마케팅 정보 수신 (선택)</Text>
+
+                            <Box w="100%" h='2px' mt="10px" bg='#F6F6F6'/>
+
+                            <Flex alignItems="center" mt="15px">
+                            {Check4?
+                                <Flex alignItems='center' justifyContent="center" onClick={()=>checking4()}>
+                                    <Box h="20px">
+                                        <Image src={circleY} width="20px" height="20px" alt="circleY"/>
+                                    </Box>
+                                    <Box position="absolute" mb="3px">
+                                        <Image src={checkB} width="10px" height="8px" alt="checkB"/>
+                                    </Box>
+                                </Flex>
+                            :
+                                <Flex alignItems='center' justifyContent="center" onClick={()=>checking4()}>
+                                    <Box h="20px">
+                                        <Image src={circleG} width="20px" height="20px" alt="circleG"/>
+                                    </Box>
+                                    <Box position="absolute" mb="3px">
+                                        <Image src={checkW} width="10px" height="8px" alt="checkW"/>
+                                    </Box>
+                                </Flex>
+                            }
+                                <Text fontSize={f3} fontWeight={400} ml="9px">전체 동의합니다</Text>
+
+                                <Spacer/>
+
+                            {Check5?
+                                <Flex alignItems='center' justifyContent="center" onClick={()=>checking5()}>
+                                    <Box h="20px">
+                                        <Image src={circleY} width="20px" height="20px" alt="circleY"/>
+                                    </Box>
+                                    <Box position="absolute" mb="3px">
+                                        <Image src={checkB} width="10px" height="8px" alt="checkB"/>
+                                    </Box>
+                                </Flex>
+                            :
+                                <Flex alignItems='center' justifyContent="center" onClick={()=>checking5()}>
+                                    <Box h="20px">
+                                        <Image src={circleG} width="20px" height="20px" alt="circleG"/>
+                                    </Box>
+                                    <Box position="absolute" mb="3px">
+                                        <Image src={checkW} width="10px" height="8px" alt="checkW"/>
+                                    </Box>
+                                </Flex>
+                            }
+                                <Text fontSize={f3} fontWeight={400} ml="9px" mr="25px">SNS</Text>
+
+                            {Check6?
+                                <Flex alignItems='center' justifyContent="center" onClick={()=>checking6()}>
+                                    <Box h="20px">
+                                        <Image src={circleY} width="20px" height="20px" alt="circleY"/>
+                                    </Box>
+                                    <Box position="absolute" mb="3px">
+                                        <Image src={checkB} width="10px" height="8px" alt="checkB"/>
+                                    </Box>
+                                </Flex>
+                            :
+                                <Flex alignItems='center' justifyContent="center" onClick={()=>checking6()}>
+                                    <Box h="20px">
+                                        <Image src={circleG} width="20px" height="20px" alt="circleG"/>
+                                    </Box>
+                                    <Box position="absolute" mb="3px">
+                                        <Image src={checkW} width="10px" height="8px" alt="checkW"/>
+                                    </Box>
+                                </Flex>
+                            }
+                                <Text fontSize={f3} fontWeight={400} ml="9px" mr="16px">Email</Text>
+                            </Flex>
+                            <Text color="#A4A4A4" fontSize="10px" mt="11px" ml="14px" >-App Push 수신 동의 상태는 앱 내 설정메뉴에서 별도로 변경할 수 있습니다</Text>
+                        </Flex>
+
+
+                    </Flex>
+                    {/* button */}
+                    {Check2&&Check3&&Check5&&Check6?
+                        <Box w="100vw" h="40px" pr="15px" pl="15px" mt="20px" bottom="40px" position="sticky">
+                            <Link href='/Home' >
+                                <Button w="100%" borderRadius="full" bg="#303030" fontSize={f1} fontWeight="bold" color="#ffffff">
+                                    동의하기
+                                </Button>
+                            </Link>
+                        </Box>
+                    :
+                        <Box w="100vw" h="40px" pr="15px" pl="15px"  mt="20px" bottom="40px" position="sticky">
+                            <Link w="100%" href='/Home' >
+                                <Button w="100%" borderRadius="full" bg="#303030" fontSize={f1} fontWeight="bold" color="#ffffff" isDisabled>
+                                    동의하기
+                                </Button>
+                            </Link>
+                        </Box>
+                    }
+
                 </Flex>
-
-                {/* container2 */}
-                <Flex direction="column" pr="20px" pl="20px">
-                    <Flex alignItems="center" mt="26px">
-
-                    {Check1?
-                        <Flex alignItems='center' justifyContent="center" onClick={()=>checking1()}>
-                            <Box h="20px">
-                                <Image src={circleY} width="20px" height="20px" alt="circleY"/>
-                            </Box>
-                            <Box position="absolute" mb="3px">
-                                <Image src={checkB} width="10px" height="8px" alt="checkB"/>
-                            </Box>
-                        </Flex>
-                    :
-                        <Flex alignItems='center' justifyContent="center" onClick={()=>checking1()}>
-                            <Box h="20px">
-                                <Image src={circleG} width="20px" height="20px" alt="circleG"/>
-                            </Box>
-                            <Box position="absolute" mb="3px">
-                                <Image src={checkW} width="10px" height="8px" alt="checkW"/>
-                            </Box>
-                        </Flex>
-                    }
-
-                        <Text fontSize={f3} fontWeight={600} ml="9px">약관 전체 동의</Text>
-                    </Flex>
-
-                    <Flex alignItems="center" mt="26px">
-                    {Check2?
-                        <Flex alignItems='center' justifyContent="center" onClick={()=>checking2()}>
-                            <Box h="20px">
-                                <Image src={circleY} width="20px" height="20px" alt="circleY"/>
-                            </Box>
-                            <Box position="absolute" mb="3px">
-                                <Image src={checkB} width="10px" height="8px" alt="checkB"/>
-                            </Box>
-                        </Flex>
-                    :
-                        <Flex alignItems='center' justifyContent="center" onClick={()=>checking2()}>
-                            <Box h="20px">
-                                <Image src={circleG} width="20px" height="20px" alt="circleG"/>
-                            </Box>
-                            <Box position="absolute" mb="3px">
-                                <Image src={checkW} width="10px" height="8px" alt="checkW"/>
-                            </Box>
-                        </Flex>
-                    }
-
-                        <Text fontSize={f3} fontWeight={400} ml="9px">이용약관에 동의 합니다 (필수)</Text>
-                        <Spacer/>
-                        <Button fontSize="10px" fontWeight={400} border="1px solid #303030" borderRadius="4px" bg="#ffffff" w="55px" h="20px">내용보기</Button>
-                    </Flex>
-
-                    <Flex alignItems="center" mt="12px">
-                    {Check3?
-                        <Flex alignItems='center' justifyContent="center" onClick={()=>checking3()}>
-                            <Box h="20px">
-                                <Image src={circleY} width="20px" height="20px" alt="circleY"/>
-                            </Box>
-                            <Box position="absolute" mb="3px">
-                                <Image src={checkB} width="10px" height="8px" alt="checkB"/>
-                            </Box>
-                        </Flex>
-                    :
-                        <Flex alignItems='center' justifyContent="center" onClick={()=>checking3()}>
-                            <Box h="20px">
-                                <Image src={circleG} width="20px" height="20px" alt="circleG"/>
-                            </Box>
-                            <Box position="absolute" mb="3px">
-                                <Image src={checkW} width="10px" height="8px" alt="checkW"/>
-                            </Box>
-                        </Flex>
-                    }
-
-                        <Text fontSize={f3} fontWeight={400} ml="9px">개인정보 수집 및 이용에 동의합니다 (필수)</Text>
-                        <Spacer/>
-                        <Button fontSize="10px" fontWeight={400} border="1px solid #303030" borderRadius="4px" bg="#ffffff" w="55px" h="20px">내용보기</Button>
-                    </Flex>
-                    
-                    <Text fontSize={f3} fontWeight="bold" mt="40px">마케팅 정보 수신 (선택)</Text>
-                    <Flex alignItems="center" mt="27px">
-                    {Check4?
-                        <Flex alignItems='center' justifyContent="center" onClick={()=>checking4()}>
-                            <Box h="20px">
-                                <Image src={circleY} width="20px" height="20px" alt="circleY"/>
-                            </Box>
-                            <Box position="absolute" mb="3px">
-                                <Image src={checkB} width="10px" height="8px" alt="checkB"/>
-                            </Box>
-                        </Flex>
-                    :
-                        <Flex alignItems='center' justifyContent="center" onClick={()=>checking4()}>
-                            <Box h="20px">
-                                <Image src={circleG} width="20px" height="20px" alt="circleG"/>
-                            </Box>
-                            <Box position="absolute" mb="3px">
-                                <Image src={checkW} width="10px" height="8px" alt="checkW"/>
-                            </Box>
-                        </Flex>
-                    }
-                        <Text fontSize={f3} fontWeight={400} ml="9px">전체 동의합니다</Text>
-
-                        <Spacer/>
-
-                    {Check5?
-                        <Flex alignItems='center' justifyContent="center" onClick={()=>checking5()}>
-                            <Box h="20px">
-                                <Image src={circleY} width="20px" height="20px" alt="circleY"/>
-                            </Box>
-                            <Box position="absolute" mb="3px">
-                                <Image src={checkB} width="10px" height="8px" alt="checkB"/>
-                            </Box>
-                        </Flex>
-                    :
-                        <Flex alignItems='center' justifyContent="center" onClick={()=>checking5()}>
-                            <Box h="20px">
-                                <Image src={circleG} width="20px" height="20px" alt="circleG"/>
-                            </Box>
-                            <Box position="absolute" mb="3px">
-                                <Image src={checkW} width="10px" height="8px" alt="checkW"/>
-                            </Box>
-                        </Flex>
-                    }
-                        <Text fontSize={f3} fontWeight={400} ml="9px" mr="25px">SNS</Text>
-
-                    {Check6?
-                        <Flex alignItems='center' justifyContent="center" onClick={()=>checking6()}>
-                            <Box h="20px">
-                                <Image src={circleY} width="20px" height="20px" alt="circleY"/>
-                            </Box>
-                            <Box position="absolute" mb="3px">
-                                <Image src={checkB} width="10px" height="8px" alt="checkB"/>
-                            </Box>
-                        </Flex>
-                    :
-                        <Flex alignItems='center' justifyContent="center" onClick={()=>checking6()}>
-                            <Box h="20px">
-                                <Image src={circleG} width="20px" height="20px" alt="circleG"/>
-                            </Box>
-                            <Box position="absolute" mb="3px">
-                                <Image src={checkW} width="10px" height="8px" alt="checkW"/>
-                            </Box>
-                        </Flex>
-                    }
-                        <Text fontSize={f3} fontWeight={400} ml="9px" mr="16px">Email</Text>
-                    </Flex>
-                    <Text color="#A4A4A4" fontSize="10px" mt="11px" ml="14px">-App Push 수신 동의 상태는 앱 내 설정메뉴에서 별도로 변경할 수 있습니다</Text>
-                    
-
-                </Flex>
-                <Spacer/>
-
-                {/* button */}
-                {Check2&&Check3&&Check5&&Check6?
-                    <Box p="10px" w="100vw" h="40px" mb="30px" position="sticky">
-                        <Link w="100%" href='/Home' >
-                            <Button w="100%" borderRadius="full" bg="#303030" fontSize={f1} fontWeight="bold" color="#ffffff">
-                                동의하기
-                            </Button>
-                        </Link>
-                    </Box>
-                :
-                    <Box p="10px" w="100vw" h="40px" mb="30px" position="sticky">
-                        <Link w="100%" href='/Home' >
-                            <Button w="100%" borderRadius="full" bg="#303030" fontSize={f1} fontWeight="bold" color="#ffffff" isDisabled>
-                                동의하기
-                            </Button>
-                        </Link>
-                    </Box>
-                }
-
-            </Flex>
 
         </div>
     )

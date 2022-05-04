@@ -4,6 +4,7 @@ import {
     Text,
     Link,
     Input,
+    Spacer,
   } from '@chakra-ui/react';
   import Image from 'next/image';
   import React from 'react';
@@ -27,17 +28,31 @@ import {
                 </Link>
             </Flex>
 
-            <Box m="10px" p="10px" w="vw" h="96px" borderBottom="1px solid #F6F6F6">
+            <Flex m="10px" h="96px" direction="column" bg="gray.200" borderBottom="1px solid #F6F6F6">
+                <Flex direction="column" mt="5px" pr="10px" pl="10px" bg="gray.300" justifyContent="flex-start">
+                    <Text fontWeight="bold" fontSize={f1} >회원가입 완료</Text>
+                    <Text fontWeight="medium" fontSize={f2} >가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
+                    <Text fontSize="10px" color="#A4A4A4" mt="17px">1시간전</Text>
+                </Flex>
+                <Spacer/>
+                <Box w="100%" h="1px" bg="red"/>
+            </Flex>
+
+            <Flex direction="column" mt="15px" pr="20px" pl="20px" justifyContent="flex-start">
                 <Text fontWeight="bold" fontSize={f1} >회원가입 완료</Text>
                 <Text fontWeight="medium" fontSize={f2} >가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
-                <Text fontSize="10px" color="#A4A4A4" mt="17px">1시간전</Text>
-            </Box>
-            
-            <Box m="10px" p="10px" w="vw" h="96px" borderBottom="1px solid #F6F6F6">
+                <Text fontSize="10px" color="#A4A4A4" mb="17px">1시간전</Text>
+            </Flex>
+            <Box w="vw" h="1px" ml="10px" mr="10px" bg="#F6F6F6"/>
+
+            <Flex direction="column" mt="15px" pr="20px" pl="20px" justifyContent="flex-start">
                 <Text fontWeight="bold" fontSize={f1} >회원가입 완료</Text>
                 <Text fontWeight="medium" fontSize={f2} >가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
-                <Text fontSize="10px" color="#A4A4A4" mt="17px">1시간전</Text>
-            </Box>
+                <Text fontSize="10px" color="#A4A4A4" mb="17px">1시간전</Text>
+            </Flex>
+            <Box w="vw" h="1px" ml="10px" mr="10px" bg="#F6F6F6"/>
+
+
         </div>
     )
   }

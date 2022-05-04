@@ -110,10 +110,10 @@ export default function SignIn() {
             {/* container4 */}
                 <Flex mt="28px" h="40px" p="10px" alignItems="center">
                     <Box w="133px">
-                        <Text fontWeight="bold" fontSize={f2}>
-                            친구 초대 코드
+                        <Text  fontSize={f2}>
+                            초대 코드
                         </Text>
-                        <Text fontWeight="bold" fontSize={f2}>
+                        <Text fontSize={f2}>
                             (선택)
                         </Text>
                     </Box>
