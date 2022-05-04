@@ -62,7 +62,7 @@ export default function RWork() {
             </Flex>
 
             <Flex justifyContent="center">
-                <Grid templateRows='repeat( 2, 1fr )' templateColumns='repeat( 4, 1fr )' gap={0} >
+                <Grid templateRows='repeat( 2, 1fr )' templateColumns='repeat( 4, 1fr )' gap={0} maxW="900px" justifyContent="center" >
                     <GridItem colSpan={2} rowSpan={2} >
                         <Image src={p1} alt="p1"/>
                     </GridItem>
@@ -75,19 +75,16 @@ export default function RWork() {
                     <GridItem colSpan={1} rowSpan={1} mt="-5px">
                         <Image src={p4} alt="p4"/>
                     </GridItem>
-                    <GridItem colSpan={1} rowSpan={1} mt="-5px"  w="100%" h="100%">
+                    <GridItem colSpan={1} rowSpan={1} mt="-5px"  w="100%" h="100%" position="relative">
+                            
                         <Link href='/'>
-                            {/* <Flex position="absolute" bg="#303030" alignItems="center" justifyContent="center" direction="column" >
-                                <Flex w="20px" h='20px'>
-                                    <Image src={gallery}/>
-                                </Flex>
-                            </Flex> */}
                             <Image src={p5} alt="p5"/>
                         </Link>
+                        
                     </GridItem>
                 </Grid>
             </Flex>
-            
+
             <Flex direction="row" ml="10px" mr="10px" mt="6px">
                 <Flex direction="column" justifyContent="center">
                     <Flex direction='row' alignItems="flex-end">
