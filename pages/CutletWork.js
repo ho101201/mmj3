@@ -46,7 +46,7 @@ export default function RWork() {
         <div>
             <Flex w="vw" h="40px" alignItems="center" justifyContent="center" borderBottom="1px solid #DDDDDD">
                 <Flex ml="18px" alignItems="center">
-                    <Link href='/randomR2' >
+                    <Link href='/RandomR2' >
                         <Flex w="7px" h="16px">
                             <Image src={arrowL} alt="arrowL"/>
                         </Flex>
@@ -60,30 +60,34 @@ export default function RWork() {
                     <Image src={exportBtn} alt="exportBtn"/>
                 </Flex>
             </Flex>
-            <Grid templateRows='repeat( 2, 1fr )' templateColumns='repeat( 4, 1fr )' gap={0} >
-                <GridItem colSpan={2} rowSpan={2} >
-                    <Image src={p1} alt="p1"/>
-                </GridItem>
-                <GridItem colSpan={1} rowSpan={1} >
-                    <Image src={p2} alt="p2"/>
-                </GridItem>
-                <GridItem colSpan={1} rowSpan={1} >
-                    <Image src={p3} alt="p3"/>
-                </GridItem>
-                <GridItem colSpan={1} rowSpan={1} mt="-5px">
-                    <Image src={p4} alt="p4"/>
-                </GridItem>
-                <GridItem colSpan={1} rowSpan={1} mt="-5px"  w="100%" h="100%">
-                    <Link href='/'>
-                        {/* <Flex position="absolute" bg="#303030" alignItems="center" justifyContent="center" direction="column" >
-                            <Flex w="20px" h='20px'>
-                                <Image src={gallery}/>
-                            </Flex>
-                        </Flex> */}
-                        <Image src={p5} alt="p5"/>
-                    </Link>
-                </GridItem>
-            </Grid>
+
+            <Flex justifyContent="center">
+                <Grid templateRows='repeat( 2, 1fr )' templateColumns='repeat( 4, 1fr )' gap={0} >
+                    <GridItem colSpan={2} rowSpan={2} >
+                        <Image src={p1} alt="p1"/>
+                    </GridItem>
+                    <GridItem colSpan={1} rowSpan={1} >
+                        <Image src={p2} alt="p2"/>
+                    </GridItem>
+                    <GridItem colSpan={1} rowSpan={1} >
+                        <Image src={p3} alt="p3"/>
+                    </GridItem>
+                    <GridItem colSpan={1} rowSpan={1} mt="-5px">
+                        <Image src={p4} alt="p4"/>
+                    </GridItem>
+                    <GridItem colSpan={1} rowSpan={1} mt="-5px"  w="100%" h="100%">
+                        <Link href='/'>
+                            {/* <Flex position="absolute" bg="#303030" alignItems="center" justifyContent="center" direction="column" >
+                                <Flex w="20px" h='20px'>
+                                    <Image src={gallery}/>
+                                </Flex>
+                            </Flex> */}
+                            <Image src={p5} alt="p5"/>
+                        </Link>
+                    </GridItem>
+                </Grid>
+            </Flex>
+            
             <Flex direction="row" ml="10px" mr="10px" mt="6px">
                 <Flex direction="column" justifyContent="center">
                     <Flex direction='row' alignItems="flex-end">
@@ -190,7 +194,7 @@ export default function RWork() {
                     <Flex direction="row" w="vw" mt="13px" >
                         <Spacer/>
                         <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
-                            <Link href='/writingRev' w="24px" h="24px">
+                            <Link href='/WritingRev' w="24px" h="24px">
                                 <Image src={review} alt="review"/>
                             </Link>
                             <Text fontWeight="medium" fontSize="10px" align="center" >후기쓰기</Text>

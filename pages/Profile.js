@@ -83,7 +83,7 @@ export default function Profile() {
             </Flex>
 
             <Text fontSize="16px" ml="10px" mb="15px" fontWeight="bold">사진</Text>
-            <Link href='/myPhoto'>
+            <Link href='/MyPhoto'>
                 <Box w="100%"   whiteSpace="nowrap" overflowX='auto' >
                     <Flex w="110px" h='110px' ml="10px"  display="inline-block" >
                         <Image src={p8} alt="p8"/>

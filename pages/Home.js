@@ -115,19 +115,19 @@ import {
                         <Select variant="unstyled" style={styles} placeholder="송파구 문정동" letterSpacing='-1px' ml="10px" fontSize={f2} iconSize='20px' w="115px" >
                         </Select>
                     </SelectBoxWrapper> */}
-                    <Link href='/setLocation' display="flex" flexDirection="row">
+                    <Link href='/SetLocation' display="flex" flexDirection="row">
                         <Text id='location' fontSize={f2} fontWeight="bold" ml="10px" mr="7px" >송파구 문정동</Text>
                         <Box w="12px" h="20px" position="absolute" left="104px" top="4px" >
                             <Image src={arrowB} alt="arrowB"/>
                         </Box>
                     </Link>
                     <Spacer/>
-                    <Link href='/search'>
+                    <Link href='/Search'>
                         <Box w="20px" h="20px" mr="22px">
                             <Image src={search} alt="search"/>
                         </Box>
                     </Link>
-                    <Link href='/alarm'>
+                    <Link href='/Alarm'>
                         <Box w="20px" h="20px" mr="22px">
                             <Image src={bell} alt="bell"/>
                         </Box>
@@ -142,7 +142,7 @@ import {
 
                 <HStack overflow="hidden" mt='20px' spacing="14.5px" whiteSpace="nowrap" overflowX='hide' >
                     {/* hilighted */}
-                    <Link href='/category'>
+                    <Link href='/Category'>
                         <Flex alignItems="center" justifyContent="center" ml="10px" position="relative">
                             <Box w="60px" h="60px">
                                 <Image src={iconBgA} alt="iconBgA"/>

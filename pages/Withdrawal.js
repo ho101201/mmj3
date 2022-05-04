@@ -141,7 +141,7 @@ export default function Withdrawal() {
             {Check1 && Check2?
                 <Flex direction="column" position="sticky" mr="10px"  w="100%" bottom="0"  mt="30px" pb="20px" is>
                     <Flex  w="100%" h="40px">
-                        <Link href='/Index' w="100%" mr="10px" ml="10px">
+                        <Link href='/' w="100%" mr="10px" ml="10px">
                             <Button w="100%" borderRadius="full" bg="#F6E229" color="#303030" fontWeight={700} fontSize={f1}>탈퇴하기</Button>
                         </Link>
                     </Flex>
