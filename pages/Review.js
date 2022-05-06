@@ -52,66 +52,71 @@ export default function Review() {
                 </Select>
             </Flex>
 
-            {/* container1 */}
-            <Flex w="vw" m="10px" direction="column" >
-                <Text fontSize={f1} fontWeight="bold" mt="18px" mb="16px" >카츠단길 문정역</Text>
-                <Flex direction="row">
-                    <Flex w="50px" h="50px" >
-                        <Image src={user} alt="user"/>
-                    </Flex>
-                    <Flex ml="12px" direction="column" justifyContent="center">
-                        <Text fontSize={f2} >유저닉네임</Text>
-                        <Text fontSize="10px" color="#565656">2022.03.01  1번째 방문</Text>
-                    </Flex>
-                    <Spacer/>
-                    <Flex direction="row" alignItems="center">
-                        <Flex w="13px" h="13px" mr="5px">
-                            <Image src={starF} alt="starF"/>
+            <Flex direction='column' bg="#FAFAFA">
+                {/* container1 */}
+                <Flex w="vw" pl="10px" pr="10px" pt="10px" mb="10px" direction="column" bg="White">
+                    <Text fontSize={f1} fontWeight="bold" mt="18px" mb="16px" >카츠단길 문정역</Text>
+                    <Flex direction="row">
+                        {/* squarcle 추가 필요 */}
+                        <Flex w="50px" h="50px" >
+                            <Image src={user} alt="user"/>
                         </Flex>
-                        <Text fontWeight="bold" fontSize={f2}>4.5</Text>
+                        <Flex ml="12px" direction="column" justifyContent="center">
+                            <Text fontSize={f2} >유저닉네임</Text>
+                            <Text fontSize="10px" color="#565656">2022.03.01  1번째 방문</Text>
+                        </Flex>
+                        <Spacer/>
+                        <Flex direction="row" alignItems="center">
+                            <Flex w="13px" h="13px" mr="5px">
+                                <Image src={starF} alt="starF"/>
+                            </Flex>
+                            <Text fontWeight="bold" fontSize={f2}>4.5</Text>
+                        </Flex>
                     </Flex>
-                </Flex>
-                <Flex mt="12px">
-                    <Image src={p0} alt="p0"/>
+                    <Flex mt="12px">
+                        <Image src={p0} alt="p0"/>
+                    </Flex>
+
+                    <Text id='userReview1' mt="12px" >
+                        후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
+                        후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
+                        후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
+                        후기텍스트
+                    </Text>
+
+                    <Flex mt="41px">
+                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
+                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">후기태그</Tag>
+                        <Link href='/AllTags'>
+                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">+더보기</Tag>
+                        </Link>
+                    </Flex>
+
+                    <Grid templateColumns="repeat(3,1fr)" borderTop="1px solid #F6F6F6" h="62px" mt="30px">
+                        <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
+                            <Flex w="12px" h="12px" mr="7px">
+                                <Image src={starB} alt="starB"/>
+                            </Flex>
+                            <Text fontSize={f2} color="#565656">가볼래요</Text>
+                        </GridItem>
+                        <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
+                            <Flex w="12px" h="12px" mr="7px">
+                                <Image src={heart} alt="heart"/>
+                            </Flex>
+                            <Text fontSize={f2} color="#565656">좋아요</Text>
+                        </GridItem>
+                        <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
+                            <Flex w="12px" h="12px" mr="7px">
+                                <Image src={comment} alt="comment"/>
+                            </Flex>
+                            <Text fontSize={f2} color="#565656">댓글</Text>
+                        </GridItem>
+                    </Grid>
                 </Flex>
 
-                <Text id='userReview1' mt="12px" >
-                    후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
-                    후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
-                    후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
-                    후기텍스트
-                </Text>
-
-                <Flex mt="41px">
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">후기태그</Tag>
-                    <Link href='/AllTags'>
-                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">+더보기</Tag>
-                    </Link>
-                </Flex>
-
-                <Grid templateColumns="repeat(3,1fr)" borderTop="1px solid #E8E8E8" h="62px" mt="30px">
-                    <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
-                        <Flex w="12px" h="12px" mr="7px">
-                            <Image src={starB} alt="starB"/>
-                        </Flex>
-                        <Text fontSize={f2} color="#565656">가볼래요</Text>
-                    </GridItem>
-                    <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
-                        <Flex w="12px" h="12px" mr="7px">
-                            <Image src={heart} alt="heart"/>
-                        </Flex>
-                        <Text fontSize={f2} color="#565656">좋아요</Text>
-                    </GridItem>
-                    <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
-                        <Flex w="12px" h="12px" mr="7px">
-                            <Image src={comment} alt="comment"/>
-                        </Flex>
-                        <Text fontSize={f2} color="#565656">댓글</Text>
-                    </GridItem>
-                </Grid>
             </Flex>
 
+            {/* NavBar */}
             <Box borderTop="1px solid #E8E8E8" h="80px"  pl="7px" pr="7px" display="absolute" position="sticky" bottom="0px" bg="#ffffff">
                 <Flex direction="row" w="vw" mt="13px" >
                     <Spacer/>

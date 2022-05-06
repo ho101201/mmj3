@@ -84,7 +84,9 @@ export default function PfSet() {
                 </Input>
             </Flex>
 
-            <Text fontSize={f2} fontWeight="bold" mt="42px" ml="10px">자주 가는 지역</Text>
+            <Flex h="1px" mt="15px" mr="10px" ml="10px" bg="#F6F6F6"  />
+
+            <Text fontSize={f2} fontWeight="bold" mt="26px" ml="10px">자주 가는 지역</Text>
             <Wrap mt="10px" ml="10px">
                 <Tag fontSize={f3} color="#A4A4A4" border="1px solid #E1E1E1" bg="none" borderRadius="4px">
                     <TagLabel>지역명</TagLabel>

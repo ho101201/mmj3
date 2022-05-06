@@ -138,52 +138,67 @@ export default function RWork() {
                 </GridItem>
             </Grid>
 
-            <Flex m="10px" direction="column">
-                <Text fontSize={f1} fontWeight="bold" mt="15px">영업시간</Text>
-                <Flex direction="row">
-                    <Flex direction="column">
-                        <Text fontSize={f2} mt="8px">평일</Text>
-                        <Text fontSize={f2} mt="8px">주말</Text>
-                        <Text fontSize={f2} mt="8px">브레이크</Text>
-                        <Text fontSize={f2} mt="8px">휴무일</Text>
-                        <Text fontSize={f2} mt="8px">라스트오더</Text>
+            <Flex direction="column" bg="#FAFAFA">
+                <Flex direction='column' bg='white' p="10px" pb="0px" pt="25px">
+                    <Text fontSize={f1} fontWeight="bold" >영업시간</Text>
+                    <Flex direction="row">
+                        <Flex direction="column">
+                            <Text fontSize={f2} mt="8px">평일</Text>
+                            <Text fontSize={f2} mt="8px">주말</Text>
+                            <Text fontSize={f2} mt="8px">브레이크</Text>
+                            <Text fontSize={f2} mt="8px">휴무일</Text>
+                            <Text fontSize={f2} mt="8px">라스트오더</Text>
+                        </Flex>
+                        <Spacer/>
+                        <Flex direction="column">
+                            <Text fontSize={f2} mt="8px" align="end">11:00 ~ 22:00</Text>
+                            <Text fontSize={f2} mt="8px" align="end">11:00 ~ 20:00</Text>
+                            <Text fontSize={f2} mt="8px" align="end">15:00 ~ 17:00</Text>
+                            <Text fontSize={f2} mt="8px" align="end">공휴일 영업, 명절 당일 휴무</Text>
+                            <Text fontSize={f2} mt="8px" align="end">매장19:00 / 포장 21:00</Text>
+                        </Flex>
+                    </Flex>
+                
+                    <Flex direction="column" justifyContent="center" alignItems='center' w="vw" h="36px" mr="20px" ml='20px' mt='13px' mb="30px" bg="#F6F6F6">
+                        <Text  fontSize='10px' borderRadius="4px" align='center' color="#565656">
+                            코로나 19의 영향으로 식당 운영에 변동이 있을수 있습니다.
+                        </Text>
+                        <Text  fontSize='10px' borderRadius="4px" align='center' color="#565656" >
+                            식당으로 문의 후 방문 부탁드립니다.
+                        </Text>
                     </Flex>
                     <Spacer/>
-                    <Flex direction="column">
-                        <Text fontSize={f2} mt="8px" align="end">11:00 ~ 22:00</Text>
-                        <Text fontSize={f2} mt="8px" align="end">11:00 ~ 20:00</Text>
-                        <Text fontSize={f2} mt="8px" align="end">15:00 ~ 17:00</Text>
-                        <Text fontSize={f2} mt="8px" align="end">공휴일 영업, 명절 당일 휴무</Text>
-                        <Text fontSize={f2} mt="8px" align="end">매장19:00 / 포장 21:00</Text>
-                    </Flex>
+                    <Box h="1px" bg="#F6F6F6"/>
                 </Flex>
 
-                <Flex direction="column" justifyContent="center" alignItems='center' w="vw" h="36px" mr="20px" ml='20px' mt='23px' bg="#F6F6F6">
-                    <Text  fontSize='10px' borderRadius="4px" align='center' color="#565656">
-                        코로나 19의 영향으로 식당 운영에 변동이 있을수 있습니다.
-                    </Text>
-                    <Text  fontSize='10px' borderRadius="4px" align='center' color="#565656" >
-                        식당으로 문의 후 방문 부탁드립니다.
-                    </Text>
+                <Flex direction="column" bg="white" p="10px" pb="0px" pt="35px">
+                    <Text fontSize={f1} fontWeight="bold">상황 / 분위기</Text>
+                    <Wrap mt='16px' mb="30px">
+                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
+                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">혼밥</Tag>
+                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">직장인</Tag>
+                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">데이트</Tag>
+                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">연인</Tag>
+                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">모던한</Tag>
+                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">숨은맛집</Tag>
+                    </Wrap>
+                    <Spacer/>
+                    <Box h="1px" bg="#F6F6F6"/>
                 </Flex>
 
-                <Text fontSize={f1} fontWeight="bold" mt="56px">상황 / 분위기</Text>
-                <Wrap mt='16px'>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">혼밥</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">직장인</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">데이트</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">연인</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">모던한</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">숨은맛집</Tag>
-                </Wrap>
+                <Flex direction="column"  bg="white" p="10px" pb="0px" pt="35px">
+                    <Text fontSize={f1} fontWeight="bold">주차</Text>
+                    <Text fontSize={f2} mt="8px" mb="27px">건물 내 주차장 ( 2시간 무료주차 )</Text>
+                    <Box h="1px" bg="#F6F6F6"/>
+                </Flex>
 
-                <Text fontSize={f1} fontWeight="bold" mt="56px">주차</Text>
-                <Text fontSize={f2} mt="8px">건물 내 주차장 ( 2시간 무료주차 )</Text>
+                <Flex direction="column"  bg="white" p="10px" pb="0px"  pt="35px" mb="30px">
+                    <Text fontSize={f1} fontWeight="bold" >단체 예약</Text>
+                    <Text fontSize={f2} mt="8px" mb="27px">홀 최대 66석, 룸 최대 32석 예약가능</Text>
+                    <Box h="1px" bg="#F6F6F6"/>
+                </Flex>
 
-                <Text fontSize={f1} fontWeight="bold" mt="53px" >단체 예약</Text>
-                <Text fontSize={f2} mt="8px" mb="57px">홀 최대 66석, 룸 최대 32석 예약가능</Text>
-
+                    
             </Flex>
 
             {/* tapbar */}

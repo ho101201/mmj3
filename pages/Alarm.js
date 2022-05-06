@@ -27,7 +27,7 @@ import {
                     <Image src={btnX} alt="btnX" />
                 </Link>
             </Flex>
-
+{/* 
             <Flex m="10px" h="96px" direction="column" bg="gray.200" borderBottom="1px solid #F6F6F6">
                 <Flex direction="column" mt="5px" pr="10px" pl="10px" bg="gray.300" justifyContent="flex-start">
                     <Text fontWeight="bold" fontSize={f1} >회원가입 완료</Text>
@@ -36,7 +36,7 @@ import {
                 </Flex>
                 <Spacer/>
                 <Box w="100%" h="1px" bg="red"/>
-            </Flex>
+            </Flex> */}
 
             <Flex direction="column" mt="15px" pr="20px" pl="20px" justifyContent="flex-start">
                 <Text fontWeight="bold" fontSize={f1} >회원가입 완료</Text>

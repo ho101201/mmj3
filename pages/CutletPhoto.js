@@ -55,6 +55,8 @@ function RadioCard(props) {
           borderRadius='full'
           fontSize="10px"
           fontWeight={500}
+          bg="white"
+          padding="10px"
 
           _checked={{
             bg: '#F6E229',
@@ -191,51 +193,57 @@ export default function RPhoto() {
                 </GridItem>
             </Grid>
 
-            <HStack {...group} mt="31px" ml="10px">
-                {options.map((value) => {
-                    const radio = getRadioProps({ value })
-                    return (
-                    <RadioCard key={value} {...radio}>
-                        {value}
-                    </RadioCard>
-                    )
-                })}
-            </HStack>
-
-            <Flex m="10px" direction="column">
-
-                <Text fontSize={f1} fontWeight="bold" mt="15px">사진 (100)</Text>
+            <Flex direction="column" bg=" " pb="30px">
                 
-                <Grid templateColumns="repeat(3, 1fr)" templateRows="repeat(2, 1fr)" mt='13px' mb="46px" gap={1} >
-                    <GridItem>
-                        <Image src={p9} alt="p9"/>
-                    </GridItem>
-                    <GridItem>
-                        <Image src={p4} alt="p4"/>
-                    </GridItem>
-                    <GridItem>
-                        <Image src={p8} alt="p8"/>
-                    </GridItem>
-                    <GridItem mt='-5px'>
-                        <Image src={p7} alt="p7"/>
-                    </GridItem>
-                    <GridItem mt='-5px'>
-                        <Image src={p3} alt="p3"/>
-                    </GridItem>
-                    <GridItem mt='-5px'>
-                        <Image src={p5} alt="p5"/>
-                    </GridItem>
-                    <GridItem mt='-10px'>
-                        <Image src={p6} alt="p6"/>
-                    </GridItem>
-                    <GridItem mt='-10px'>
-                        <Image src={p2} alt="p2"/>
-                    </GridItem>
-                    <GridItem mt='-10px'>
-                        <Image src={p1} alt="p1"/>
-                    </GridItem>
-                </Grid>
+                <Flex direction="column" bg="white" p="10px" pt="30px" pb="0px">
+                    <HStack {...group}>
+                        {options.map((value) => {
+                            const radio = getRadioProps({ value })
+                            return (
+                            <RadioCard key={value} {...radio}>
+                                {value}
+                            </RadioCard>
+                            )
+                        })}
+                    </HStack>
 
+                </Flex>
+
+                <Flex p="10px" direction="column" bg="white">
+
+                    <Text fontSize={f1} fontWeight="bold" mt="15px">사진 (100)</Text>
+                    
+                    <Grid templateColumns="repeat(3, 1fr)" templateRows="repeat(2, 1fr)" mt='16px' mb="20px" gap={1} >
+                        <GridItem>
+                            <Image src={p9} alt="p9"/>
+                        </GridItem>
+                        <GridItem>
+                            <Image src={p4} alt="p4"/>
+                        </GridItem>
+                        <GridItem>
+                            <Image src={p8} alt="p8"/>
+                        </GridItem>
+                        <GridItem mt='-5px'>
+                            <Image src={p7} alt="p7"/>
+                        </GridItem>
+                        <GridItem mt='-5px'>
+                            <Image src={p3} alt="p3"/>
+                        </GridItem>
+                        <GridItem mt='-5px'>
+                            <Image src={p5} alt="p5"/>
+                        </GridItem>
+                        <GridItem mt='-10px'>
+                            <Image src={p6} alt="p6"/>
+                        </GridItem>
+                        <GridItem mt='-10px'>
+                            <Image src={p2} alt="p2"/>
+                        </GridItem>
+                        <GridItem mt='-10px'>
+                            <Image src={p1} alt="p1"/>
+                        </GridItem>
+                    </Grid>
+
+                </Flex>
             </Flex>
 
             {/* tapbar */}

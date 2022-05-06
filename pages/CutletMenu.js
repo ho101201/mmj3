@@ -139,77 +139,84 @@ export default function RMenu() {
                 </GridItem>
             </Grid>
 
-            <Flex m="10px" direction="column">
-                <Text fontSize={f1} fontWeight="bold" mt="15px">대표메뉴</Text>
-                <Grid templateColumns="repeat(3, 1fr)" mt='9px'>
-                    <GridItem>
-                        <Image src={p7} alt="p7"/>
-                    </GridItem>
-                    <GridItem>
-                        <Image src={p4} alt="p4"/>
-                    </GridItem>
-                    <GridItem>
-                        <Image src={p6} alt="p6"/>
-                    </GridItem>
-                </Grid>
+            <Flex direction="column" bg="#FAFAFA" pb="30px">
+                <Flex direction="column" p="10px" pt="25px" pb="0px" bg="white">
+                    <Text fontSize={f1} fontWeight="bold" >대표메뉴</Text>
+                    <Grid templateColumns="repeat(3, 1fr)" mt='9px'>
+                        <GridItem>
+                            <Image src={p7} alt="p7"/>
+                        </GridItem>
+                        <GridItem>
+                            <Image src={p4} alt="p4"/>
+                        </GridItem>
+                        <GridItem>
+                            <Image src={p6} alt="p6"/>
+                        </GridItem>
+                    </Grid>
 
-                <Flex direction="row">
-                    <Flex direction="column">
-                        <Text fontSize={f2} mt="8px">안심카츠(160g)</Text>
-                        <Text fontSize={f2} mt="8px">블랙 안심카츠(160g)</Text>
-                        <Text fontSize={f2} mt="8px">카레추가(리필)</Text>
+                    <Flex direction="row" mb="25px">
+                        <Flex direction="column">
+                            <Text fontSize={f2} mt="8px">안심카츠(160g)</Text>
+                            <Text fontSize={f2} mt="8px">블랙 안심카츠(160g)</Text>
+                            <Text fontSize={f2} mt="8px">카레추가(리필)</Text>
+                        </Flex>
+                        <Spacer/>
+                        <Flex direction="column">
+                            <Text fontSize={f2} mt="8px" align="end">11,000원</Text>
+                            <Text fontSize={f2} mt="8px" align="end">13,000원</Text>
+                            <Text fontSize={f2} mt="8px" align="end">5,000원</Text>
+                        </Flex>
                     </Flex>
-                    <Spacer/>
-                    <Flex direction="column">
-                        <Text fontSize={f2} mt="8px" align="end">11,000원</Text>
-                        <Text fontSize={f2} mt="8px" align="end">13,000원</Text>
-                        <Text fontSize={f2} mt="8px" align="end">5,000원</Text>
+                    <Box h="1px" bg="#F6F6F6"/>
+                </Flex>
+
+                <Flex direction="column" p="10px" pt="25px" pb="0px" bg="white">
+                    <Text fontSize={f1} fontWeight="bold">전체메뉴 (100)</Text>
+                    <Flex direction="row">
+                        <Flex direction="column">
+                            <Text fontSize={f2} mt="8px">경양 카츠(160g)</Text>
+                            <Text fontSize={f2} mt="8px">등심카츠(170g)</Text>
+                            <Text fontSize={f2} mt="8px">안심카츠(160g)</Text>
+                        </Flex>
+                        <Spacer/>
+                        <Flex direction="column">
+                            <Text fontSize={f2} mt="8px" align="end">13,000원</Text>
+                            <Text fontSize={f2} mt="8px" align="end">13,000원</Text>
+                            <Text fontSize={f2} mt="8px" align="end">11,000원</Text>
+                        </Flex>
+                    </Flex>
+
+                    <Flex direction="column" justifyContent="center" alignItems='center' w="vw" h="50px" mr="10px" ml='10px' mt='23px' border="2px solid #F6F6F6">
+                        <Text  fontSize={f2} borderRadius="4px" align='center' color="#565656">
+                            더보기
+                        </Text>
                     </Flex>
                 </Flex>
 
-                <Text fontSize={f1} fontWeight="bold" mt="51px">전체메뉴 (100)</Text>
-                <Flex direction="row">
-                    <Flex direction="column">
-                        <Text fontSize={f2} mt="8px">경양 카츠(160g)</Text>
-                        <Text fontSize={f2} mt="8px">등심카츠(170g)</Text>
-                        <Text fontSize={f2} mt="8px">안심카츠(160g)</Text>
-                    </Flex>
-                    <Spacer/>
-                    <Flex direction="column">
-                        <Text fontSize={f2} mt="8px" align="end">13,000원</Text>
-                        <Text fontSize={f2} mt="8px" align="end">13,000원</Text>
-                        <Text fontSize={f2} mt="8px" align="end">11,000원</Text>
-                    </Flex>
+                <Flex direction="column" p="10px" pt="25px" pb="0px" bg="white">
+                    <Text fontSize={f1} fontWeight="bold">메뉴사진 (100)</Text>
+                    
+                    <Grid templateColumns="repeat(3, 1fr)" templateRows="repeat(2, 1fr)" mt='16px' mb="30px">
+                        <GridItem>
+                            <Image src={p2} alt="p2"/>
+                        </GridItem>
+                        <GridItem>
+                            <Image src={p4} alt="p4"/>
+                        </GridItem>
+                        <GridItem>
+                            <Image src={p6} alt="p6"/>
+                        </GridItem>
+                        <GridItem mt='-5px'>
+                            <Image src={p7} alt="p7"/>
+                        </GridItem>
+                        <GridItem mt='-5px'>
+                            <Image src={p3} alt="p3"/>
+                        </GridItem>
+                        <GridItem mt='-5px'>
+                            <Image src={p1} alt="p1"/>
+                        </GridItem>
+                    </Grid>
                 </Flex>
-
-                <Flex direction="column" justifyContent="center" alignItems='center' w="vw" h="50px" mr="10px" ml='10px' mt='23px' border="2px solid #F6F6F6">
-                    <Text  fontSize={f2} borderRadius="4px" align='center' color="#565656">
-                        더보기
-                    </Text>
-                </Flex>
-
-                <Text fontSize={f1} fontWeight="bold" mt="26px">메뉴사진 (100)</Text>
-                
-                <Grid templateColumns="repeat(3, 1fr)" templateRows="repeat(2, 1fr)" mt='9px' mb="46px">
-                    <GridItem>
-                        <Image src={p2} alt="p2"/>
-                    </GridItem>
-                    <GridItem>
-                        <Image src={p4} alt="p4"/>
-                    </GridItem>
-                    <GridItem>
-                        <Image src={p6} alt="p6"/>
-                    </GridItem>
-                    <GridItem mt='-5px'>
-                        <Image src={p7} alt="p7"/>
-                    </GridItem>
-                    <GridItem mt='-5px'>
-                        <Image src={p3} alt="p3"/>
-                    </GridItem>
-                    <GridItem mt='-5px'>
-                        <Image src={p1} alt="p1"/>
-                    </GridItem>
-                </Grid>
             </Flex>
 
             {/* tapbar */}

@@ -37,17 +37,17 @@ import {
                 </Link>
             </Flex>
 
-            <Flex direction='row' p="10px" alignItems="center" h="126px">
+            <Flex direction='row' p="10px" alignItems="center" h="126px" bg="blue.100">
                 <Flex w="85px" h="85px" borderRadius="10px" overflow="hidden">
                     <Image src={p1} alt="p1"/>
                 </Flex>
                 <Flex direction="column" ml='10px'>
                     <Text fontWeight="bold" fontSize={f2}>카츠단길</Text>
-                    <Flex direction="row" mb='10px'>
+                    <Flex direction="row" mb='10px' alignItems="center">
                         <Flex w="13px" h="13px">
                             <Image src={starF} alt="starF"/>
                         </Flex>
-                        <Text fontSize={f2}>4.5 (10)</Text>
+                        <Text fontSize={f2} ml="5px">4.5 (10)</Text>
                     </Flex>
                     <Text fontSize={f2}>신천/잠실 · 한식코스</Text>
                 </Flex>
@@ -57,7 +57,7 @@ import {
                 </Flex>
             </Flex>
 
-            <Grid templateColumns="repeat(3,1fr)" borderTop="1px solid #E8E8E8" borderBottom="1px solid #E8E8E8" h="50px" ml="10px" mr="10px" mb="10px" >
+            <Grid templateColumns="repeat(3,1fr)" borderTop="1px solid #E8E8E8" borderBottom="1px solid #E8E8E8" h="50px" pl="10px" pr="10px" mb="10px" bg="red.100">
                 <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
                     <Flex w="12px" h="12px" mr="7px">
                         <Image src={starB} alt="starB"/>
@@ -78,17 +78,17 @@ import {
                 </GridItem>
             </Grid>
 
-            <Flex direction='row' p="10px" alignItems="center" h="126px" mt="10px">
+            <Flex direction='row' p="10px" alignItems="center" h="126px" mt="10px" bg="blue.100">
                 <Flex w="85px" h="85px" borderRadius="10px" overflow="hidden">
                     <Image src={p1} alt="p1"/>
                 </Flex>
                 <Flex direction="column" ml='10px'>
                     <Text fontWeight="bold" fontSize={f2}>카츠단길</Text>
-                    <Flex direction="row" mb='10px'>
+                    <Flex direction="row" alignItems="center" mb='10px'>
                         <Flex w="13px" h="13px">
-                            <Image src={del} alt="del"/>
+                            <Image src={starF} alt="del"/>
                         </Flex>
-                        <Text fontSize={f2}>4.5 (10)</Text>
+                        <Text fontSize={f2} ml="5px">4.5 (10)</Text>
                     </Flex>
                     <Text fontSize={f2}>신천/잠실 · 한식코스</Text>
                 </Flex>
@@ -98,7 +98,7 @@ import {
                 </Flex>
             </Flex>
 
-            <Grid templateColumns="repeat(3,1fr)" borderTop="1px solid #E8E8E8" borderBottom="1px solid #E8E8E8" h="62px" mt="20px">
+            <Grid templateColumns="repeat(3,1fr)" borderTop="1px solid #E8E8E8" borderBottom="1px solid #E8E8E8" h="62px" bg="red.100">
                 <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
                     <Flex w="12px" h="12px" mr="7px">
                         <Image src={starB} alt="starB"/>

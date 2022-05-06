@@ -137,111 +137,120 @@ export default function RRev() {
                     </Link>
                 </GridItem>
             </Grid>
-
-            <Flex m="10px" direction="column">
-                <Text fontSize={f1} fontWeight="bold" mt="15px">후기 (100)</Text>
-
-                <Flex direction="column" w="vw" mt="16px">
-                    <Flex direction="row">
-                        <Flex w="50px" h="50px" >
-                            <Image src={user} alt="user"/>
-                        </Flex>
-                        <Flex ml="12px" direction="column" justifyContent="center">
-                            <Text fontSize={f2} >유저닉네임</Text>
-                            <Text fontSize="10px" color="#565656">2022.03.01  1번째 방문</Text>
-                        </Flex>
-                        <Spacer/>
-                        <Flex direction="row" alignItems="center">
-                            <Flex w="13px" h="13px" mr="5px">
-                                <Image src={starF} alt="starF"/>
+            <Flex direction="column" bg="#FAFAFA" pb="30px">
+                {/* rev1 */}
+                <Flex p="10px" pb="0px" direction="column" bg="white">
+                    <Text fontSize={f1} fontWeight="bold" mt="15px">후기 (100)</Text>
+                    <Flex direction="column" w="vw" mt="16px">
+                        <Flex direction="row">
+                            <Flex w="50px" h="50px" >
+                                <Image src={user} alt="user"/>
                             </Flex>
-                            <Text fontWeight="bold" fontSize={f2}>4.5</Text>
+                            <Flex ml="12px" direction="column" justifyContent="center">
+                                <Text fontSize={f2} >유저닉네임</Text>
+                                <Text fontSize="10px" color="#565656">2022.03.01  1번째 방문</Text>
+                            </Flex>
+                            <Spacer/>
+                            <Flex direction="row" alignItems="center">
+                                <Flex w="13px" h="13px" mr="5px">
+                                    <Image src={starF} alt="starF"/>
+                                </Flex>
+                                <Text fontWeight="bold" fontSize={f2}>4.5</Text>
+                            </Flex>
+                        </Flex>
+                        <Flex mt="12px">
+                            <Image src={p0} alt="p0"/>
+                        </Flex>
+    
+                        <Text id='userReview1' mt="12px">
+                            후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
+                            후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
+                            후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
+                            후기텍스트
+                        </Text>
+
+                        <Flex mt="41px">
+                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
+                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">후기태그</Tag>
                         </Flex>
                     </Flex>
-                    <Flex mt="12px">
-                        <Image src={p0} alt="p0"/>
-                    </Flex>
- 
-                    <Text id='userReview1' mt="12px">
-                        후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
-                        후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
-                        후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
-                        후기텍스트
-                    </Text>
 
-                    <Flex mt="41px">
-                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
-                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">후기태그</Tag>
-                    </Flex>
+                    <Box w="vw" bg="#F6F6F6" h="2px" mt="30px"/>
+
                 </Flex>
 
-                <Box w="vw" bg="#F6F6F6" h="2px" mt="30px" mb="20px"/>
-
-                <Flex direction="column" w="vw" mt="16px">
-                    <Flex direction="row">
-                        <Flex w="50px" h="50px" >
-                            <Image src={user} alt="user"/>
-                        </Flex>
-                        <Flex ml="12px" direction="column" justifyContent="center">
-                            <Text fontSize={f2} >유저닉네임</Text>
-                            <Text fontSize="10px" color="#565656">2022.03.01  1번째 방문</Text>
-                        </Flex>
-                        <Spacer/>
-                        <Flex direction="row" alignItems="center">
-                            <Flex w="13px" h="13px" mr="5px">
-                                <Image src={starF} alt="starF"/>
+                {/* rev2 */}
+                <Flex p="10px" pt="20px" pb="0px" direction="column" bg="white" mb="10px">
+                    <Flex direction="column" w="vw">
+                        <Flex direction="row">
+                            <Flex w="50px" h="50px" >
+                                <Image src={user} alt="user"/>
                             </Flex>
-                            <Text fontWeight="bold" fontSize={f2}>4.5</Text>
+                            <Flex ml="12px" direction="column" justifyContent="center">
+                                <Text fontSize={f2} >유저닉네임</Text>
+                                <Text fontSize="10px" color="#565656">2022.03.01  1번째 방문</Text>
+                            </Flex>
+                            <Spacer/>
+                            <Flex direction="row" alignItems="center">
+                                <Flex w="13px" h="13px" mr="5px">
+                                    <Image src={starF} alt="starF"/>
+                                </Flex>
+                                <Text fontWeight="bold" fontSize={f2}>4.5</Text>
+                            </Flex>
                         </Flex>
-                    </Flex>
 
-                    <Text id='userReview1' mt="12px">
-                        후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
-                        후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
-                        후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
-                        후기텍스트
-                    </Text>
+                        <Text id='userReview1' mt="12px">
+                            후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
+                            후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
+                            후기텍스트후기텍스트후기텍스트후기텍스트후기텍스트
+                            후기텍스트
+                        </Text>
 
-                    <Flex mt="41px">
-                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
-                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">후기태그</Tag>
+                        <Flex mt="41px">
+                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
+                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">후기태그</Tag>
+                        </Flex>
+
                     </Flex>
+                    <Box w="vw" bg="#F6F6F6" h="2px" mt="40px"/>
+                </Flex>
+                <Flex p="10px" direction="column" bg="white">
+                    <Text fontSize={f1} fontWeight="bold" mt="15px">방문자 사진 (100)</Text>
+                    
+                    <Grid templateColumns="repeat(3, 1fr)" templateRows="repeat(2, 1fr)" mt='13px' mb="20px" gap={1} >
+                        <GridItem>
+                            <Image src={p9} alt="p9"/>
+                        </GridItem>
+                        <GridItem>
+                            <Image src={p4} alt="p4"/>
+                        </GridItem>
+                        <GridItem>
+                            <Image src={p8} alt="08"/>
+                        </GridItem>
+                        <GridItem mt='-5px'>
+                            <Image src={p7} alt="p7"/>
+                        </GridItem>
+                        <GridItem mt='-5px'>
+                            <Image src={p3} alt="p3"/>
+                        </GridItem>
+                        <GridItem mt='-5px'>
+                            <Image src={p5} alt="p5"/>
+                        </GridItem>
+                        <GridItem mt='-10px'>
+                            <Image src={p6} alt="p6"/>
+                        </GridItem>
+                        <GridItem mt='-10px'>
+                            <Image src={p2} alt="p2"/>
+                        </GridItem>
+                        <GridItem mt='-10px'>
+                            <Image src={p1} alt="p1"/>
+                        </GridItem>
+                    </Grid>
                 </Flex>
 
-                <Box w="vw" bg="#F6F6F6" h="2px" mt="30px" mb="20px"/>
-
-                <Text fontSize={f1} fontWeight="bold" mt="15px">방문자 사진 (100)</Text>
-                
-                <Grid templateColumns="repeat(3, 1fr)" templateRows="repeat(2, 1fr)" mt='13px' mb="46px" gap={1} >
-                    <GridItem>
-                        <Image src={p9} alt="p9"/>
-                    </GridItem>
-                    <GridItem>
-                        <Image src={p4} alt="p4"/>
-                    </GridItem>
-                    <GridItem>
-                        <Image src={p8} alt="08"/>
-                    </GridItem>
-                    <GridItem mt='-5px'>
-                        <Image src={p7} alt="p7"/>
-                    </GridItem>
-                    <GridItem mt='-5px'>
-                        <Image src={p3} alt="p3"/>
-                    </GridItem>
-                    <GridItem mt='-5px'>
-                        <Image src={p5} alt="p5"/>
-                    </GridItem>
-                    <GridItem mt='-10px'>
-                        <Image src={p6} alt="p6"/>
-                    </GridItem>
-                    <GridItem mt='-10px'>
-                        <Image src={p2} alt="p2"/>
-                    </GridItem>
-                    <GridItem mt='-10px'>
-                        <Image src={p1} alt="p1"/>
-                    </GridItem>
-                </Grid>
             </Flex>
+
+
 
             {/* tapbar */}
             <Box borderTop="1px solid #E8E8E8" h="80px"  pl="7px" pr="7px" display="absolute" position="sticky" bottom="0px" bg="#ffffff">

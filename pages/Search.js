@@ -33,11 +33,11 @@ import {
                     <Image src={btnX} alt="btnX"/>
                 </Link>
             </Flex>
-            <Flex justifyContent="center" alignItems="center" h="52px" border="1px solid #F6F6F6">
+            <Flex justifyContent="center" alignItems="center" h="52px" border="1px solid #F6F6F6" mr="10px" ml="10px">
                 <Flex w="11px" h="13px" mr="6px">
                     <Image src={location} alt="location"/>
                 </Flex>
-                <Text fontSize={f2} letterSpacing="-1px">내 주변 식당 검색하기</Text>
+                <Text fontSize={f2} fontWeight="bold">내 주변 식당 검색하기</Text>
             </Flex>
             
             {/* hide */}

@@ -91,8 +91,7 @@ export default function SignIn3() {
                     </Text>
                 </Flex>
 
-                {/* #FAFAFA */}
-                <Flex w="100%" h="100vh" bg="gray.100" direction="column" alignItems="center" p="10px">
+                <Flex w="100%" h="100vh" bg=" #FAFAFA" direction="column" alignItems="center" p="10px">
                     <Flex direction="column" m="10px" mt="10px" p="10px" borderRadius="30px" w="100%" minH="410px" alignItems="center" justifyContent="center" bg="white">
                         <Text fontSize={f1} fontWeight="bold" mb="1px">
                             약관동의
@@ -260,6 +259,7 @@ export default function SignIn3() {
 
                     </Flex>
                     {/* button */}
+                    <Spacer/>
                     {Check2&&Check3&&Check5&&Check6?
                         <Box w="100vw" h="40px" pr="15px" pl="15px" mt="20px" bottom="40px" position="sticky">
                             <Link href='/Home' >

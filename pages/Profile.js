@@ -43,114 +43,119 @@ export default function Profile() {
 
     return(
         <div>
-            <Flex w="vw" h="140px" direction="column" alignItems="center" justifyContent="center" mb="10px">
-                <Flex w="50px" h="50px">
-                    <Image src={user} alt="user"/>
+            <Flex direction="column" bg="#FAFAFA">
+                <Flex w="vw" h="140px" direction="column" alignItems="center" justifyContent="center" mb="10px" bg="white">
+                    <Flex w="50px" h="50px">
+                        <Image src={user} alt="user"/>
+                    </Flex>
+                    <Text fontSize={f2} fontWeight="bold" mt="4px" mb="4px" letterSpacing="-1px" >유저닉네임</Text>
+                    <Link href='/ProfileSetting'>
+                        <Button fontSize="10px" bg="#303030" color="#ffffff" h="20px" w="70px">프로필설정</Button>
+                    </Link>
                 </Flex>
-                <Text fontSize={f2} fontWeight="bold" mt="4px" mb="4px" letterSpacing="-1px" >유저닉네임</Text>
-                <Link href='/ProfileSetting'>
-                    <Button fontSize="10px" bg="#303030" color="#ffffff" h="20px" w="70px">프로필설정</Button>
-                </Link>
+
+                <Flex h="92px" mb="10px" bg="white">
+                    <Spacer/>
+                        <Flex w="67px" direction="column" justifyContent="center">
+                            <Link href='/Willgo'>
+                                <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
+                                <Text fontSize="10px" align="center" >가볼래요</Text>
+                            </Link>
+                        </Flex>
+                        <Flex w="67px" direction="column" justifyContent="center">
+                            <Link href='/Went'>
+                                <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
+                                <Text fontSize="10px" align="center" >가봤어요</Text>
+                            </Link>
+                        </Flex>
+                        <Flex w="67px" direction="column" justifyContent="center">
+                            <Link href='/Review'>
+                                <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
+                                <Text fontSize="10px" align="center" >후기</Text>
+                            </Link> 
+                        </Flex>
+                        <Flex w="67px" direction="column" justifyContent="center">
+                            <Link href='/Like'>
+                                <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
+                                <Text fontSize="10px" align="center" >좋아요</Text>
+                            </Link>
+                        </Flex>
+                    <Spacer/>
+                </Flex>
+
+                <Flex direction="column" bg="white" pt="30px">
+                    <Text fontSize="16px" ml="10px" mb="15px" fontWeight="bold">사진</Text>
+                    <Link href='/MyPhoto'>
+                        <Box w="100%"   whiteSpace="nowrap" overflowX='auto' >
+                            <Flex w="110px" h='110px' ml="10px"  display="inline-block" >
+                                <Image src={p8} alt="p8"/>
+                            </Flex>
+                            <Flex w="110px" h='110px' display="inline-block">
+                                <Image src={p9} alt="p9"/>
+                            </Flex>
+                            <Flex w="110px" h='110px'  display="inline-block">
+                                <Image src={p3} alt="p3"/>
+                            </Flex>
+                            <Flex w="110px" h='110px' display="inline-block">
+                                <Image src={p4} alt="p4"/>
+                            </Flex>
+                            <Flex w="110px" h='110px' display="inline-block">
+                                <Image src={p5} alt="p5"/>
+                            </Flex>
+                            <Flex w="110px" h='110px' display="inline-block">
+                                <Image src={p6} alt="p6"/>
+                            </Flex>
+                            <Flex w="110px" h='110px' display="inline-block">
+                                <Image src={p7} alt="p7"/>
+                            </Flex>
+                        </Box>
+                    </Link>
+                    
+                    <Link href='/Taste'>
+                        <Flex alignItems="center" p="10px" h="50px" mt="30px"  borderTop="1px solid #F6F6F6" borderBottom="1px solid #F6F6F6" >
+                            <Text fontSize={f2} color="#333333">입맛 설정</Text>
+                            <Spacer/>
+                            <Flex w="7px" h="10px">
+                                <Image src={arrowR} alt="arrowR"/>
+                            </Flex>
+                        </Flex>
+                    </Link>
+
+                    <Link href='/Setting'>
+                        <Flex alignItems="center" p="10px" h="50px" borderBottom="1px solid #F6F6F6">
+                            <Text fontSize={f2} color="#333333" >앱 설정</Text>
+                            <Spacer/>
+                            <Flex w="7px" h="10px">
+                                <Image src={arrowR} alt="arrowR"/>
+                            </Flex>
+                        </Flex>
+                    </Link>
+
+                    <Link href='/Service'>
+                        <Flex alignItems="center" p="10px" h="50px" borderBottom="1px solid #F6F6F6">
+                            <Text fontSize={f2} color="#333333">고객센터</Text>
+                            <Spacer/>
+                            <Flex w="7px" h="10px">
+                                <Image src={arrowR} alt="arrowR"/>
+                            </Flex>
+                        </Flex>
+                    </Link>
+
+                    <Link href='/'>
+                        <Flex w="vw" mr="10px" ml="10px" mt="10px" h="50px" alignItems="center" justifyContent="center" color="#565656" border="2px solid #F6F6F6" borderRadius="10px">
+                            <Text>로그아웃</Text>
+                        </Flex>
+                    </Link>
+
+                    <Link href='/Withdrawal'>
+                        <Flex w="vw" mr="10px" ml="10px" mt="10px" mb="30px" h="50px" alignItems="center" justifyContent="center" color="#565656" border="2px solid #F6F6F6" borderRadius="10px">
+                            <Text>회원탈퇴</Text>
+                        </Flex>
+                    </Link>
+                    
+                </Flex>
+
             </Flex>
-
-            <Flex h="92px" mb="40px">
-                <Spacer/>
-                    <Flex w="67px" direction="column" justifyContent="center">
-                        <Link href='/Willgo'>
-                            <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
-                            <Text fontSize="10px" align="center" >가볼래요</Text>
-                        </Link>
-                    </Flex>
-                    <Flex w="67px" direction="column" justifyContent="center">
-                        <Link href='/Went'>
-                            <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
-                            <Text fontSize="10px" align="center" >가봤어요</Text>
-                        </Link>
-                    </Flex>
-                    <Flex w="67px" direction="column" justifyContent="center">
-                        <Link href='/Review'>
-                            <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
-                            <Text fontSize="10px" align="center" >후기</Text>
-                        </Link> 
-                    </Flex>
-                    <Flex w="67px" direction="column" justifyContent="center">
-                        <Link href='/Like'>
-                            <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
-                            <Text fontSize="10px" align="center" >좋아요</Text>
-                        </Link>
-                    </Flex>
-                <Spacer/>
-            </Flex>
-
-            <Text fontSize="16px" ml="10px" mb="15px" fontWeight="bold">사진</Text>
-            <Link href='/MyPhoto'>
-                <Box w="100%"   whiteSpace="nowrap" overflowX='auto' >
-                    <Flex w="110px" h='110px' ml="10px"  display="inline-block" >
-                        <Image src={p8} alt="p8"/>
-                    </Flex>
-                    <Flex w="110px" h='110px' display="inline-block">
-                        <Image src={p9} alt="p9"/>
-                    </Flex>
-                    <Flex w="110px" h='110px'  display="inline-block">
-                        <Image src={p3} alt="p3"/>
-                    </Flex>
-                    <Flex w="110px" h='110px' display="inline-block">
-                        <Image src={p4} alt="p4"/>
-                    </Flex>
-                    <Flex w="110px" h='110px' display="inline-block">
-                        <Image src={p5} alt="p5"/>
-                    </Flex>
-                    <Flex w="110px" h='110px' display="inline-block">
-                        <Image src={p6} alt="p6"/>
-                    </Flex>
-                    <Flex w="110px" h='110px' display="inline-block">
-                        <Image src={p7} alt="p7"/>
-                    </Flex>
-                </Box>
-            </Link>
-            
-            <Link href='/Taste'>
-                <Flex p="10px" h="50px" mt="30px">
-                    <Text fontSize={f2} color="#333333">입맛 설정</Text>
-                    <Spacer/>
-                    <Flex w="7px" h="10px">
-                        <Image src={arrowR} alt="arrowR"/>
-                    </Flex>
-                </Flex>
-            </Link>
-
-            <Link href='/Setting'>
-                <Flex p="10px" h="50px">
-                    <Text fontSize={f2} color="#333333" >앱 설정</Text>
-                    <Spacer/>
-                    <Flex w="7px" h="10px">
-                        <Image src={arrowR} alt="arrowR"/>
-                    </Flex>
-                </Flex>
-            </Link>
-
-            <Link href='/Service'>
-                <Flex p="10px" h="50px">
-                    <Text fontSize={f2} color="#333333">고객센터</Text>
-                    <Spacer/>
-                    <Flex w="7px" h="10px">
-                        <Image src={arrowR} alt="arrowR"/>
-                    </Flex>
-                </Flex>
-            </Link>
-
-            <Link href='/'>
-                <Flex w="vw" mr="10px" ml="10px" mt="10px" h="50px" alignItems="center" justifyContent="center" color="#565656" border="2px solid #F6F6F6" borderRadius="10px">
-                    <Text>로그아웃</Text>
-                </Flex>
-            </Link>
-
-            <Link href='/Withdrawal'>
-                <Flex w="vw" mr="10px" ml="10px" mt="10px" h="50px" alignItems="center" justifyContent="center" color="#565656" border="2px solid #F6F6F6" borderRadius="10px">
-                    <Text>회원탈퇴</Text>
-                </Flex>
-            </Link>
-
 
             {/* navBar */}
             <Box borderTop="1px solid #E8E8E8" h="80px"  pl="7px" pr="7px" display="absolute" position="sticky" bottom="0px" bg="#ffffff">

@@ -30,7 +30,7 @@ import {
 
     return(
         <div>
-            <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD">
+            <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD" >
                 <Text fontSize={f1} fontWeight="bold" align="center">가봤어요</Text>
                 <Link href='/CutletInfo' position="absolute" right="11px" w="20px" h="20px">
                     <Image src={btnX} alt="btnX"/>
@@ -55,7 +55,7 @@ import {
             </Flex> 
 
             <Link href='/CutletWentRev2'>
-                <Flex p="10px" h="50px">
+                <Flex alignItems='center' justifyContent="center" m="10px" h="50px" borderTop="1px solid #F6F6F6" borderBottom="1px solid #F6F6F6">
                     <Text fontSize={f3} color="#333333" >방문 후기를 짧게 메모해보세요</Text>
                     <Spacer/>
                     <Flex w="7px" h="10px">

@@ -70,12 +70,16 @@ import {
     )
   }
 
-
   export default function Category () {
   
     const f1 ="16px";
     const f2 ="14px";
     const f3 ="12px";
+
+    const [Check, setCheck] = useState(true);
+    const checkAlarm =()=> {
+        setCheck( Check => !Check );
+    }
 
     const styles = {
         control: base => ({
@@ -118,8 +122,8 @@ import {
                         <Select variant="unstyled" style={styles} placeholder="송파구 문정동" letterSpacing='-1px' ml="10px" fontSize={f2} iconSize='20px' w="115px" >
                         </Select>
                     </SelectBoxWrapper> */}
-                    <Link href='/SetLocation' display="flex" flexDirection="row">
-                        <Text id='location' fontSize={f2} fontWeight="bold" ml="10px" mr="7px" >송파구 문정동</Text>
+                    <Link href='/SetLocation' display="flex" flexDirection="row" ml="10px">
+                        <Text id='location' fontSize={f2} fontWeight="bold" mr="7px" >송파구 문정동</Text>
                         <Box w="12px" h="20px" position="absolute" left="104px" top="4px" >
                             <Image src={arrowB} alt="arrowB"/>
                         </Box>
@@ -138,9 +142,11 @@ import {
                 </Flex>
 
                 {/* hide or fade out */}
-                    <Box position="absolute" w="214px" h="28px" top="29px" left="11px">
+                {Check&&
+                    <Box position="absolute" w="214px" h="28px" top="29px" left="11px" onClick={()=>checkAlarm()}>
                         <Image src={info} alt="info"/>
                     </Box>
+                }
 
                 <HStack {...group} mt="19px" mb="15px" ml="10px" overflowX="hidden">
                     {options.map((value) => {

@@ -23,9 +23,6 @@ import {
 } from 'react';
   
   import styled from "styled-components";
-
-  import { useRef } from "react";
-  import { useDraggable } from "react-use-draggable-scroll";
   
   import bell from './images/Bell_Icon.png';
   import search from './images/Search_Icons.png';
@@ -78,6 +75,11 @@ import {
     const f2 ="14px";
     const f3 ="12px";
 
+    const [Check, setCheck] = useState(true);
+    const checkAlarm =()=> {
+        setCheck( Check => !Check );
+    }
+
     const styles = {
         control: base => ({
           ...base,
@@ -111,13 +113,16 @@ import {
     return (
       
         <div>
-                <Flex h="40px"  alignItems="center" borderBottom="1px solid #DDDDDD" position="sticky">
+            {/* homeBody */}
+            <Flex direction="column" bg="#FAFAFA">
+                
+                <Flex h="40px"  alignItems="center" borderBottom="1px solid #DDDDDD" position="sticky" bg="white">
                     {/* <SelectBoxWrapper >
                         <Select variant="unstyled" style={styles} placeholder="송파구 문정동" letterSpacing='-1px' ml="10px" fontSize={f2} iconSize='20px' w="115px" >
                         </Select>
                     </SelectBoxWrapper> */}
-                    <Link href='/SetLocation' display="flex" flexDirection="row">
-                        <Text id='location' fontSize={f2} fontWeight="bold" ml="10px" mr="7px" >송파구 문정동</Text>
+                    <Link href='/SetLocation' display="flex" flexDirection="row" ml="10px">
+                        <Text id='location' fontSize={f2} fontWeight="bold" mr="7px" >송파구 문정동</Text>
                         <Box w="12px" h="20px" position="absolute" left="104px" top="4px" >
                             <Image src={arrowB} alt="arrowB"/>
                         </Box>
@@ -136,10 +141,11 @@ import {
                 </Flex>
 
                 {/* hide or fade out */}
-                    <Box position="absolute" w="214px" h="28px" top="29px" left="11px">
+                {Check&&
+                    <Box position="absolute" w="214px" h="28px" top="29px" left="11px" onClick={()=>checkAlarm()}>
                         <Image src={info} alt="info"/>
                     </Box>
-      
+                }
 
                 <HStack overflow="hidden" mt='20px' spacing="14.5px" whiteSpace="nowrap" overflowX='hide' >
                     {/* hilighted */}
@@ -322,7 +328,7 @@ import {
                 </Box>
 
                 <Flex direction="column" w="vw" h="120px" justifyContent="center" alignItems="center" ml="10px" mr="10px" mt="40px" border="3px solid #F6E229"
-                 borderTopLeftRadius="30px" borderTopRightRadius="30px" borderBottomLeftRadius="30px">
+                 borderTopLeftRadius="30px" borderTopRightRadius="30px" borderBottomLeftRadius="30px" bg="white">
                      <Flex position="absolute" alignItems="center" justifyContent="center" mb="115px">
                          <Flex position="absolute" w="40px" h="40px">
                              <Image src={circleB} alt="fcircleB"/>
@@ -426,6 +432,7 @@ import {
                         <Spacer/>
                     </Flex>
                 </Box>
+            </Flex>
 
         </div>
   

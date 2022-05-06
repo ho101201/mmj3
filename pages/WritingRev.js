@@ -89,7 +89,7 @@ import {
                 </Link>
             </Flex>
 
-            <Flex direction='row' p="10px" alignItems="center" h="126px">
+            <Flex direction='row' m="10px" mt="0px" alignItems="center" h="126px" borderBottom="1px solid #F6F6F6">
                 <Flex w="85px" h="85px" borderRadius="10px" overflow="hidden">
                     <Image src={p1} alt="p1"/>
                 </Flex>
@@ -106,7 +106,7 @@ import {
                 <Spacer/>
             </Flex> 
 
-            <Text fontSize={f2} fontWeight="bold" align="center" mb="5px" mt="36px">매장의 어떤점이 좋았나요?</Text>
+            <Text fontSize={f2} fontWeight="bold" align="center" mb="5px" mt="30px">매장의 어떤점이 좋았나요?</Text>
 
             <Flex direction="row" alignItems="center" justifyContent="center" mb="25px">
                 <Flex w="30px" h="30px" onClick={()=>checking1()} m="5px">
@@ -148,7 +148,7 @@ import {
             </Flex>
             
             <Flex pr="10px" pl="10px" h="175px">
-                <Textarea fontSize={f2} placeholder='최소 5자 이상 입력해주세요. (ex. 이 메뉴가 제일 맛있었어요, 친절해요, 깔끔해요.주차가 편리해요 등)' 
+                <Textarea fontSize={f2} placeholder="최소 5자 이상 입력해주세요.&#13;&#10;(ex. 이 메뉴가 제일 맛있었어요, 친절해요, 깔끔해요.주차가 편리해요 등)" 
                 variant="unstyled"  border="1px solid #E1E1E1 " p="10px" resize='none' overflow="visible"/>
             </Flex>
             <Flex direction="row-reverse" pr="10px">
@@ -167,8 +167,8 @@ import {
             </Flex>
 
             <Link href='/TagInput'>
-                <Flex p="10px" h="50px" mt="30px" mb="50px">
-                    <Text fontSize={f2} color="#333333" >#태그 입력</Text>
+                <Flex alignItems="center" justifyContent="center" mr="10px" ml="10px" h="50px" mt="30px" mb="30px" borderTop="1px solid #F6F6F6" borderBottom="1px solid #F6F6F6">
+                    <Text fontSize={f2}  color="#333333" ># 태그 입력</Text>
                     <Spacer/>
                     <Flex w="7px" h="10px">
                         <Image src={arrowR} alt="arrowR"/>

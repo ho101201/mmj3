@@ -136,44 +136,58 @@ export default function RInfo() {
                 </GridItem>
             </Grid>
 
-            <Flex m="10px" direction="column">
-                <Text fontSize={f1} fontWeight="bold" mt="15px">매장 소개</Text>
-                <Text fontSize={f2} mt="8px">&#34;상위1% 프리미엄 돈카츠입니다.&#34;</Text>
-                <Flex direction="row" alignItems="center" mt='53px '>
-                    <Text fontSize={f1} fontWeight="bold">매장 Tip</Text>
-                    <Spacer/>
-                    <Text fontSize="10px" letterSpacing="-1px">마지막 업데이트 : 2021-11-09</Text>
-                </Flex>
-                <Text fontSize={f2} mt="8px">카레 추가 시 무한리필 됩니다.</Text>
-                <Text fontSize={f1} fontWeight="bold" mt="53px">편의정보</Text>
-                <Wrap mt='16px'>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">예약가능</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">포장</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">주차가능</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">1~2만원</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">발렛파킹</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">제로페이</Tag>
-                    <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">국민지원금</Tag>
-                </Wrap>
-                <Flex justifyContent="center" alignItems='center' mt='23' mb='33px'>
-                    <Text bg="#F6F6F6" fontSize='10px' w="232px" h="20px" borderRadius="4px" align='center' pt="2px">
-                        마지막 예약시간 00월00일 오전00시 00분 00초
-                    </Text>
-                </Flex>
+            <Flex direction='column' bg="#FAFAFA">
+                
+                <Flex p="10px" pb="0px" pt="25px" direction="column" bg="white">
+                    <Flex direction="column"  h="79px" borderBottom='1px solid #F6F6F6' bg="white">
+                        <Text fontSize={f1} fontWeight="bold" >매장 소개</Text>
+                        <Text fontSize={f2} mt="8px">&#34;상위1% 프리미엄 돈카츠입니다.&#34;</Text>
 
-                <Link href='/FixInfo'>
-                    <Flex alignItems='center' h='50px'>
-                        <Flex w="15px" h="15px" mr='11px'>
-                            <Image src={Exclamation} alt="exclamation"/>
-                        </Flex>
-                        <Text fontSize={f3} letterSpacing="-1px">잘못된 정보를 알려주세요</Text>
-                        <Spacer/>
-                        <Flex w="6px" h="10px">
-                            <Image src={arrowR} alt="arrowR"/>
-                        </Flex>
                     </Flex>
-                </Link>
 
+                    <Flex direction="column" h="79px" mt='25px' borderBottom='1px solid #F6F6F6' bg="white" >
+                        <Flex direction="row" alignItems="center" >
+                            <Text fontSize={f1} fontWeight="bold">매장 Tip</Text>
+                            <Spacer/>
+                            <Text fontSize="10px" letterSpacing="-1px">마지막 업데이트 : 2021-11-09</Text>
+                        </Flex>
+                        <Text fontSize={f2} mt="8px">카레 추가 시 무한리필 됩니다.</Text>
+
+                    </Flex>
+
+                    <Flex direction="column" bg="white" mt="25px">
+                        <Text fontSize={f1} fontWeight="bold">편의정보</Text>
+                        <Wrap mt='16px'>
+                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">예약가능</Tag>
+                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">포장</Tag>
+                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">주차가능</Tag>
+                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">1~2만원</Tag>
+                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">발렛파킹</Tag>
+                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">제로페이</Tag>
+                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">국민지원금</Tag>
+                        </Wrap>
+                        <Flex justifyContent="center" alignItems='center' mt='23px' mb='30px'>
+                            <Text bg="#F6F6F6" fontSize='10px' w="232px" h="20px" borderRadius="4px" align='center' pt="2px">
+                                마지막 예약시간 00월00일 오전00시 00분 00초
+                            </Text>
+                        </Flex>
+
+                    </Flex>
+
+                </Flex>
+
+                    <Link href='/FixInfo' p="10px" mt="10px" mb="20px" bg="white">
+                        <Flex alignItems='center' h='30px'>
+                            <Flex w="15px" h="15px" mr='11px'>
+                                <Image src={Exclamation} alt="exclamation"/>
+                            </Flex>
+                            <Text fontSize={f3} letterSpacing="-1px">잘못된 정보를 알려주세요</Text>
+                            <Spacer/>
+                            <Flex w="6px" h="10px">
+                                <Image src={arrowR} alt="arrowR"/>
+                            </Flex>
+                        </Flex>
+                    </Link>
 
             </Flex>
 
