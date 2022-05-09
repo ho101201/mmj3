@@ -55,8 +55,12 @@ function RadioCard(props) {
           _focus={{
             
           }}
-          px={2.5}
-          py={1}
+          width="40px"
+          height="25px"
+          
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
         >
           {props.children}
         </Box>

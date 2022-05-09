@@ -81,7 +81,7 @@ export default function SignIn2() {
 
                     {/* button */}
                     <Spacer/>
-                    <Box pr="15px" pl="15px" w="100vw" h="40px" bottom="50px" mt="20px" position="sticky">
+                    <Box pr="15px" pl="15px" w="100vw" h="40px" bottom="40px" mt="20px" position="sticky">
                         <Link href='/SignIn3' >
                             <Button w="100%" borderRadius="full" bg="#303030" fontSize={f1} fontWeight="light" color="#ffffff" onMouseOver={()=>setbtnHover} >
                                 허용하기

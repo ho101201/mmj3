@@ -23,71 +23,80 @@ import {
 
     return(
         <div>
-            <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD">
-                <Text fontSize={f1} fontWeight="bold" align="center">가볼래요</Text>
-                <Link href='/Profile' position="absolute" right="11px" w="20px" h="20px">
-                    <Image src={btnX} alt="btnX"/>
-                </Link>
-            </Flex>
+            <Flex direction='column' bg="#FAFAFA" h="100vh">
 
-            <Flex direction='row' p="10px" alignItems="center" h="126px">
-                <Flex w="85px" h="85px" borderRadius="10px" overflow="hidden">
-                    <Image src={p1} alt="p1"/>
+                <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD" bg="white">
+                    <Text fontSize={f1} fontWeight="bold" align="center">가볼래요</Text>
+                    <Link href='/Profile' position="absolute" right="11px" w="20px" h="20px">
+                        <Image src={btnX} alt="btnX"/>
+                    </Link>
                 </Flex>
-                <Flex direction="column" ml='10px'>
-                    <Text fontWeight="bold" fontSize={f2}>카츠단길</Text>
-                    <Flex direction="row" mb='10px'>
-                        <Flex w="13px" h="13px">
+
+                <Flex direction="column" bg="white" mb="10px">
+                    <Flex direction='row' p="10px" alignItems="center" h="126px">
+                        <Flex w="85px" h="85px" borderRadius="10px" overflow="hidden">
+                            <Image src={p1} alt="p1"/>
+                        </Flex>
+                        <Flex direction="column" ml='10px'>
+                            <Text fontWeight="bold" fontSize={f2}>카츠단길</Text>
+                            <Flex direction="row" mb='10px'>
+                                <Flex w="13px" h="13px">
+                                    <Image src={starF} alt="starF"/>
+                                </Flex>
+                                <Text fontSize={f2}>4.5 (10)</Text>
+                            </Flex>
+                            <Text fontSize={f2}>신천/잠실 · 한식코스</Text>
+                        </Flex>
+                        <Spacer/>
+                        <Flex w="30px" h="30px">
                             <Image src={starF} alt="starF"/>
                         </Flex>
-                        <Text fontSize={f2}>4.5 (10)</Text>
                     </Flex>
-                    <Text fontSize={f2}>신천/잠실 · 한식코스</Text>
+                    <Box bg="#F6F6F6" h="1px" ml="10px" mr="10px" />
+                    <Link href='/Memo'>
+                        <Flex p="10px" h="52px" alignItems="center">
+                            <Text fontSize={f2} color="#333333">가고싶은 이유가 있나요?</Text>
+                            <Spacer/>
+                            <Flex w="7px" h="10px">
+                                <Image src={arrowR} alt="arrowR"/>
+                            </Flex>
+                        </Flex>
+                    </Link>
                 </Flex>
-                <Spacer/>
-                <Flex w="30px" h="30px">
-                    <Image src={starF} alt="starF"/>
-                </Flex>
-            </Flex>
-            <Link href='/Memo'>
-                <Flex p="10px" h="50px" alignItems="center">
-                    <Text fontSize={f2} color="#333333">가고싶은 이유가 있나요?</Text>
-                    <Spacer/>
-                    <Flex w="7px" h="10px">
-                        <Image src={arrowR} alt="arrowR"/>
-                    </Flex>
-                </Flex>
-            </Link>
 
-            <Flex direction='row' p="10px" alignItems="center" h="126px" mt="10px">
-                <Flex w="85px" h="85px" borderRadius="10px" overflow="hidden">
-                    <Image src={p1} alt="p1"/>
-                </Flex>
-                <Flex direction="column" ml='10px'>
-                    <Text fontWeight="bold" fontSize={f2}>카츠단길</Text>
-                    <Flex direction="row" mb='10px'>
-                        <Flex w="13px" h="13px">
+                <Flex direction="column" bg="white"  mb="10px">
+                    <Flex direction='row' p="10px" alignItems="center" h="126px">
+                        <Flex w="85px" h="85px" borderRadius="10px" overflow="hidden">
+                            <Image src={p1} alt="p1"/>
+                        </Flex>
+                        <Flex direction="column" ml='10px'>
+                            <Text fontWeight="bold" fontSize={f2}>카츠단길</Text>
+                            <Flex direction="row" mb='10px'>
+                                <Flex w="13px" h="13px">
+                                    <Image src={starF} alt="starF"/>
+                                </Flex>
+                                <Text fontSize={f2}>4.5 (10)</Text>
+                            </Flex>
+                            <Text fontSize={f2}>신천/잠실 · 한식코스</Text>
+                        </Flex>
+                        <Spacer/>
+                        <Flex w="30px" h="30px">
                             <Image src={starF} alt="starF"/>
                         </Flex>
-                        <Text fontSize={f2}>4.5 (10)</Text>
                     </Flex>
-                    <Text fontSize={f2}>신천/잠실 · 한식코스</Text>
+                    <Box bg="#F6F6F6" h="1px" ml="10px" mr="10px" />
+                    <Link href='/Memo'>
+                        <Flex p="10px" h="52px" alignItems="center">
+                            <Text fontSize={f2} color="#333333">가고싶은 이유가 있나요?</Text>
+                            <Spacer/>
+                            <Flex w="7px" h="10px">
+                                <Image src={arrowR} alt="arrowR"/>
+                            </Flex>
+                        </Flex>
+                    </Link>
                 </Flex>
-                <Spacer/>
-                <Flex w="30px" h="30px">
-                    <Image src={starF} alt="starF"/>
-                </Flex>
+            
             </Flex>
-
-            <Link href='/Memo'>
-                <Flex p="10px" h="50px" alignItems="center">
-                    <Text fontSize={f2} color="#333333">가고싶은 이유가 있나요?</Text>
-                    <Spacer/>
-                    <Flex w="7px" h="10px">
-                        <Image src={arrowR} alt="arrowR"/>
-                    </Flex>
-                </Flex>
-            </Link>
 
         </div>
     )

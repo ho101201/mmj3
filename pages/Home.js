@@ -147,7 +147,7 @@ import {
                     </Box>
                 }
 
-                <HStack overflow="hidden" mt='20px' spacing="14.5px" whiteSpace="nowrap" overflowX='hide' >
+                <HStack overflow="hidden" mt='20px' spacing="14.5px" whiteSpace="nowrap" overflowX='auto' >
                     {/* hilighted */}
                     <Link href='/Category'>
                         <Flex alignItems="center" justifyContent="center" ml="10px" position="relative">

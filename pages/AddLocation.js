@@ -34,14 +34,14 @@ import {
                     </Box>
                     <Input fontSize={f2} color="#A4A4A4" placeholder='동명(읍,면)으로 검색 (ex. 문정동)' bg="#F6F6F6" mr="5px" h="30px" border="none"/>
                 </Flex>
-                <Flex direction="column" bg="white">
-                    <Flex justifyContent="center" h="52px" alignItems="center" bg="white" >
+                <Flex direction="column">
+                    <Flex justifyContent="center" h="52px" alignItems="center" >
                         <Flex w="11px" h="13px" mr="6px">
                             <Image src={location} alt="location"/>
                         </Flex>
                         <Text fontSize={f2} >내 주변 지역으로 검색</Text>
                     </Flex> 
-                    <Box h="1px" bg="#F6F6F6" ml="10px" mr="10px"/>
+                    <Box h="10px" bg="#FAFAFA"/>
                 </Flex>
 
                 {/* #F6F6F6 */}

@@ -18,72 +18,75 @@ export default function Service() {
 
     return(
         <div>
-            <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD">
-                <Text fontSize={f1} fontWeight="bold" align="center">고객센터</Text>
-                <Link href='/Profile' position="absolute" left="11px" w="20px" h="20px">
-                    <Image src={arrowL} alt="arrowL"/>
+            <Flex direction="column" h="100vh" bg="#FAFAFA">
+
+                <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD" bg="white">
+                    <Text fontSize={f1} fontWeight="bold" align="center">고객센터</Text>
+                    <Link href='/Profile' position="absolute" left="11px" w="20px" h="20px">
+                        <Image src={arrowL} alt="arrowL"/>
+                    </Link>
+                </Flex> 
+                
+                <Link href='/Announcement'>
+                    <Flex p="10px" h="50px" mt="10px" borderBottom="1px solid #F6F6F6" bg="white">
+                        <Text fontWeight="bold" fontSize={f2} color="#333333">공지사항</Text>
+                        <Spacer/>
+                        <Flex w="7px" h="10px">
+                            <Image src={arrowR} alt="arrowR"/>
+                        </Flex>
+                    </Flex>
                 </Link>
-            </Flex> 
-            
-            <Link href='/Announcement'>
-                <Flex p="10px" h="50px" mt="10px">
-                    <Text fontWeight="bold" fontSize={f2} color="#333333">공지사항</Text>
-                    <Spacer/>
-                    <Flex w="7px" h="10px">
-                        <Image src={arrowR} alt="arrowR"/>
-                    </Flex>
-                </Flex>
-            </Link>
 
-            <Link >
-                <Flex p="10px" h="50px">
-                    <Text fontWeight="bold" fontSize={f2} color="#333333" >FAQ</Text>
-                    <Spacer/>
-                    <Flex w="7px" h="10px">
-                        <Image src={arrowR} alt="arrowR"/>
+                <Link >
+                    <Flex p="10px" h="50px" borderBottom="1px solid #F6F6F6"  bg="white">
+                        <Text fontWeight="bold" fontSize={f2} color="#333333" >FAQ</Text>
+                        <Spacer/>
+                        <Flex w="7px" h="10px">
+                            <Image src={arrowR} alt="arrowR"/>
+                        </Flex>
                     </Flex>
-                </Flex>
-            </Link>
+                </Link>
 
-            <Link>
-                <Flex p="10px" h="50px">
-                    <Text fontWeight="bold" fontSize={f2} color="#333333">피드백 및 지원</Text>
-                    <Spacer/>
-                    <Flex w="7px" h="10px">
-                        <Image src={arrowR} alt="arrowR"/>
+                <Link>
+                    <Flex p="10px" h="50px" mt="10px" mb="10px" borderBottom="1px solid #F6F6F6" bg="white">
+                        <Text fontWeight="bold" fontSize={f2} color="#333333">피드백 및 지원</Text>
+                        <Spacer/>
+                        <Flex w="7px" h="10px">
+                            <Image src={arrowR} alt="arrowR"/>
+                        </Flex>
                     </Flex>
-                </Flex>
-            </Link>
+                </Link>
 
-            <Link>
-                <Flex p="10px" h="50px">
-                    <Text fontWeight="bold" fontSize={f2} color="#333333" >서비스 이용약관</Text>
-                    <Spacer/>
-                    <Flex w="7px" h="10px">
-                        <Image src={arrowR} alt="arrowR"/>
+                <Link>
+                    <Flex p="10px" h="50px" borderBottom="1px solid #F6F6F6" bg="white">
+                        <Text fontWeight="bold" fontSize={f2} color="#333333" >서비스 이용약관</Text>
+                        <Spacer/>
+                        <Flex w="7px" h="10px">
+                            <Image src={arrowR} alt="arrowR"/>
+                        </Flex>
                     </Flex>
-                </Flex>
-            </Link>
+                </Link>
 
-            <Link>
-                <Flex p="10px" h="50px">
-                    <Text fontWeight="bold" fontSize={f2} color="#333333" >개인정보 처리방침</Text>
-                    <Spacer/>
-                    <Flex w="7px" h="10px">
-                        <Image src={arrowR} alt="arrowR"/>
+                <Link>
+                    <Flex p="10px" h="50px" borderBottom="1px solid #F6F6F6" bg="white"> 
+                        <Text fontWeight="bold" fontSize={f2} color="#333333" >개인정보 처리방침</Text>
+                        <Spacer/>
+                        <Flex w="7px" h="10px">
+                            <Image src={arrowR} alt="arrowR"/>
+                        </Flex>
                     </Flex>
-                </Flex>
-            </Link>
+                </Link>
 
-            <Link>
-                <Flex p="10px" h="50px">
-                    <Text fontWeight="bold" fontSize={f2} color="#333333" >위치기반 서비스 이용약관</Text>
-                    <Spacer/>
-                    <Flex w="7px" h="10px">
-                        <Image src={arrowR} alt="arrowR"/>
+                <Link>
+                    <Flex p="10px" h="50px" borderBottom="1px solid #F6F6F6" bg="white">
+                        <Text fontWeight="bold" fontSize={f2} color="#333333" >위치기반 서비스 이용약관</Text>
+                        <Spacer/>
+                        <Flex w="7px" h="10px">
+                            <Image src={arrowR} alt="arrowR"/>
+                        </Flex>
                     </Flex>
-                </Flex>
-            </Link>
+                </Link>
+            </Flex>
 
         </div>
     )

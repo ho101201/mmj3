@@ -2,19 +2,15 @@ import {
     Box,
     Flex,
     Text,
-    Heading,
-    VStack,
-    Img,
     Spacer,
     Link,
-    Grid,
-    GridItem,
     Input,
-    Icon,
     Button,
     InputGroup
   } from '@chakra-ui/react';
-import React from 'react';
+import React, { 
+    useState,
+} from 'react';
 import { 
     CheckIcon,
 } from '@chakra-ui/icons'
@@ -25,10 +21,7 @@ import check from './images/check.svg';
 
   
 export default function SignIn() {
-
-    const btnHover = () =>{
-
-    }
+    
 
     const [show, setShow] = React.useState(false)
     const inputted = () => setShow(!show)
@@ -137,7 +130,7 @@ export default function SignIn() {
                 <Box p="10px" w="100vw" h="40px" mb="30px">
                     {/* 유효성검사  */}
                     <Link w="100%" href='/SignIn2' >
-                        <Button w="100%" borderRadius="full" bg="#F6E229" fontSize={f1} fontWeight="bold" _hover={btnHover} >
+                        <Button w="100%" borderRadius="full" bg="#F6E229" fontSize={f1} fontWeight="bold" type='submit' >
                             가입하기
                         </Button>
                     </Link>
