@@ -42,6 +42,11 @@ export default function RWork() {
     const f2 ="14px";
     const f3 ="12px";
 
+    const fc1 ="#303030"
+    const fc2 ="#333333"
+    const fc3 ="#494949"
+    const fc4 ="#A4A4A4"
+
     return(
         <div>
             <Flex w="vw" h="40px" alignItems="center" justifyContent="center" borderBottom="1px solid #DDDDDD">
@@ -53,7 +58,7 @@ export default function RWork() {
                     </Link>
                 </Flex>
                 <Spacer/>
-                <Text fontWeight="extrabold" fontSize={f1} position="absolute">
+                <Text fontWeight="extrabold" fontSize={f1} position="absolute" color={fc2}>
                     카츠단길
                 </Text>
                 <Flex w="20px" h="20px" mr="9px">
@@ -88,7 +93,7 @@ export default function RWork() {
             <Flex direction="row" ml="10px" mr="10px" mt="6px">
                 <Flex direction="column" justifyContent="center">
                     <Flex direction='row' alignItems="flex-end">
-                        <Text fontSize={f1} fontWeight='bold'>카츠단길</Text>
+                        <Text fontSize={f1} color={fc2} fontWeight='bold'>카츠단길</Text>
                         <Text fontSize={f3} color="#565656" ml="6px">126m</Text>
                     </Flex>
                     <Text fontSize={f2} color="#565656">서울 송파구 송파대로 201 A동 1층 117호</Text>
@@ -98,7 +103,8 @@ export default function RWork() {
                     <Flex w="13px" h="13px" mr="5px">
                         <Image src={starF} alt="starF"/>
                     </Flex>
-                    <Text fontWeight="bold" fontSize={f2}>4.5 <text fontWeight="medium">(10)</text></Text>
+                    <Text fontWeight="bold" fontSize={f2} color={fc2}>4.5</Text>
+                    <Text fontWeight="medium" fontSize={f2} color={fc3} ml="2px">(10)</Text>
                 </Flex>
             </Flex>
             <Flex direction="row" justifyContent="center" mt="19px" mb='30px'>
@@ -113,49 +119,49 @@ export default function RWork() {
             <Grid templateColumns="repeat(5,1fr)" h="50px">
                 <GridItem display="flex" alignItems="center" justifyContent="center" borderBottom="2px solid #303030">
                     <Link href='/CutletInfo'>
-                        <Text fontSize={f2} fontWeight="bold" align="center" >정보</Text>
+                        <Text fontSize={f2} fontWeight="bold" align="center" color={fc2}>정보</Text>
                     </Link>
                 </GridItem>
                 <GridItem display="flex" alignItems="center" justifyContent="center" borderBottom="2px solid #F6E229">
                     <Link href='/CutletWork'>
-                        <Text fontSize={f2} fontWeight="medium" align="center">영업</Text>
+                        <Text fontSize={f2} fontWeight="medium" align="center" color={fc2}>영업</Text>
                     </Link>
                 </GridItem>
                 <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
                     <Link href='/CutletMenu'>
-                        <Text fontSize={f2} fontWeight="medium" align="center">메뉴</Text>
+                        <Text fontSize={f2} fontWeight="medium" align="center" color={fc2}>메뉴</Text>
                     </Link>
                 </GridItem>
                 <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
                     <Link href='/CutletPhoto'>
-                        <Text fontSize={f2} fontWeight="medium" align="center">사진</Text>
+                        <Text fontSize={f2} fontWeight="medium" align="center" color={fc2}>사진</Text>
                     </Link>
                 </GridItem>
                 <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
                     <Link href='/CutletReview'>
-                        <Text fontSize={f2} fontWeight="medium" align="center">후기</Text>
+                        <Text fontSize={f2} fontWeight="medium" align="center" color={fc2}>후기</Text>
                     </Link>
                 </GridItem>
             </Grid>
 
             <Flex direction="column" bg="#FAFAFA">
                 <Flex direction='column' bg='white' p="10px" pb="0px" pt="25px">
-                    <Text fontSize={f1} fontWeight="bold" >영업시간</Text>
+                    <Text fontSize={f1} fontWeight="bold" color={fc2}>영업시간</Text>
                     <Flex direction="row">
                         <Flex direction="column">
-                            <Text fontSize={f2} mt="8px">평일</Text>
-                            <Text fontSize={f2} mt="8px">주말</Text>
-                            <Text fontSize={f2} mt="8px">브레이크</Text>
-                            <Text fontSize={f2} mt="8px">휴무일</Text>
-                            <Text fontSize={f2} mt="8px">라스트오더</Text>
+                            <Text fontSize={f2} mt="8px" color={fc2}>평일</Text>
+                            <Text fontSize={f2} mt="8px" color={fc2}>주말</Text>
+                            <Text fontSize={f2} mt="8px" color={fc2}>브레이크</Text>
+                            <Text fontSize={f2} mt="8px" color={fc2}>휴무일</Text>
+                            <Text fontSize={f2} mt="8px" color={fc2}>라스트오더</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column">
-                            <Text fontSize={f2} mt="8px" align="end">11:00 ~ 22:00</Text>
-                            <Text fontSize={f2} mt="8px" align="end">11:00 ~ 20:00</Text>
-                            <Text fontSize={f2} mt="8px" align="end">15:00 ~ 17:00</Text>
-                            <Text fontSize={f2} mt="8px" align="end">공휴일 영업, 명절 당일 휴무</Text>
-                            <Text fontSize={f2} mt="8px" align="end">매장19:00 / 포장 21:00</Text>
+                            <Text fontSize={f2} mt="8px" color={fc2} align="end">11:00 ~ 22:00</Text>
+                            <Text fontSize={f2} mt="8px" color={fc2} align="end">11:00 ~ 20:00</Text>
+                            <Text fontSize={f2} mt="8px" color={fc2} align="end">15:00 ~ 17:00</Text>
+                            <Text fontSize={f2} mt="8px" color={fc2} align="end">공휴일 영업, 명절 당일 휴무</Text>
+                            <Text fontSize={f2} mt="8px" color={fc2} align="end">매장19:00 / 포장 21:00</Text>
                         </Flex>
                     </Flex>
                 
@@ -187,14 +193,14 @@ export default function RWork() {
                 </Flex>
 
                 <Flex direction="column"  bg="white" p="10px" pb="0px" pt="35px">
-                    <Text fontSize={f1} fontWeight="bold">주차</Text>
-                    <Text fontSize={f2} mt="8px" mb="27px">건물 내 주차장 ( 2시간 무료주차 )</Text>
+                    <Text fontSize={f1} fontWeight="bold" color={fc2}>주차</Text>
+                    <Text fontSize={f2} mt="8px" mb="27px" color={fc2}>건물 내 주차장 ( 2시간 무료주차 )</Text>
                     <Box h="1px" bg="#F6F6F6"/>
                 </Flex>
 
                 <Flex direction="column"  bg="white" p="10px" pb="0px"  pt="35px" mb="30px">
-                    <Text fontSize={f1} fontWeight="bold" >단체 예약</Text>
-                    <Text fontSize={f2} mt="8px" mb="27px">홀 최대 66석, 룸 최대 32석 예약가능</Text>
+                    <Text fontSize={f1} fontWeight="bold" color={fc2}>단체 예약</Text>
+                    <Text fontSize={f2} mt="8px" mb="27px" color={fc2}>홀 최대 66석, 룸 최대 32석 예약가능</Text>
                     <Box h="1px" bg="#F6F6F6"/>
                 </Flex>
 
@@ -202,28 +208,28 @@ export default function RWork() {
             </Flex>
 
             {/* tapbar */}
-            <Box borderTop="1px solid #E8E8E8" h="80px"  pl="7px" pr="7px" display="absolute" position="sticky" bottom="0px" bg="#ffffff">
+            <Box borderTop="1px solid #E8E8E8" h="80px" pl="7px" pr="7px" display="absolute" position="sticky" bottom="0px" bg="#ffffff">
                     <Flex direction="row" w="vw" mt="13px" >
                         <Spacer/>
                         <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
                             <Link href='/WritingRev' w="24px" h="24px">
                                 <Image src={review} alt="review"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >후기쓰기</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>후기쓰기</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
                             <Link w="24px" h="24px">
                                 <Image src={call} alt="call"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >전화</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>전화</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
                             <Link w="24px" h="24px">
                                 <Image src={location} alt="location"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >길찾기</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>길찾기</Text>
                         </Flex>
                         <Spacer/>
                     </Flex>

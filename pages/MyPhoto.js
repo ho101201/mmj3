@@ -74,6 +74,11 @@ export default function RPhoto() {
     const f2 ="14px";
     const f3 ="12px";
 
+    const fc1 ="#303030"
+    const fc2 ="#333333"
+    const fc3 ="#494949"
+    const fc4 ="#A4A4A4"
+
     const options = ['전체', '업체', '방문자','음식', '매장' ]
 
     const { getRootProps, getRadioProps } = useRadioGroup({

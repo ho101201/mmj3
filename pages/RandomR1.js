@@ -24,6 +24,11 @@ export default function Random1() {
     const f2 ="14px";
     const f3 ="12px";
 
+    const fc1 ="#303030"
+    const fc2 ="#333333"
+    const fc3 ="#494949"
+    const fc4 ="#A4A4A4"
+
     return(
         <div>
             <Flex w="vw" h="40px" alignItems="center" justifyContent="center" borderBottom="1px solid #DDDDDD">
@@ -49,8 +54,8 @@ export default function Random1() {
                         <Image src={FNK} alt="FNK"/>
                     </Flex>
                 </Flex>
-                <Text fontSize={f1} fontWeight="bold" mt="15px">원하는 카테고리를 선택해주세요</Text>
-                <Text fontSize={f2}>중복 선택 가능합니다</Text>
+                <Text fontSize={f1} color={fc2} fontWeight="bold" mt="15px">원하는 카테고리를 선택해주세요</Text>
+                <Text fontSize={f2} color={fc3}>중복 선택 가능합니다</Text>
 
                 <Flex w="90vw" h="8px" mt="17px" mb="30px" justifyContent="center">
                     <Flex w="100%" h="2px" bg="#303030" >
@@ -59,34 +64,34 @@ export default function Random1() {
 
                 <Wrap spacing="10px" justify="center" pr="30px" pl="30px" >
                         <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#F6E229" borderRadius="full" border="1px solid #303030">
-                            <Text  fontSize={f2} >메뉴</Text>
+                            <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                        </Flex>
+                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
+                            <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                        </Flex>
+                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
+                            <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                        </Flex>
+                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
+                            <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                        </Flex>
+                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
+                            <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                        </Flex>
+                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
+                            <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                        </Flex>
+                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
+                            <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                        </Flex>
+                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
+                            <Text  fontSize={f2} color={fc1}>메뉴</Text>
                         </Flex>
                         <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
                             <Text  fontSize={f2} >메뉴</Text>
                         </Flex>
                         <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                            <Text  fontSize={f2} >메뉴</Text>
-                        </Flex>
-                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                            <Text  fontSize={f2} >메뉴</Text>
-                        </Flex>
-                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                            <Text  fontSize={f2} >메뉴</Text>
-                        </Flex>
-                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                            <Text  fontSize={f2} >메뉴</Text>
-                        </Flex>
-                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                            <Text  fontSize={f2} >메뉴</Text>
-                        </Flex>
-                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                            <Text  fontSize={f2} >메뉴</Text>
-                        </Flex>
-                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                            <Text  fontSize={f2} >메뉴</Text>
-                        </Flex>
-                        <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                            <Text  fontSize={f2} >메뉴</Text>
+                            <Text  fontSize={f2} color={fc1}>메뉴</Text>
                         </Flex>
                 </Wrap>
 

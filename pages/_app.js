@@ -25,6 +25,11 @@ function MyApp({ Component, pageProps }) {
         fontWeight: 'light',
         color: "#303030"
       },
+      Text: {
+        baseStyle:{
+          color: "#303030"
+        }
+      }
     },
   })
   

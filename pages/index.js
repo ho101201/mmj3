@@ -24,6 +24,11 @@ export default function LogIn() {
   const f2 ="14px";
   const f3 ="12px";
 
+  const fc1 ="#303030"
+  const fc2 ="#333333"
+  const fc3 ="#494949"
+  const fc4 ="#A4A4A4"
+  
   return (
     
       <div>  
@@ -31,10 +36,10 @@ export default function LogIn() {
           <Flex direction="column" w="100%" h="100%" >
             
             <Flex direction="column" alignItems="center" justifyContent="center" flex='1'>
-              <Text fontSize="36px" lang='ko' fontWeight={900} >
+              <Text fontSize="36px" lang='ko' fontWeight={900} color={fc2} >
                 오늘 뭐 먹지?
               </Text>
-              <Text fontSize="24px">
+              <Text fontSize="24px" color={fc2}>
                 고민을 덜어 드릴게요
               </Text>
             </Flex>
@@ -48,8 +53,8 @@ export default function LogIn() {
                       <Image src={kakao} alt="kakao"/>
                     </Box>
                     <Spacer/>
-                    <Text position="absolute" >
-                      카카오 로그인
+                    <Text position="absolute" color={fc1} fontSize={f2}>
+                      카카오로 로그인
                     </Text>
                   </Flex>
                 </Link>
@@ -59,8 +64,8 @@ export default function LogIn() {
                     <Image src={naver} alt="naver"/>
                   </Box>
                   <Spacer/>
-                <Text  position="absolute">
-                  NAVER 로그인
+                <Text  position="absolute" color={fc1} fontSize={f2}>
+                  NAVER로 로그인
                 </Text>
               </Flex>
               <Flex bg="#FFFFFF" alignItems="center" justifyContent="center" w="100%" borderRadius="10px" h="40px">
@@ -68,8 +73,8 @@ export default function LogIn() {
                     <Image src={facebook} alt="facebook"/>
                   </Box>
                   <Spacer/>
-                <Text position="absolute">
-                  페이스북 로그인
+                <Text position="absolute" color={fc1} fontSize={f2}>
+                  페이스북으로 로그인
                 </Text>
               </Flex>
               <Flex bg="#FFFFFF" alignItems="center" justifyContent="center" w="100%" borderRadius="10px" h="40px">
@@ -77,8 +82,8 @@ export default function LogIn() {
                     <Image src={apple} alt="apple"/>
                   </Box>
                   <Spacer/>
-                <Text position="absolute">
-                  Apple 로그인
+                <Text position="absolute" color={fc1} fontSize={f2}>
+                  Apple로 로그인
                 </Text>
               </Flex>
               <Flex bg="#FFFFFF" alignItems="center" justifyContent="center" w="100%" borderRadius="10px" h="40px">
@@ -86,8 +91,8 @@ export default function LogIn() {
                     <Image src={mail} alt="mail"/>
                   </Box>
                   <Spacer/>
-                <Text position="absolute">
-                  이메일 로그인
+                <Text position="absolute" color={fc1} fontSize={f2}>
+                  이메일로 로그인
                 </Text>
               </Flex>
             </VStack>

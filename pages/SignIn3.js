@@ -36,6 +36,11 @@ export default function SignIn3() {
     const f2 ="14px";
     const f3 ="12px";
 
+    const fc1 ="#303030"
+    const fc2 ="#333333"
+    const fc3 ="#494949"
+    const fc4 ="#A4A4A4"
+
     const [Check1, setCheck1] = useState(false);
     
     const checking1 =()=> {
@@ -86,20 +91,20 @@ export default function SignIn3() {
                         </Link>
                     </Flex>
                     <Spacer/>
-                    <Text fontWeight="extrabold" fontSize={f1} position="absolute">
+                    <Text fontWeight="extrabold" fontSize={f1} color={fc2} position="absolute">
                         회원가입
                     </Text>
                 </Flex>
 
                 <Flex w="100%" h="100vh" bg=" #FAFAFA" direction="column" alignItems="center" p="10px">
                     <Flex direction="column" m="10px" mt="10px" p="10px" borderRadius="30px" w="100%" minH="410px" alignItems="center" justifyContent="center" bg="white">
-                        <Text fontSize={f1} fontWeight="bold" mb="1px">
+                        <Text fontSize={f1} color={fc2} fontWeight="bold" mb="1px">
                             약관동의
                         </Text>
-                        <Text fontSize={f2} fontWeight="normal"  >
+                        <Text fontSize={f2} color={fc3} fontWeight="normal"  >
                             고객님께서는 동의를 거부할 수 있습니다.
                         </Text>
-                        <Text fontSize={f2} fontWeight="normal">
+                        <Text fontSize={f2} color={fc3} fontWeight="normal">
                             단, 필수항목 동의 거부 시에는 회원가입이 제한됩니다.
                         </Text>
                         <Box w="100%" h='2px' mt="17px" bg='#303030'/>
@@ -126,10 +131,10 @@ export default function SignIn3() {
                                     </Flex>
                                 </Flex>
                             }
-                                <Text fontSize={f3} fontWeight="bold" ml="9px">약관 전체 동의</Text>
+                                <Text fontSize={f3} color={fc1} fontWeight="bold" ml="9px">약관 전체 동의</Text>
                             </Flex>
 
-                            <Box w="100%" h='2px' mt="10px" bg='#F6F6F6'/>
+                            <Box w="100%" h='1px' mt="10px" bg='#F6F6F6'/>
 
                             <Flex alignItems="center" mt="15px">
                             {Check2?
@@ -152,9 +157,9 @@ export default function SignIn3() {
                                 </Flex>
                             }
 
-                                <Text fontSize={f3} fontWeight={400} ml="9px">이용약관에 동의 합니다 (필수)</Text>
+                                <Text fontSize={f3} color={fc3} fontWeight={400} ml="9px">이용약관에 동의 합니다 (필수)</Text>
                                 <Spacer/>
-                                <Button fontSize="10px" fontWeight={400} border="1px solid #303030" borderRadius="4px" bg="#ffffff" w="55px" h="20px">내용보기</Button>
+                                <Button fontSize="10px" color={fc1} fontWeight={400} border="1px solid #303030" borderRadius="4px" bg="#ffffff" w="55px" h="20px">내용보기</Button>
                             </Flex>
 
                             <Flex alignItems="center" mt="12px">
@@ -178,14 +183,14 @@ export default function SignIn3() {
                                 </Flex>
                             }
 
-                                <Text fontSize={f3} fontWeight={400} ml="9px">개인정보 수집 및 이용에 동의합니다 (필수)</Text>
+                                <Text fontSize={f3} color={fc3} fontWeight={400} ml="9px">개인정보 수집 및 이용에 동의합니다 (필수)</Text>
                                 <Spacer/>
-                                <Button fontSize="10px" fontWeight={400} border="1px solid #303030" borderRadius="4px" bg="#ffffff" w="55px" h="20px">내용보기</Button>
+                                <Button fontSize="10px" color={fc1} fontWeight={400} border="1px solid #303030" borderRadius="4px" bg="#ffffff" w="55px" h="20px">내용보기</Button>
                             </Flex>
                             
-                            <Text fontSize={f3} fontWeight="bold" mt="40px">마케팅 정보 수신 (선택)</Text>
+                            <Text fontSize={f3} color={fc1} fontWeight="bold" mt="40px">마케팅 정보 수신 (선택)</Text>
 
-                            <Box w="100%" h='2px' mt="10px" bg='#F6F6F6'/>
+                            <Box w="100%" h='1px' mt="10px" bg='#F6F6F6'/>
 
                             <Flex alignItems="center" mt="15px">
                             {Check4?
@@ -207,7 +212,7 @@ export default function SignIn3() {
                                     </Box>
                                 </Flex>
                             }
-                                <Text fontSize={f3} fontWeight={400} ml="9px">전체 동의합니다</Text>
+                                <Text fontSize={f3} color={fc3} fontWeight={400} ml="9px">전체 동의합니다</Text>
 
                                 <Spacer/>
 
@@ -230,7 +235,7 @@ export default function SignIn3() {
                                     </Box>
                                 </Flex>
                             }
-                                <Text fontSize={f3} fontWeight={400} ml="9px" mr="25px">SNS</Text>
+                                <Text fontSize={f3} color={fc3} fontWeight={400} ml="9px" mr="25px">SNS</Text>
 
                             {Check6?
                                 <Flex alignItems='center' justifyContent="center" onClick={()=>checking6()}>
@@ -251,9 +256,9 @@ export default function SignIn3() {
                                     </Box>
                                 </Flex>
                             }
-                                <Text fontSize={f3} fontWeight={400} ml="9px" mr="16px">Email</Text>
+                                <Text fontSize={f3} color={fc3} fontWeight={400} ml="9px" mr="16px">Email</Text>
                             </Flex>
-                            <Text color="#A4A4A4" fontSize="10px" mt="11px" ml="14px" >-App Push 수신 동의 상태는 앱 내 설정메뉴에서 별도로 변경할 수 있습니다</Text>
+                            <Text color={fc4} fontSize="10px" mt="11px" ml="14px" >-App Push 수신 동의 상태는 앱 내 설정메뉴에서 별도로 변경할 수 있습니다</Text>
                         </Flex>
 
 

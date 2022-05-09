@@ -80,6 +80,11 @@ export default function RPhoto() {
     const f2 ="14px";
     const f3 ="12px";
 
+    const fc1 ="#303030"
+    const fc2 ="#333333"
+    const fc3 ="#494949"
+    const fc4 ="#A4A4A4"
+
     const options = ['전체', '업체', '방문자','음식', '매장' ]
 
     const { getRootProps, getRadioProps } = useRadioGroup({
@@ -102,7 +107,7 @@ export default function RPhoto() {
                     </Link>
                 </Flex>
                 <Spacer/>
-                <Text fontWeight="extrabold" fontSize={f1} position="absolute">
+                <Text fontWeight="extrabold" fontSize={f1} color={fc2} position="absolute">
                     카츠단길
                 </Text>
                 <Flex w="20px" h="20px" mr="9px">
@@ -143,7 +148,7 @@ export default function RPhoto() {
             <Flex direction="row" ml="10px" mr="10px" mt="6px">
                 <Flex direction="column" justifyContent="center">
                     <Flex direction='row' alignItems="flex-end">
-                        <Text fontSize={f1} fontWeight='bold'>카츠단길</Text>
+                        <Text fontSize={f1} color={fc2} fontWeight='bold'>카츠단길</Text>
                         <Text fontSize={f3} color="#565656" ml="6px">126m</Text>
                     </Flex>
                     <Text fontSize={f2} color="#565656">서울 송파구 송파대로 201 A동 1층 117호</Text>
@@ -153,7 +158,8 @@ export default function RPhoto() {
                     <Flex w="13px" h="13px" mr="5px">
                         <Image src={starF} alt="starF"/>
                     </Flex>
-                    <Text fontWeight="bold" fontSize={f2}>4.5 <text fontWeight="medium">(10)</text></Text>
+                    <Text fontWeight="bold" fontSize={f2} color={fc2}>4.5</Text>
+                    <Text fontWeight="medium" fontSize={f2} color={fc3} ml="2px">(10)</Text>
                 </Flex>
             </Flex>
             <Flex direction="row" justifyContent="center" mt="19px" mb='30px'>
@@ -168,27 +174,27 @@ export default function RPhoto() {
             <Grid templateColumns="repeat(5,1fr)" h="50px">
                 <GridItem display="flex" alignItems="center" justifyContent="center" borderBottom="2px solid #303030">
                     <Link href='/CutletInfo'>
-                        <Text fontSize={f2} fontWeight="bold" align="center" >정보</Text>
+                        <Text fontSize={f2} fontWeight="bold" align="center" color={fc2}>정보</Text>
                     </Link>
                 </GridItem>
                 <GridItem display="flex" alignItems="center" justifyContent="center" borderBottom="2px solid #303030">
                     <Link href='/CutletWork'>
-                        <Text fontSize={f2} fontWeight="medium" align="center">영업</Text>
+                        <Text fontSize={f2} fontWeight="medium" align="center" color={fc2}>영업</Text>
                     </Link>
                 </GridItem>
                 <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
                     <Link href='/CutletMenu'>
-                        <Text fontSize={f2} fontWeight="medium" align="center">메뉴</Text>
+                        <Text fontSize={f2} fontWeight="medium" align="center" color={fc2}>메뉴</Text>
                     </Link>
                 </GridItem>
                 <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #F6E229">
                     <Link href='/CutletPhoto'>
-                        <Text fontSize={f2} fontWeight="medium" align="center">사진</Text>
+                        <Text fontSize={f2} fontWeight="medium" align="center" color={fc2}>사진</Text>
                     </Link>
                 </GridItem>
                 <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
                     <Link href='/CutletReview'>
-                        <Text fontSize={f2} fontWeight="medium" align="center">후기</Text>
+                        <Text fontSize={f2} fontWeight="medium" align="center" color={fc2}>후기</Text>
                     </Link>
                 </GridItem>
             </Grid>
@@ -211,7 +217,7 @@ export default function RPhoto() {
 
                 <Flex p="10px" direction="column" bg="white">
 
-                    <Text fontSize={f1} fontWeight="bold" mt="15px">사진 (100)</Text>
+                    <Text fontSize={f1} fontWeight="bold" mt="15px" color={fc2}>사진 (100)</Text>
                     
                     <Grid templateColumns="repeat(3, 1fr)" templateRows="repeat(2, 1fr)" mt='16px' mb="20px" gap={1} >
                         <GridItem>
@@ -254,21 +260,21 @@ export default function RPhoto() {
                             <Link href='/WritingRev' w="24px" h="24px">
                                 <Image src={review} alt="review"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >후기쓰기</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>후기쓰기</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
                             <Link w="24px" h="24px">
                                 <Image src={call} alt="call"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >전화</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>전화</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
                             <Link w="24px" h="24px">
                                 <Image src={location} alt="location"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >길찾기</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>길찾기</Text>
                         </Flex>
                         <Spacer/>
 

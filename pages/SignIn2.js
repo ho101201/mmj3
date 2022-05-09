@@ -25,6 +25,11 @@ export default function SignIn2() {
     const f2 ="14px";
     const f3 ="12px";
 
+    const fc1 ="#303030"
+    const fc2 ="#333333"
+    const fc3 ="#494949"
+    const fc4 ="#A4A4A4"
+
     const [btnHover, setbtnHover] = useState();
 
 
@@ -38,7 +43,7 @@ export default function SignIn2() {
                         </Link>
                     </Flex>
                     <Spacer/>
-                    <Text fontWeight="extrabold" fontSize={f1} position="absolute">
+                    <Text fontWeight="extrabold" fontSize={f1} color={fc2} position="absolute">
                         회원가입
                     </Text>
                 </Flex>
@@ -46,10 +51,10 @@ export default function SignIn2() {
                 {/* container */} 
                 <Flex w="100%" h="100vh" bg="#FAFAFA" direction="column" alignItems="center" p="10px">
                     <Flex direction="column" m="10px" mt="10px" p="10px" borderRadius="30px" w="100%" h="394px" alignItems="center" justifyContent="center" bg="white">
-                        <Text fontSize={f1} fontWeight="bold"  mt="15px" mb="1px">
+                        <Text fontSize={f1} fontWeight="bold" color={fc2}  mt="15px" mb="1px">
                             뭐먹지 정보 이용 안내
                         </Text>
-                        <Text fontSize={f2} fontWeight="normal">
+                        <Text fontSize={f2} fontWeight="normal" color={fc3}>
                             뭐먹지 이용을 위해 아래의 권한을 허용해주세요
                         </Text>
                         <Box w="100%" h='2px' mt="17px" bg='#303030' />
@@ -62,9 +67,9 @@ export default function SignIn2() {
                                 <Image src={file} width="14px" height="11px" alt="file"/>
                             </Box>
                         </Flex>
-                        <Text fontSize={f3} fontWeight="bold" mt="5px">저장소</Text>
-                        <Text fontSize={f3} fontWeight="light" mt="3px" >내 기기에 저장되어 있는 이미지를 이용하여</Text>
-                        <Text fontSize={f3} fontWeight="light">데이터를 저장하기위해 저장소 접근이 필요합니다.</Text>
+                        <Text fontSize={f3} color={fc1} fontWeight="bold" mt="5px">저장소</Text>
+                        <Text fontSize={f3} color={fc3} fontWeight="light" mt="3px">내 기기에 저장되어 있는 이미지를 이용하여</Text>
+                        <Text fontSize={f3} color={fc3} fontWeight="light">데이터를 저장하기위해 저장소 접근이 필요합니다.</Text>
 
                         <Flex alignItems='center' justifyContent="center" mt="18px">
                             <Box h="40px">
@@ -74,9 +79,9 @@ export default function SignIn2() {
                                 <Image src={camera} width="14px" height="11px" alt="camera"/>
                             </Box>
                         </Flex>
-                        <Text fontSize={f3} fontWeight="bold" mt="5px">카메라</Text>
-                        <Text fontSize={f3} fontWeight="light" maxW="246px" mt="3px" >내 기기에 카메라를 통하여 사진을 등록하기 위해</Text>
-                        <Text fontSize={f3} fontWeight="light" maxW="246px"  >카메라 접근이 필요합니다.</Text>
+                        <Text fontSize={f3} color={fc1} fontWeight="bold" mt="5px">카메라</Text>
+                        <Text fontSize={f3} color={fc3} fontWeight="light" maxW="246px" mt="3px" >내 기기에 카메라를 통하여 사진을 등록하기 위해</Text>
+                        <Text fontSize={f3} color={fc3} fontWeight="light" maxW="246px"  >카메라 접근이 필요합니다.</Text>
                     </Flex>
 
                     {/* button */}

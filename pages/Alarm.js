@@ -19,10 +19,15 @@ import {
     const f2 ="14px";
     const f3 ="12px";
 
+    const fc1 ="#303030"
+    const fc2 ="#333333"
+    const fc3 ="#494949"
+    const fc4 ="#A4A4A4"
+
     return(
         <div>
             <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD">
-                <Text fontSize={f1} fontWeight="bold" align="center">알림</Text>
+                <Text fontSize={f1} fontWeight="bold" align="center" color={fc2}>알림</Text>
                 <Link href='/Home' position="absolute" right="11px" w="20px" h="20px">
                     <Image src={btnX} alt="btnX" />
                 </Link>
@@ -39,19 +44,18 @@ import {
             </Flex> */}
 
             <Flex direction="column" mt="15px" pr="20px" pl="20px" justifyContent="flex-start">
-                <Text fontWeight="bold" fontSize={f1} >회원가입 완료</Text>
-                <Text fontWeight="medium" fontSize={f2} >가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
-                <Text fontSize="10px" color="#A4A4A4" mb="17px">1시간전</Text>
+                <Text fontWeight="bold" fontSize={f1} color={fc2}>회원가입 완료</Text>
+                <Text fontWeight="medium" fontSize={f2} color={fc3}>가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
+                <Text fontSize="10px" color={fc4} mt="17px" mb="20px">1시간전</Text>
             </Flex>
             <Box w="vw" h="1px" ml="10px" mr="10px" bg="#F6F6F6"/>
 
             <Flex direction="column" mt="15px" pr="20px" pl="20px" justifyContent="flex-start">
-                <Text fontWeight="bold" fontSize={f1} >회원가입 완료</Text>
-                <Text fontWeight="medium" fontSize={f2} >가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
-                <Text fontSize="10px" color="#A4A4A4" mb="17px">1시간전</Text>
+                <Text fontWeight="bold" fontSize={f1} color={fc2} >회원가입 완료</Text>
+                <Text fontWeight="medium" fontSize={f2} color={fc3} >가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
+                <Text fontSize="10px" color={fc4} mt="17px" mb="20px">1시간전</Text>
             </Flex>
             <Box w="vw" h="1px" ml="10px" mr="10px" bg="#F6F6F6"/>
-
 
         </div>
     )

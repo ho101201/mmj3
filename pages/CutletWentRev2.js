@@ -17,10 +17,15 @@ import {
     const f2 ="14px";
     const f3 ="12px";
 
+    const fc1 ="#303030"
+    const fc2 ="#333333"
+    const fc3 ="#494949"
+    const fc4 ="#A4A4A4"
+
     return(
         <div>
             <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD">
-                <Text fontSize={f1} fontWeight="bold" align="center">가봤어요</Text>
+                <Text fontSize={f1} color={fc2} fontWeight="bold" align="center">가봤어요</Text>
                 <Link href='/CutletInfo' position="absolute" right="11px" w="20px" h="20px">
                     <Image src={btnX} alt="btnX"/>
                 </Link>

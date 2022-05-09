@@ -18,6 +18,11 @@ export default function Random2() {
     const f1 ="16px";
     const f2 ="14px";
     const f3 ="12px";
+    
+    const fc1 ="#303030"
+    const fc2 ="#333333"
+    const fc3 ="#494949"
+    const fc4 ="#A4A4A4"
 
     return(
         <div>
@@ -30,7 +35,7 @@ export default function Random2() {
                     </Link>
                 </Flex>
                 <Spacer/>
-                <Text fontWeight="extrabold" fontSize={f1} position="absolute">
+                <Text fontWeight="extrabold" fontSize={f2} color={fc2} position="absolute">
                     랜덤추천
                 </Text>
                 <Flex w="20px" h="20px" mr="9px">
@@ -44,12 +49,12 @@ export default function Random2() {
                         <Image src={store} alt="store"/>
                     </Flex>
                 </Flex>
-                <Text fontSize={f1} fontWeight="bold" mt="15px">가츠단길 문정점</Text>
-                <Text fontSize={f2} fontWeight="medium">음식점 ▶ 일식 ▶ 돈까스</Text>
+                <Text fontSize={f1} color={fc2} fontWeight="bold" mt="15px">가츠단길 문정점</Text>
+                <Text fontSize={f2} color={fc3} fontWeight="medium">음식점 ▶ 일식 ▶ 돈까스</Text>
 
                 <Flex alignItems="center" justifyContent="center">
                     <Link href='/CutletInfo'>
-                        <Button h="30px" mt="17px" fontSize={f3} bg="#F6E229" border="1px solid #303030" borderRadius="full">상세정보 보기</Button>
+                        <Button h="30px" mt="17px" fontSize={f3} color={fc1} bg="#F6E229" border="1px solid #303030" borderRadius="full">상세정보 보기</Button>
                     </Link>
                 </Flex>
 

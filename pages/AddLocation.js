@@ -19,6 +19,11 @@ import {
     const f2 ="14px";
     const f3 ="12px";
 
+    const fc1 ="#303030"
+    const fc2 ="#333333"
+    const fc3 ="#494949"
+    const fc4 ="#A4A4A4"
+
     return(
         <div>
             <Flex direction="column" bg="white">

@@ -75,21 +75,15 @@ import {
     const f2 ="14px";
     const f3 ="12px";
 
+    const fc1 ="#303030"
+    const fc2 ="#333333"
+    const fc3 ="#494949"
+    const fc4 ="#A4A4A4"
+
     const [Check, setCheck] = useState(true);
     const checkAlarm =()=> {
         setCheck( Check => !Check );
     }
-
-    const styles = {
-        control: base => ({
-          ...base,
-          fontFamily: "Noto Sans KR"
-        }),
-        menu: base => ({
-          ...base,
-          fontFamily: "Noto Sans KR"
-        })
-      };
 
     const SelectBoxWrapper = styled.div`
 	display: flex;
@@ -122,7 +116,7 @@ import {
                         </Select>
                     </SelectBoxWrapper> */}
                     <Link href='/SetLocation' display="flex" flexDirection="row" ml="10px">
-                        <Text id='location' fontSize={f2} fontWeight="bold" mr="7px" >송파구 문정동</Text>
+                        <Text id='location' fontSize={f2} color={fc2} fontWeight="bold" mr="7px">송파구 문정동</Text>
                         <Box w="12px" h="20px" position="absolute" left="104px" top="4px" >
                             <Image src={arrowB} alt="arrowB"/>
                         </Box>
@@ -157,7 +151,7 @@ import {
                             <Box position="absolute" w="18px" h="12px" mb="20px">
                                 <Image src={foodA1} alt="foodA1"/>
                             </Box>
-                            <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">전체</Text>
+                            <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">전체</Text>
                         </Flex>
                     </Link>
 
@@ -169,7 +163,7 @@ import {
                         <Box position="absolute" w="18px" h="12px" mb="20px">
                             <Image src={foodN2} alt="foodN2"/>
                         </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">한식</Text>
+                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">한식</Text>
                     </Flex>
 
                     <Flex alignItems="center" justifyContent="center" position="relative">
@@ -179,7 +173,7 @@ import {
                         <Box position="absolute" w="18px" h="12px" mb="20px">
                             <Image src={foodN3} alt="foodN3" />
                         </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">일식</Text>
+                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">일식</Text>
                     </Flex>
 
                     <Flex alignItems="center" justifyContent="center" position="relative">
@@ -189,7 +183,7 @@ import {
                         <Box position="absolute" w="18px" h="12px" mb="20px">
                             <Image src={foodN4} alt="foodN4"/>
                         </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">중식</Text>
+                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">중식</Text>
                     </Flex>
 
                     <Flex alignItems="center" justifyContent="center" position="relative">
@@ -199,7 +193,7 @@ import {
                         <Box position="absolute" w="18px" h="12px" mb="20px">
                             <Image src={foodN5} alt="foodN5"/>
                         </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">양식</Text>
+                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">양식</Text>
                     </Flex> 
 
                     <Flex alignItems="center" justifyContent="center" position="relative">
@@ -209,7 +203,7 @@ import {
                         <Box position="absolute" w="18px" h="12px" mb="20px">
                             <Image src={foodN6} alt="foodN6"/>
                         </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">분식</Text>
+                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">분식</Text>
                     </Flex> 
 
                     <Flex alignItems="center" justifyContent="center" position="relative">
@@ -219,7 +213,7 @@ import {
                         <Box position="absolute" w="18px" h="12px" mb="20px">
                             <Image src={foodN7} alt="foodN7"/>
                         </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">퓨전</Text>
+                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">퓨전</Text>
                     </Flex> 
 
                     <Flex alignItems="center" justifyContent="center" position="relative">
@@ -229,7 +223,7 @@ import {
                         <Box position="absolute" w="18px" h="12px" mb="20px">
                             <Image src={foodN8} alt="foodN8"/>
                         </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">퓨전</Text>
+                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">퓨전</Text>
                     </Flex> 
                     
                     <Flex alignItems="center" justifyContent="center" position="relative">
@@ -239,8 +233,8 @@ import {
                         <Box position="absolute" w="18px" h="12px" mb="26px">
                             <Image src={foodN9} alt="foodN9"/>
                         </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="16px">디저트</Text>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="36px">베이커리</Text>
+                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="16px">디저트</Text>
+                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="36px">베이커리</Text>
                     </Flex> 
 
                     <Flex alignItems="center" justifyContent="center" position="relative">
@@ -250,7 +244,7 @@ import {
                         <Box position="absolute" w="18px" h="12px" mb="20px">
                             <Image src={foodN10} alt="foodN10"/>
                         </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">기타</Text>
+                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">기타</Text>
                     </Flex> 
                 </HStack>
 
@@ -309,9 +303,9 @@ import {
 
                 </Flex> */}
 
-                <Box mt="26px" ml="10px">
-                    <Text fontSize={f1} fontWeight="bold" >최근에 먹은 것들</Text>
-                    <HStack spacing="10px" mt="11px">
+                    <Text mt="26px" ml="10px" fontSize={f1} fontWeight="bold" color={fc2}>최근에 먹은 것들</Text>
+                    
+                    <HStack w="max-content" spacing="10px" ml="10px" mt="11px" whiteSpace="nowrap" overflow='hidden' overflowX="auto">
                         <Box w="90px" h="90px" >
                             <Image src={p1} alt="p1"/>
                         </Box>
@@ -325,7 +319,6 @@ import {
                             <Image src={pd} alt="pd"/>
                         </Box>
                     </HStack>
-                </Box>
 
                 <Flex direction="column" w="vw" h="120px" justifyContent="center" alignItems="center" ml="10px" mr="10px" mt="40px" border="3px solid #F6E229"
                  borderTopLeftRadius="30px" borderTopRightRadius="30px" borderBottomLeftRadius="30px" bg="white">
@@ -337,7 +330,7 @@ import {
                              <Image src={ranking} alt="ranking"/>
                          </Flex>
                      </Flex>
-                    <Text fontSize={f2} fontWeight="bold" align="center">갑작스럽게 혼밥을 해야할 때 당신은?</Text>
+                    <Text fontSize={f2} color={fc3} fontWeight="bold" align="center">갑작스럽게 혼밥을 해야할 때 당신은?</Text>
                     <Flex direction="row" justifyContent="center" mt="9px">
                         <Button w="90px" h="30px" bg="#303030" color="#ffffff" borderRadius="full" fontSize="10px" fontWeight="medium" mr="5px">죽어도 싫어</Button>
                         <Button w="90px" h="30px" bg="#F6E229" border="1px solid #303030" borderRadius="full" fontSize="10px" fontWeight="medium" ml="5px">오히려 좋아</Button>
@@ -345,7 +338,7 @@ import {
                 </Flex>
 
                 <Flex direction="row" w="vw" h="60px" ml="10px" mr="10px" mt="30px" mb="30px" borderRadius="full" bg="#F6E229" justifyContent="center" alignItems="center" >
-                    <Text fontSize={f2} fontWeight="bold" letterSpacing="-1px" align="center" mr="5px">아직도 뭐 먹을까 고민하세요 ?</Text>
+                    <Text fontSize={f2} fontWeight="bold" letterSpacing="-1px" align="center" mr="5px" color={fc3}>아직도 뭐 먹을까 고민하세요 ?</Text>
                     <Link href='/RandomR1'>
                         <Button fontSize={f3} fontWeight="medium" color="#ffffff" w="96px" h="30px" bg="#303030" borderRadius="full" ml="5px">랜덤 추천받기</Button>
                     </Link>
@@ -360,11 +353,11 @@ import {
                     <ModalOverlay/>
                     <ModalContent  borderRadius="30px">
                         <ModalBody >
-                            <Text fontSize={f2} fontWeight="bold" align="center" mt="26px">‘뭐먹지’에서 알림을 보내고자 합니다.</Text>
-                            <Text fontSize={f3} mt="10px" align="center">
+                            <Text fontSize={f2} color={fc2} fontWeight="bold" align="center" mt="26px">‘뭐먹지’에서 알림을 보내고자 합니다.</Text>
+                            <Text fontSize={f3} color={fc3} mt="10px" align="center">
                                 경고, 사운드 및 아이콘 배지가 알림에 포함될 수 있습니다.
                             </Text>
-                            <Text fontSize={f3} align="center">
+                            <Text fontSize={f3} color={fc3} align="center">
                                 설정에서 이를 구성할 수 있습니다.
                             </Text>
                             <Flex direction="row" justifyContent="center" mt="15px" mb="25px">
@@ -383,11 +376,11 @@ import {
                     <ModalContent  borderRadius="30px">
                         <ModalCloseButton w="20px" h="20px" fontSize="20px" m="10px"/>
                         <ModalBody >
-                            <Text fontSize={f2} fontWeight="bold" align="center" mt="26px">입맛 취향을 확인해 보세요!</Text>
-                            <Text fontSize={f3} mt="10px" align="center">
+                            <Text fontSize={f2} color={fc2} fontWeight="bold" align="center" mt="26px">입맛 취향을 확인해 보세요!</Text>
+                            <Text fontSize={f3} color={fc3} mt="10px" align="center">
                                 싫어하는 음식과 좋아하는 음식 취향을 반영해  
                             </Text>
-                            <Text fontSize={f3} align="center">
+                            <Text fontSize={f3} color={fc3} align="center">
                                 근처 식당을 랜덤으로 추천해드립니다.
                             </Text>
                             <Flex direction="row" justifyContent="center" mt="15px" mb="25px">
@@ -406,28 +399,28 @@ import {
                             <Link href='/Home' w="24px" h="24px">
                                 <Image src={homeA} alt="homeA"/>
                             </Link>
-                            <Text fontWeight="bold" fontSize="10px" align="center" >홈</Text>
+                            <Text fontWeight="bold" fontSize="10px" color={fc3} align="center" >홈</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
                             <Link href='/Recommand' w="24px" h="24px">
                                 <Image src={rec} alt="rec"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >추천</Text>
+                            <Text fontWeight="medium" fontSize="10px" color={fc3} align="center" >추천</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
                             <Link href='/Review' w="24px" h="24px">
                                 <Image src={rev} alt="rev"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >후기</Text>
+                            <Text fontWeight="medium" fontSize="10px" color={fc3} align="center" >후기</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
                             <Link href='/Profile' w="24px" h="24px">
                                 <Image src={my} alt="my"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >마이</Text>
+                            <Text fontWeight="medium" fontSize="10px" color={fc3} align="center" >마이</Text>
                         </Flex>
                         <Spacer/>
                     </Flex>

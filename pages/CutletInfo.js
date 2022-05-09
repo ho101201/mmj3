@@ -40,6 +40,11 @@ export default function RInfo() {
     const f2 ="14px";
     const f3 ="12px";
 
+    const fc1 ="#303030"
+    const fc2 ="#333333"
+    const fc3 ="#494949"
+    const fc4 ="#A4A4A4"
+
     return(
         <div>
             <Flex w="vw" h="40px" alignItems="center" justifyContent="center" borderBottom="1px solid #DDDDDD">
@@ -51,7 +56,7 @@ export default function RInfo() {
                     </Link>
                 </Flex>
                 <Spacer/>
-                <Text fontWeight="extrabold" fontSize={f1} position="absolute">
+                <Text fontWeight="extrabold" fontSize={f1} color={fc2} position="absolute">
                     카츠단길
                 </Text>
                 <Flex w="20px" h="20px" mr="9px">
@@ -86,7 +91,7 @@ export default function RInfo() {
             <Flex direction="row" ml="10px" mr="10px" mt="6px">
                 <Flex direction="column" justifyContent="center">
                     <Flex direction='row' alignItems="flex-end">
-                        <Text fontSize={f1} fontWeight='bold'>카츠단길</Text>
+                        <Text fontSize={f1} color={fc2} fontWeight='bold'>카츠단길</Text>
                         <Text fontSize={f3} color="#565656" ml="6px">126m</Text>
                     </Flex>
                     <Text fontSize={f2} color="#565656">서울 송파구 송파대로 201 A동 1층 117호</Text>
@@ -96,7 +101,8 @@ export default function RInfo() {
                     <Flex w="13px" h="13px" mr="5px">
                         <Image src={starF} alt="starF"/>
                     </Flex>
-                    <Text fontWeight="bold" fontSize={f2}>4.5 <text fontWeight="medium">(10)</text></Text>
+                    <Text fontWeight="bold" fontSize={f2} color={fc2}>4.5</Text>
+                    <Text fontWeight="medium" fontSize={f2} color={fc3} ml="2px">(10)</Text>
                 </Flex>
             </Flex>
             <Flex direction="row" justifyContent="center" mt="19px" mb='30px'>
@@ -111,27 +117,27 @@ export default function RInfo() {
             <Grid templateColumns="repeat(5,1fr)" h="50px">
                 <GridItem display="flex" alignItems="center" justifyContent="center" borderBottom="2px solid #F6E229">
                     <Link href='/CutletInfo'>
-                        <Text fontSize={f2} fontWeight="bold" align="center">정보</Text>
+                        <Text fontSize={f2} color={fc2} fontWeight="bold" align="center">정보</Text>
                     </Link>
                 </GridItem>
                 <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
                     <Link href='/CutletWork'>
-                        <Text fontSize={f2} fontWeight="medium" align="center">영업</Text>
+                        <Text fontSize={f2} color={fc2} fontWeight="medium" align="center">영업</Text>
                     </Link>
                 </GridItem>
                 <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
                     <Link href='/CutletMenu'>
-                        <Text fontSize={f2} fontWeight="medium" align="center">메뉴</Text>
+                        <Text fontSize={f2} color={fc2} fontWeight="medium" align="center">메뉴</Text>
                     </Link>
                 </GridItem>
                 <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
                     <Link href='/CutletPhoto'>
-                        <Text fontSize={f2} fontWeight="medium" align="center">사진</Text>
+                        <Text fontSize={f2} color={fc2} fontWeight="medium" align="center">사진</Text>
                     </Link>
                 </GridItem>
                 <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
                     <Link href='/CutletReview'>
-                        <Text fontSize={f2} fontWeight="medium" align="center">후기</Text>
+                        <Text fontSize={f2} color={fc2} fontWeight="medium" align="center">후기</Text>
                     </Link>
                 </GridItem>
             </Grid>
@@ -140,23 +146,23 @@ export default function RInfo() {
                 
                 <Flex p="10px" pb="0px" pt="25px" direction="column" bg="white">
                     <Flex direction="column"  h="79px" borderBottom='1px solid #F6F6F6' bg="white">
-                        <Text fontSize={f1} fontWeight="bold" >매장 소개</Text>
-                        <Text fontSize={f2} mt="8px">&#34;상위1% 프리미엄 돈카츠입니다.&#34;</Text>
+                        <Text fontSize={f1} color={fc2} fontWeight="bold" >매장 소개</Text>
+                        <Text fontSize={f2} color={fc2} mt="8px">&#34;상위1% 프리미엄 돈카츠입니다.&#34;</Text>
 
                     </Flex>
 
                     <Flex direction="column" h="79px" mt='25px' borderBottom='1px solid #F6F6F6' bg="white" >
                         <Flex direction="row" alignItems="center" >
-                            <Text fontSize={f1} fontWeight="bold">매장 Tip</Text>
+                            <Text fontSize={f1} color={fc2} fontWeight="bold">매장 Tip</Text>
                             <Spacer/>
-                            <Text fontSize="10px" letterSpacing="-1px">마지막 업데이트 : 2021-11-09</Text>
+                            <Text fontSize="10px" color="#565656" letterSpacing="-1px">마지막 업데이트 : 2021-11-09</Text>
                         </Flex>
-                        <Text fontSize={f2} mt="8px">카레 추가 시 무한리필 됩니다.</Text>
+                        <Text fontSize={f2} color={fc2} mt="8px">카레 추가 시 무한리필 됩니다.</Text>
 
                     </Flex>
 
                     <Flex direction="column" bg="white" mt="25px">
-                        <Text fontSize={f1} fontWeight="bold">편의정보</Text>
+                        <Text fontSize={f1} color={fc2} fontWeight="bold">편의정보</Text>
                         <Wrap mt='16px'>
                             <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">예약가능</Tag>
                             <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">포장</Tag>
@@ -167,7 +173,7 @@ export default function RInfo() {
                             <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">국민지원금</Tag>
                         </Wrap>
                         <Flex justifyContent="center" alignItems='center' mt='23px' mb='30px'>
-                            <Text bg="#F6F6F6" fontSize='10px' w="232px" h="20px" borderRadius="4px" align='center' pt="2px">
+                            <Text bg="#F6F6F6" fontSize='10px' color={fc2} w="232px" h="20px" borderRadius="4px" align='center' pt="2px">
                                 마지막 예약시간 00월00일 오전00시 00분 00초
                             </Text>
                         </Flex>

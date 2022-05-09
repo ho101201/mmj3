@@ -25,6 +25,14 @@ a {
   width: 0 !important;
 }
 
+textarea::placeholder {
+  color: #A4A4A4;
+}
+
+input::placeholder {
+  color: #A4A4A4;
+}
+
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 @import url(http://fonts.googleapis.com/earlyaccess/notosanssc.css);
