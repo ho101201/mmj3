@@ -90,6 +90,7 @@ export default function SignIn() {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     return(
         <div>
@@ -210,7 +211,7 @@ export default function SignIn() {
                 {/* sign in button */}
                 <Box p="10px" w="100vw" h="40px" mb="30px">
                     {/* 유효성검사  */}
-                    {isName&&isEmail&&isPassword?
+                    {name&&email&&password?
                         <Link w="100%" href='/SignIn2' >
                             <Button w="100%" borderRadius="full" bg="#F6E229" fontSize={f1} color={fc1} fontWeight="bold" type='submit' >
                                 가입하기

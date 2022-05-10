@@ -30,6 +30,7 @@ import {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     const [Page, setPage] = useState(true);
 
@@ -42,7 +43,7 @@ import {
             <Flex direction="column" h="100%" bg="#FAFAFA">
 
                 <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD" bg="white">
-                    <Text fontSize={f1} fontWeight="bold" align="center">좋아요</Text>
+                    <Text fontSize={f1} color={fc2} fontWeight="bold" align="center">좋아요</Text>
                     <Link href='/Profile' position="absolute" left="11px" w="20px" h="20px">
                         <Image src={arrowL} alt="arrowL"/>
                     </Link>
@@ -51,21 +52,21 @@ import {
                 {Page?
                     <Grid templateColumns="repeat(2,1fr)" h="50px" bg="white">
                         <GridItem display="flex" alignItems="center" justifyContent="center" borderBottom="2px solid #F6E229">
-                                <Text fontSize={f2} fontWeight="bold" align="center">식당</Text>
+                                <Text fontSize={f2} color={fc2} fontWeight="bold" align="center">식당</Text>
                         </GridItem>
         
                         <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030" onClick={()=>movePage()}>
-                                <Text fontSize={f2} fontWeight="medium" align="center">후기</Text>
+                                <Text fontSize={f2} color={fc2} fontWeight="medium" align="center">후기</Text>
                         </GridItem>
                     </Grid>
                 :
                     <Grid templateColumns="repeat(2,1fr)" h="50px" bg="white">
                         <GridItem display="flex" alignItems="center" justifyContent="center" borderBottom="2px solid #303030" onClick={()=>movePage()}>
-                                <Text fontSize={f2} fontWeight="medium" align="center">식당</Text>
+                                <Text fontSize={f2} color={fc2} fontWeight="medium" align="center">식당</Text>
                         </GridItem>
 
                         <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #F6E229">
-                                <Text fontSize={f2} fontWeight="bold" align="center">후기</Text>
+                                <Text fontSize={f2} color={fc2} fontWeight="bold" align="center">후기</Text>
                         </GridItem>
                     </Grid>
                 }
@@ -78,14 +79,14 @@ import {
                                 <Image src={p1} alt="p1"/>
                             </Flex>
                             <Flex direction="column" ml='10px'>
-                                <Text fontWeight="bold" fontSize={f2}>카츠단길</Text>
+                                <Text fontWeight="bold" fontSize={f2} color={fc2}>카츠단길</Text>
                                 <Flex direction="row" mb='6px' alignItems="center">
                                     <Flex w="13px" h="13px">
                                         <Image src={starF} alt="starF"/>
                                     </Flex>
-                                    <Text fontSize={f2} ml="5px">4.5 (10)</Text>
+                                    <Text fontSize={f2} ml="5px" color={fc2}>4.5 (10)</Text>
                                 </Flex>
-                                <Text fontSize={f2}>신천/잠실 · 한식코스</Text>
+                                <Text fontSize={f2} color={fc5}>신천/잠실 · 한식코스</Text>
                             </Flex>
                             <Spacer/>
                             <Flex w="30px" h="30px">
@@ -93,24 +94,24 @@ import {
                             </Flex>
                         </Flex>
 
-                        <Grid templateColumns="repeat(3,1fr)" borderTop="1px solid #E8E8E8" borderBottom="1px solid #E8E8E8" h="52px" mr="10px" ml="10px">
+                        <Grid templateColumns="repeat(3,1fr)" borderTop="1px solid #F6F6F6" borderBottom="1px solid #F6F6F6" h="52px" mr="10px" ml="10px">
                             <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
                                 <Flex w="12px" h="12px" mr="7px">
                                     <Image src={starB} alt="starB"/>
                                 </Flex>
-                                <Text fontSize={f2} color="#565656">가볼래요<text>(99)</text></Text>
+                                <Text fontSize={f2} color={fc5}>가볼래요<text>(99)</text></Text>
                             </GridItem>
                             <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
                                 <Flex w="12px" h="12px" mr="7px">
                                     <Image src={heart} alt="heart"/>
                                 </Flex>
-                                <Text fontSize={f2} color="#565656">좋아요<text>(99)</text></Text>
+                                <Text fontSize={f2} color={fc5}>좋아요<text>(99)</text></Text>
                             </GridItem>
                             <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
                                 <Flex w="12px" h="12px" mr="7px">
                                     <Image src={comment} alt="comment"/>
                                 </Flex>
-                                <Text fontSize={f2} color="#565656">댓글<text>(99)</text></Text>
+                                <Text fontSize={f2} color={fc5}>댓글<text>(99)</text></Text>
                             </GridItem>
                         </Grid>
                     </Flex>
@@ -127,7 +128,7 @@ import {
                             </Flex>
                             <Flex ml="12px" direction="column" justifyContent="center">
                                 <Text fontSize={f2} >유저닉네임</Text>
-                                <Text fontSize="10px" color="#565656">2022.03.01  1번째 방문</Text>
+                                <Text fontSize="10px" color={fc5}>2022.03.01  1번째 방문</Text>
                             </Flex>
                             <Spacer/>
                             <Flex direction="row" alignItems="center">
@@ -149,10 +150,10 @@ import {
                         </Text>
         
                         <Flex mt="41px">
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">후기태그</Tag>
+                            <Tag border="1px solid #E1E1E1" color={fc4} bg="#ffffff" mr="5px">점심식사</Tag>
+                            <Tag border="1px solid #E1E1E1" color={fc4} bg="#ffffff" mr="5px">후기태그</Tag>
                             <Link href='/AllTags'>
-                                <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">+더보기</Tag>
+                                <Tag border="1px solid #E1E1E1" color={fc4} bg="#ffffff" mr="5px">+더보기</Tag>
                             </Link>
                         </Flex>
         
@@ -161,19 +162,19 @@ import {
                                 <Flex w="12px" h="12px" mr="7px">
                                     <Image src={starB} alt="starB"/>
                                 </Flex>
-                                <Text fontSize={f2} color="#565656">가볼래요</Text>
+                                <Text fontSize={f2} color={fc5}>가볼래요</Text>
                             </GridItem>
                             <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
                                 <Flex w="12px" h="12px" mr="7px">
                                     <Image src={heart} alt="heart"/>
                                 </Flex>
-                                <Text fontSize={f2} color="#565656">좋아요</Text>
+                                <Text fontSize={f2} color={fc5}>좋아요</Text>
                             </GridItem>
                             <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
                                 <Flex w="12px" h="12px" mr="7px">
                                     <Image src={comment} alt="comment"/>
                                 </Flex>
-                                <Text fontSize={f2} color="#565656">댓글</Text>
+                                <Text fontSize={f2} color={fc5}>댓글</Text>
                             </GridItem>
                         </Grid>
                     </Flex>

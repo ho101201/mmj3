@@ -33,6 +33,7 @@ import {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     const [Check1, setCheck1] = useState(false);
     const [Check2, setCheck2] = useState(false);
@@ -88,7 +89,7 @@ import {
     return(
         <div>
             <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD">
-                <Text fontSize={f1} fontWeight="bold" align="center">후기 쓰기</Text>
+                <Text fontSize={f1} color={fc2} fontWeight="bold" align="center">후기 쓰기</Text>
                 <Link href='/CutletInfo' position="absolute" right="11px" w="20px" h="20px">
                     <Image src={btnX} alt="btnX"/>
                 </Link>
@@ -99,19 +100,20 @@ import {
                     <Image src={p1} alt="p1"/>
                 </Flex>
                 <Flex direction="column" ml='10px'>
-                    <Text fontWeight="bold" fontSize={f2}>카츠단길</Text>
-                    <Flex direction="row" mb='10px'>
+                    <Text fontWeight="bold" fontSize={f2} color={fc2}>카츠단길</Text>
+                    <Flex direction="row" alignItems="center" mb='10px'>
                         <Flex w="13px" h="13px">
                             <Image src={starF} alt="starF"/>
                         </Flex>
-                        <Text fontSize={f2} fontWeight="bold">4.5 (10)</Text>
+                        <Text fontSize={f2} fontWeight="bold" color={fc2} ml="4px">4.5</Text>
+                        <Text fontSize={f2} color={fc3} ml="4px"> (10)</Text>
                     </Flex>
                     <Text fontSize={f2}>신천/잠실 · 한식코스</Text>
                 </Flex>
                 <Spacer/>
             </Flex> 
 
-            <Text fontSize={f2} fontWeight="bold" align="center" mb="5px" mt="30px">매장의 어떤점이 좋았나요?</Text>
+            <Text fontSize={f2} color={fc1} fontWeight="bold" align="center" mb="5px" mt="30px">매장의 어떤점이 좋았나요?</Text>
 
             <Flex direction="row" alignItems="center" justifyContent="center" mb="25px">
                 <Flex w="30px" h="30px" onClick={()=>checking1()} m="5px">
@@ -165,15 +167,15 @@ import {
                     <Image src={camera} alt="camera"/>
                 </Flex>
                 <Flex direction="column" ml="10px">
-                    <Text fontSize={f3} fontWeight="bold" mb="5px">사진/동영상 첨부하기</Text>
-                    <Text fontSize="10px" color="#A4A4A4">상품과 무관한 사진/동영상을 첨부한 리뷰는 통보없이</Text>
-                    <Text fontSize="10px" color="#A4A4A4">삭제될 수 있습니다.</Text>
+                    <Text fontSize={f3} color={fc2} fontWeight="bold" mb="5px">사진/동영상 첨부하기</Text>
+                    <Text fontSize="10px" color={fc4}>상품과 무관한 사진/동영상을 첨부한 리뷰는 통보없이</Text>
+                    <Text fontSize="10px" color={fc4}>삭제될 수 있습니다.</Text>
                 </Flex>
             </Flex>
 
             <Link href='/TagInput'>
                 <Flex alignItems="center" justifyContent="center" mr="10px" ml="10px" h="50px" mt="30px" mb="30px" borderTop="1px solid #F6F6F6" borderBottom="1px solid #F6F6F6">
-                    <Text fontSize={f2}  color="#333333" ># 태그 입력</Text>
+                    <Text fontSize={f2} color={fc2}># 태그 입력</Text>
                     <Spacer/>
                     <Flex w="7px" h="10px">
                         <Image src={arrowR} alt="arrowR"/>

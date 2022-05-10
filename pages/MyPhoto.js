@@ -78,6 +78,7 @@ export default function RPhoto() {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     const options = ['전체', '업체', '방문자','음식', '매장' ]
 

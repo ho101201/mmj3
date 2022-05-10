@@ -21,6 +21,7 @@ import {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     return(
         <div>
@@ -37,7 +38,7 @@ import {
             <Flex direction="column" position="sticky" mr="10px"  w="100%" bottom="0"  mt="30px" pb="20px">
                 <Flex  w="100%" h="40px">
                     <Link href='/CutletInfo' w="100%" mr="10px" ml="10px">
-                        <Button w="100%" borderRadius="full" bg="#F6E229" color="#303030" fontWeight={700} fontSize={f1} >입력완료</Button>
+                        <Button w="100%" borderRadius="full" bg="#F6E229" color={fc1} fontWeight={700} fontSize={f1} >입력완료</Button>
                     </Link>
                 </Flex>
             </Flex>

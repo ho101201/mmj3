@@ -44,6 +44,7 @@ export default function RInfo() {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     return(
         <div>
@@ -92,9 +93,9 @@ export default function RInfo() {
                 <Flex direction="column" justifyContent="center">
                     <Flex direction='row' alignItems="flex-end">
                         <Text fontSize={f1} color={fc2} fontWeight='bold'>카츠단길</Text>
-                        <Text fontSize={f3} color="#565656" ml="6px">126m</Text>
+                        <Text fontSize={f3} color={fc5} ml="6px">126m</Text>
                     </Flex>
-                    <Text fontSize={f2} color="#565656">서울 송파구 송파대로 201 A동 1층 117호</Text>
+                    <Text fontSize={f2} color={fc5}>서울 송파구 송파대로 201 A동 1층 117호</Text>
                 </Flex>
                 <Spacer/>
                 <Flex direction="row" alignItems="center">
@@ -110,7 +111,7 @@ export default function RInfo() {
                     <Button w="90px" h="30px" bg="#303030" color="#ffffff" borderRadius="full" fontSize="10px" fontWeight="medium" mr="5px">가볼래요</Button>
                 </Link>
                 <Link href='/CutletWentRev1'>
-                    <Button w="90px" h="30px" bg="#F6E229" border="1px solid #303030" borderRadius="full" fontSize="10px" fontWeight="medium" ml="5px">가봤어요</Button>
+                    <Button class="yellowBtn" w="90px" h="30px" bg="#F6E229" border="1px solid #303030" borderRadius="full" fontSize="10px" fontWeight="medium" ml="5px">가봤어요</Button>
                 </Link>
             </Flex>
 
@@ -155,7 +156,7 @@ export default function RInfo() {
                         <Flex direction="row" alignItems="center" >
                             <Text fontSize={f1} color={fc2} fontWeight="bold">매장 Tip</Text>
                             <Spacer/>
-                            <Text fontSize="10px" color="#565656" letterSpacing="-1px">마지막 업데이트 : 2021-11-09</Text>
+                            <Text fontSize="10px" color={fc5} letterSpacing="-1px">마지막 업데이트 : 2021-11-09</Text>
                         </Flex>
                         <Text fontSize={f2} color={fc2} mt="8px">카레 추가 시 무한리필 됩니다.</Text>
 
@@ -205,21 +206,21 @@ export default function RInfo() {
                             <Link href='/WritingRev' w="24px" h="24px">
                                 <Image src={review} alt="review"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >후기쓰기</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>후기쓰기</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
                             <Link w="24px" h="24px">
                                 <Image src={call} alt="call"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >전화</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>전화</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
                             <Link w="24px" h="24px">
                                 <Image src={location} alt="location"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >길찾기</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>길찾기</Text>
                         </Flex>
                         <Spacer/>
                     </Flex>

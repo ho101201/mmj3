@@ -46,6 +46,7 @@ export default function RWork() {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     return(
         <div>
@@ -94,9 +95,9 @@ export default function RWork() {
                 <Flex direction="column" justifyContent="center">
                     <Flex direction='row' alignItems="flex-end">
                         <Text fontSize={f1} color={fc2} fontWeight='bold'>카츠단길</Text>
-                        <Text fontSize={f3} color="#565656" ml="6px">126m</Text>
+                        <Text fontSize={f3} color={fc5} ml="6px">126m</Text>
                     </Flex>
-                    <Text fontSize={f2} color="#565656">서울 송파구 송파대로 201 A동 1층 117호</Text>
+                    <Text fontSize={f2} color={fc5}>서울 송파구 송파대로 201 A동 1층 117호</Text>
                 </Flex>
                 <Spacer/>
                 <Flex direction="row" alignItems="center">
@@ -166,10 +167,10 @@ export default function RWork() {
                     </Flex>
                 
                     <Flex direction="column" justifyContent="center" alignItems='center' w="vw" h="36px" mr="20px" ml='20px' mt='13px' mb="30px" bg="#F6F6F6">
-                        <Text  fontSize='10px' borderRadius="4px" align='center' color="#565656">
+                        <Text  fontSize='10px' borderRadius="4px" align='center' color={fc5}>
                             코로나 19의 영향으로 식당 운영에 변동이 있을수 있습니다.
                         </Text>
-                        <Text  fontSize='10px' borderRadius="4px" align='center' color="#565656" >
+                        <Text  fontSize='10px' borderRadius="4px" align='center' color={fc5} >
                             식당으로 문의 후 방문 부탁드립니다.
                         </Text>
                     </Flex>

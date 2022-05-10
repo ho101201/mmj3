@@ -47,6 +47,8 @@ export default function RMenu() {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
+    
 
     return(
         <div>
@@ -95,9 +97,9 @@ export default function RMenu() {
                 <Flex direction="column" justifyContent="center">
                     <Flex direction='row' alignItems="flex-end">
                         <Text fontSize={f1} color={fc2} fontWeight='bold'>카츠단길</Text>
-                        <Text fontSize={f3} color="#565656" ml="6px">126m</Text>
+                        <Text fontSize={f3} color={fc5} ml="6px">126m</Text>
                     </Flex> 
-                    <Text fontSize={f2} color="#565656">서울 송파구 송파대로 201 A동 1층 117호</Text>
+                    <Text fontSize={f2} color={fc5}>서울 송파구 송파대로 201 A동 1층 117호</Text>
                 </Flex>
                 <Spacer/>
                 <Flex direction="row" alignItems="center">
@@ -193,7 +195,7 @@ export default function RMenu() {
                     </Flex>
 
                     <Flex direction="column" justifyContent="center" alignItems='center' w="vw" h="50px" mr="10px" ml='10px' mt='23px' border="2px solid #F6F6F6">
-                        <Text  fontSize={f2} color="#565656" borderRadius="4px" align='center'>
+                        <Text  fontSize={f2} color={fc5} borderRadius="4px" align='center'>
                             더보기
                         </Text>
                     </Flex>

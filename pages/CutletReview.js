@@ -46,6 +46,7 @@ export default function RRev() {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     return(
         <div>
@@ -94,9 +95,9 @@ export default function RRev() {
                 <Flex direction="column" justifyContent="center">
                     <Flex direction='row' alignItems="flex-end">
                         <Text fontSize={f1} color={fc2} fontWeight='bold'>카츠단길</Text>
-                        <Text fontSize={f3} color="#565656" ml="6px">126m</Text>
+                        <Text fontSize={f3} color={fc5} ml="6px">126m</Text>
                     </Flex>
-                    <Text fontSize={f2} color="#565656">서울 송파구 송파대로 201 A동 1층 117호</Text>
+                    <Text fontSize={f2} color={fc5}>서울 송파구 송파대로 201 A동 1층 117호</Text>
                 </Flex>
                 <Spacer/>
                 <Flex direction="row" alignItems="center">
@@ -157,7 +158,7 @@ export default function RRev() {
                             </Flex>
                             <Flex ml="12px" direction="column" justifyContent="center">
                                 <Text fontSize={f2} >유저닉네임</Text>
-                                <Text fontSize="10px" color="#565656">2022.03.01  1번째 방문</Text>
+                                <Text fontSize="10px" color={fc5}>2022.03.01  1번째 방문</Text>
                             </Flex>
                             <Spacer/>
                             <Flex direction="row" alignItems="center">
@@ -179,8 +180,8 @@ export default function RRev() {
                         </Text>
 
                         <Flex mt="41px">
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">후기태그</Tag>
+                            <Tag border="1px solid #E1E1E1" fontWeight="light" color={fc4} bg="#ffffff" mr="5px">점심식사</Tag>
+                            <Tag border="1px solid #E1E1E1" fontWeight="light" color={fc4} bg="#ffffff" mr="5px">후기태그</Tag>
                         </Flex>
                     </Flex>
 
@@ -197,7 +198,7 @@ export default function RRev() {
                             </Flex>
                             <Flex ml="12px" direction="column" justifyContent="center">
                                 <Text fontSize={f2} >유저닉네임</Text>
-                                <Text fontSize="10px" color="#565656">2022.03.01  1번째 방문</Text>
+                                <Text fontSize="10px" color={fc5}>2022.03.01  1번째 방문</Text>
                             </Flex>
                             <Spacer/>
                             <Flex direction="row" alignItems="center">
@@ -216,8 +217,8 @@ export default function RRev() {
                         </Text>
 
                         <Flex mt="41px">
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">후기태그</Tag>
+                            <Tag border="1px solid #E1E1E1" fontWeight="light" color={fc4} bg="#ffffff" mr="5px">점심식사</Tag>
+                            <Tag border="1px solid #E1E1E1" fontWeight="light" color={fc4} bg="#ffffff" mr="5px">후기태그</Tag>
                         </Flex>
 
                     </Flex>
@@ -269,21 +270,21 @@ export default function RRev() {
                             <Link href='/WritingRev' w="24px" h="24px">
                                 <Image src={review} alt="review"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >후기쓰기</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>후기쓰기</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
                             <Link w="24px" h="24px">
                                 <Image src={call} alt="call"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >전화</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>전화</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
                             <Link w="24px" h="24px">
                                 <Image src={location} alt="location"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >길찾기</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>길찾기</Text>
                         </Flex>
                         <Spacer/>
 

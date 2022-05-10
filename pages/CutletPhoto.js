@@ -84,6 +84,8 @@ export default function RPhoto() {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
+
 
     const options = ['전체', '업체', '방문자','음식', '매장' ]
 
@@ -149,9 +151,9 @@ export default function RPhoto() {
                 <Flex direction="column" justifyContent="center">
                     <Flex direction='row' alignItems="flex-end">
                         <Text fontSize={f1} color={fc2} fontWeight='bold'>카츠단길</Text>
-                        <Text fontSize={f3} color="#565656" ml="6px">126m</Text>
+                        <Text fontSize={f3} color={fc5} ml="6px">126m</Text>
                     </Flex>
-                    <Text fontSize={f2} color="#565656">서울 송파구 송파대로 201 A동 1층 117호</Text>
+                    <Text fontSize={f2} color={fc5}>서울 송파구 송파대로 201 A동 1층 117호</Text>
                 </Flex>
                 <Spacer/>
                 <Flex direction="row" alignItems="center">

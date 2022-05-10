@@ -45,6 +45,7 @@ export default function Profile() {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     return(
         <div>
@@ -53,7 +54,7 @@ export default function Profile() {
                     <Flex w="50px" h="50px">
                         <Image src={user} alt="user"/>
                     </Flex>
-                    <Text fontSize={f2} fontWeight="bold" mt="4px" mb="4px" letterSpacing="-1px" >유저닉네임</Text>
+                    <Text fontSize={f2} fontWeight="bold" color={fc2} mt="4px" mb="4px">유저닉네임</Text>
                     <Link href='/ProfileSetting'>
                         <Button fontSize="10px" bg="#303030" color="#ffffff" h="20px" w="70px">프로필설정</Button>
                     </Link>
@@ -63,33 +64,33 @@ export default function Profile() {
                     <Spacer/>
                         <Flex w="67px" direction="column" justifyContent="center">
                             <Link href='/Willgo'>
-                                <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
-                                <Text fontSize="10px" align="center" >가볼래요</Text>
+                                <Text fontSize={f1} color={fc2} fontWeight="bold" align="center">999</Text>
+                                <Text fontSize="10px" align="center" color={fc5}>가볼래요</Text>
                             </Link>
                         </Flex>
                         <Flex w="67px" direction="column" justifyContent="center">
                             <Link href='/Went'>
-                                <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
-                                <Text fontSize="10px" align="center" >가봤어요</Text>
+                                <Text fontSize={f1} color={fc2} fontWeight="bold" align="center">999</Text>
+                                <Text fontSize="10px" align="center" color={fc2}>가봤어요</Text>
                             </Link>
                         </Flex>
                         <Flex w="67px" direction="column" justifyContent="center">
                             <Link href='/Review'>
                                 <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
-                                <Text fontSize="10px" align="center" >후기</Text>
+                                <Text fontSize="10px" align="center" color={fc5}>후기</Text>
                             </Link> 
                         </Flex>
                         <Flex w="67px" direction="column" justifyContent="center">
                             <Link href='/Like'>
                                 <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
-                                <Text fontSize="10px" align="center" >좋아요</Text>
+                                <Text fontSize="10px" align="center" color={fc5}>좋아요</Text>
                             </Link>
                         </Flex>
                     <Spacer/>
                 </Flex>
 
                 <Flex direction="column" bg="white" pt="30px">
-                    <Text fontSize="16px" ml="10px" mb="15px" fontWeight="bold">사진</Text>
+                    <Text fontSize="16px" color={fc2} ml="10px" mb="15px" fontWeight="bold">사진</Text>
                     <Link href='/MyPhoto'>
                         <Box w="100%"   whiteSpace="nowrap" overflowX='auto' >
                             <Flex w="110px" h='110px' ml="10px"  display="inline-block" >
@@ -116,9 +117,9 @@ export default function Profile() {
                         </Box>
                     </Link>
                     
-                    <Link href='/Taste'>
-                        <Flex alignItems="center" p="10px" h="50px" mt="30px"  borderTop="1px solid #F6F6F6" borderBottom="1px solid #F6F6F6" >
-                            <Text fontSize={f2} color="#333333">입맛 설정</Text>
+                    <Link href='/Taste' mt="30px">
+                        <Flex alignItems="center" p="10px" h="50px" borderTop="1px solid #F6F6F6" borderBottom="1px solid #F6F6F6" >
+                            <Text fontSize={f2} color={fc2}>입맛 설정</Text>
                             <Spacer/>
                             <Flex w="7px" h="10px">
                                 <Image src={arrowR} alt="arrowR"/>
@@ -128,7 +129,7 @@ export default function Profile() {
 
                     <Link href='/Setting'>
                         <Flex alignItems="center" p="10px" h="50px" borderBottom="1px solid #F6F6F6">
-                            <Text fontSize={f2} color="#333333" >앱 설정</Text>
+                            <Text fontSize={f2} color={fc2} >앱 설정</Text>
                             <Spacer/>
                             <Flex w="7px" h="10px">
                                 <Image src={arrowR} alt="arrowR"/>
@@ -138,7 +139,7 @@ export default function Profile() {
 
                     <Link href='/Service'>
                         <Flex alignItems="center" p="10px" h="50px" borderBottom="1px solid #F6F6F6">
-                            <Text fontSize={f2} color="#333333">고객센터</Text>
+                            <Text fontSize={f2} color={fc2}>고객센터</Text>
                             <Spacer/>
                             <Flex w="7px" h="10px">
                                 <Image src={arrowR} alt="arrowR"/>
@@ -148,13 +149,13 @@ export default function Profile() {
 
                     <Link href='/'>
                         <Flex w="vw" mr="10px" ml="10px" mt="10px" h="50px" alignItems="center" justifyContent="center" color="#565656" border="2px solid #F6F6F6" borderRadius="10px">
-                            <Text>로그아웃</Text>
+                            <Text fontSize={f2} color={fc5}>로그아웃</Text>
                         </Flex>
                     </Link>
 
                     <Link href='/Withdrawal'>
                         <Flex w="vw" mr="10px" ml="10px" mt="10px" mb="30px" h="50px" alignItems="center" justifyContent="center" color="#565656" border="2px solid #F6F6F6" borderRadius="10px">
-                            <Text>회원탈퇴</Text>
+                            <Text fontSize={f2} color={fc5}>회원탈퇴</Text>
                         </Flex>
                     </Link>
                     
@@ -170,28 +171,28 @@ export default function Profile() {
                             <Link href='/Home' w="24px" h="24px">
                                 <Image src={home} alt="home"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >홈</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc1}>홈</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
                             <Link href='/Recommand' w="24px" h="24px">
                                 <Image src={rec} alt="rec"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >추천</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc1}>추천</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
                             <Link href='/Review' w="24px" h="24px">
                                 <Image src={rev} alt="rev"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" >후기</Text>
+                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc1}>후기</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
                             <Link href='/Profile' w="24px" h="24px">
                                 <Image src={myA} alt="myA"/>
                             </Link>
-                            <Text fontWeight="bold" fontSize="10px" align="center" >마이</Text>
+                            <Text fontWeight="bold" fontSize="10px" align="center" color={fc1}>마이</Text>
                         </Flex>
                         <Spacer/>
 

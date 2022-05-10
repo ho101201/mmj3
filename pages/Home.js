@@ -79,6 +79,7 @@ import {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     const [Check, setCheck] = useState(true);
     const checkAlarm =()=> {
@@ -108,13 +109,9 @@ import {
       
         <div>
             {/* homeBody */}
-            <Flex direction="column" bg="#FAFAFA">
+            <Flex direction="column" bg="#FAFAFA" h="100vh">
                 
                 <Flex h="40px"  alignItems="center" borderBottom="1px solid #DDDDDD" position="sticky" bg="white">
-                    {/* <SelectBoxWrapper >
-                        <Select variant="unstyled" style={styles} placeholder="송파구 문정동" letterSpacing='-1px' ml="10px" fontSize={f2} iconSize='20px' w="115px" >
-                        </Select>
-                    </SelectBoxWrapper> */}
                     <Link href='/SetLocation' display="flex" flexDirection="row" ml="10px">
                         <Text id='location' fontSize={f2} color={fc2} fontWeight="bold" mr="7px">송파구 문정동</Text>
                         <Box w="12px" h="20px" position="absolute" left="104px" top="4px" >
@@ -332,7 +329,7 @@ import {
                      </Flex>
                     <Text fontSize={f2} color={fc3} fontWeight="bold" align="center">갑작스럽게 혼밥을 해야할 때 당신은?</Text>
                     <Flex direction="row" justifyContent="center" mt="9px">
-                        <Button w="90px" h="30px" bg="#303030" color="#ffffff" borderRadius="full" fontSize="10px" fontWeight="medium" mr="5px">죽어도 싫어</Button>
+                        <Button w="90px" h="30px" bg={fc1} color="#ffffff" borderRadius="full" fontSize="10px" fontWeight="medium" mr="5px">죽어도 싫어</Button>
                         <Button w="90px" h="30px" bg="#F6E229" border="1px solid #303030" borderRadius="full" fontSize="10px" fontWeight="medium" ml="5px">오히려 좋아</Button>
                     </Flex>
                 </Flex>
@@ -340,7 +337,7 @@ import {
                 <Flex direction="row" w="vw" h="60px" ml="10px" mr="10px" mt="30px" mb="30px" borderRadius="full" bg="#F6E229" justifyContent="center" alignItems="center" >
                     <Text fontSize={f2} fontWeight="bold" letterSpacing="-1px" align="center" mr="5px" color={fc3}>아직도 뭐 먹을까 고민하세요 ?</Text>
                     <Link href='/RandomR1'>
-                        <Button fontSize={f3} fontWeight="medium" color="#ffffff" w="96px" h="30px" bg="#303030" borderRadius="full" ml="5px">랜덤 추천받기</Button>
+                        <Button fontSize={f3} fontWeight="medium" color="#ffffff" w="96px" h="30px" bg={fc1} borderRadius="full" ml="5px">랜덤 추천받기</Button>
                     </Link>
 
                 </Flex>

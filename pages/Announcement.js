@@ -20,6 +20,7 @@ export default function Ann() {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     return(
         <div>
@@ -42,7 +43,7 @@ export default function Ann() {
 
             {/* 공지사항내용 */}
             <Flex h="262px" p="10px" pr="30px" direction="column">
-                <Text fontSize={f3} color="#565656" mb="12px">2022.03.1</Text>
+                <Text fontSize={f3} color={fc5} mb="12px">2022.03.1</Text>
                 <Text fontSize={f2}>
                     공지사항 내용공지사항 내용공지사항 내용공지사항 내용
                     공지사항 내용공지사항 내용공지사항 내용공지사항 내용

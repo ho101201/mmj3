@@ -87,6 +87,7 @@ import {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     const [Check, setCheck] = useState(true);
     const checkAlarm =()=> {
@@ -185,7 +186,7 @@ import {
                             <Flex direction="row" alignItems="center" mt="5px">
                                 <Text fontWeight="bold" fontSize={f1}>카츠단식</Text>
                                 <Spacer/>
-                                <Text fontSize={f3} color="#565656">126m</Text>
+                                <Text fontSize={f3} color={fc5}>126m</Text>
                             </Flex>
                             <Flex direction="row">
                                 <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px" mr="5px">일식</Tag>
@@ -195,7 +196,7 @@ import {
                                 <Flex w="12px" h="12px" mr="5px">
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize="10px" color="#565656">4.5 (10)</Text>
+                                <Text fontSize="10px" color={fc5}>4.5 (10)</Text>
                             </Flex>
                         </Flex>
                     </WrapItem>
@@ -213,7 +214,7 @@ import {
                             <Flex direction="row" alignItems="center" mt="5px">
                                 <Text fontWeight="bold" fontSize={f1}>카츠단식</Text>
                                 <Spacer/>
-                                <Text fontSize={f3} color="#565656">126m</Text>
+                                <Text fontSize={f3} color={fc5}>126m</Text>
                             </Flex>
                             <Flex direction="row">
                                 <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px" mr="5px">일식</Tag>
@@ -223,7 +224,7 @@ import {
                                 <Flex w="12px" h="12px" mr="5px">
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize="10px" color="#565656">4.5 (10)</Text>
+                                <Text fontSize="10px" color={fc5}>4.5 (10)</Text>
                             </Flex>
                         </Flex>
                     </WrapItem>
@@ -241,7 +242,7 @@ import {
                             <Flex direction="row" alignItems="center" mt="5px">
                                 <Text fontWeight="bold" fontSize={f1}>카츠단식</Text>
                                 <Spacer/>
-                                <Text fontSize={f3} color="#565656">126m</Text>
+                                <Text fontSize={f3} color={fc5}>126m</Text>
                             </Flex>
                             <Flex direction="row">
                                 <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px" mr="5px">일식</Tag>
@@ -251,7 +252,7 @@ import {
                                 <Flex w="12px" h="12px" mr="5px">
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize="10px" color="#565656">4.5 (10)</Text>
+                                <Text fontSize="10px" color={fc5}>4.5 (10)</Text>
                             </Flex>
                         </Flex>
                     </WrapItem>
@@ -264,7 +265,7 @@ import {
                             <Flex direction="row" alignItems="center" mt="5px">
                                 <Text fontWeight="bold" fontSize={f1}>카츠단식</Text>
                                 <Spacer/>
-                                <Text fontSize={f3} color="#565656">126m</Text>
+                                <Text fontSize={f3} color={fc5}>126m</Text>
                             </Flex>
                             <Flex direction="row">
                                 <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px" mr="5px">일식</Tag>
@@ -274,7 +275,7 @@ import {
                                 <Flex w="12px" h="12px" mr="5px">
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize="10px" color="#565656">4.5 (10)</Text>
+                                <Text fontSize="10px" color={fc5}>4.5 (10)</Text>
                             </Flex>
                         </Flex>
                     </WrapItem>
@@ -287,7 +288,7 @@ import {
                             <Flex direction="row" alignItems="center" mt="5px">
                                 <Text fontWeight="bold" fontSize={f1}>카츠단식</Text>
                                 <Spacer/>
-                                <Text fontSize={f3} color="#565656">126m</Text>
+                                <Text fontSize={f3} color={fc5}>126m</Text>
                             </Flex>
                             <Flex direction="row">
                                 <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px" mr="5px">일식</Tag>
@@ -297,7 +298,7 @@ import {
                                 <Flex w="12px" h="12px" mr="5px">
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize="10px" color="#565656">4.5 (10)</Text>
+                                <Text fontSize="10px" color={fc5}>4.5 (10)</Text>
                             </Flex>
                         </Flex>
                     </WrapItem>
@@ -310,7 +311,7 @@ import {
                             <Flex direction="row" alignItems="center" mt="5px">
                                 <Text fontWeight="bold" fontSize={f1}>카츠단식</Text>
                                 <Spacer/>
-                                <Text fontSize={f3} color="#565656">126m</Text>
+                                <Text fontSize={f3} color={fc5}>126m</Text>
                             </Flex>
                             <Flex direction="row">
                                 <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px" mr="5px">일식</Tag>
@@ -320,7 +321,7 @@ import {
                                 <Flex w="12px" h="12px" mr="5px">
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize="10px" color="#565656">4.5 (10)</Text>
+                                <Text fontSize="10px" color={fc5}>4.5 (10)</Text>
                             </Flex>
                         </Flex>
                     </WrapItem>

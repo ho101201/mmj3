@@ -27,6 +27,7 @@ import checkW from './images/checkW.png';
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     const [Check1, setCheck1] = useState(false);
 
@@ -73,19 +74,19 @@ import checkW from './images/checkW.png';
     return(
         <div>
             <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD">
-                <Text fontSize={f1} fontWeight="bold" align="center">정보수정</Text>
-                <Link href='/profile' position="absolute" left="11px" w="20px" h="20px">
+                <Text fontSize={f1} color={fc2} fontWeight="bold" align="center">정보수정</Text>
+                <Link href='/CutletInfo' position="absolute" left="11px" w="20px" h="20px">
                     <Image src={arrowL} alt="arrowL"/>
                 </Link>
             </Flex>
 
             <Flex direction="row-reverse" p="10px">
-                <Text fontSize={f2} color="#A4A4A4" letterSpacing="-0.5px">중복선택 가능</Text>
+                <Text fontSize={f2} color={fc4} letterSpacing="-0.5px">중복선택 가능</Text>
             </Flex>
 
             <Flex direction="column" ml="10px" mr="10px">
                 <Flex direction="row" alignItems="center" justifyContent="center" mb="20px">
-                    <Text fontSize={f2}>매장이 문을 닫았어요</Text>
+                    <Text fontSize={f2} color={fc1}>매장이 문을 닫았어요</Text>
                     <Spacer/>
                     {Check1?
                         <Flex alignItems='center' justifyContent="center" onClick={()=>checking1()}>
@@ -109,7 +110,7 @@ import checkW from './images/checkW.png';
                 </Flex>
 
                 <Flex direction="row" alignItems="center" justifyContent="center" mb="20px">
-                    <Text fontSize={f2}>주소가 틀려요</Text>
+                    <Text fontSize={f2} color={fc1}>주소가 틀려요</Text>
                     <Spacer/>
                     {Check2?
                         <Flex alignItems='center' justifyContent="center" onClick={()=>checking2()}>
@@ -133,7 +134,7 @@ import checkW from './images/checkW.png';
                 </Flex>
 
                 <Flex direction="row" alignItems="center" justifyContent="center" mb="20px">
-                    <Text fontSize={f2}>전화번호가 틀려요</Text>
+                    <Text fontSize={f2} color={fc1}>전화번호가 틀려요</Text>
                     <Spacer/>
                     {Check3?
                         <Flex alignItems='center' justifyContent="center" onClick={()=>checking3()}>
@@ -157,7 +158,7 @@ import checkW from './images/checkW.png';
                 </Flex>
 
                 <Flex direction="row" alignItems="center" justifyContent="center" mb="20px">
-                    <Text fontSize={f2}>운영시간 정보가 틀려요</Text>
+                    <Text fontSize={f2} color={fc1}>운영시간 정보가 틀려요</Text>
                     <Spacer/>
                     {Check4?
                         <Flex alignItems='center' justifyContent="center" onClick={()=>checking4()}>
@@ -181,7 +182,7 @@ import checkW from './images/checkW.png';
                 </Flex>
 
                 <Flex direction="row" alignItems="center" justifyContent="center" mb="20px">
-                    <Text fontSize={f2}>메뉴 정보가 틀려요</Text>
+                    <Text fontSize={f2} color={fc1}>메뉴 정보가 틀려요</Text>
                     <Spacer/>
                     {Check5?
                         <Flex alignItems='center' justifyContent="center" onClick={()=>checking5()}>
@@ -205,7 +206,7 @@ import checkW from './images/checkW.png';
                 </Flex>
 
                 <Flex direction="row" alignItems="center" justifyContent="center" mb="20px">
-                    <Text fontSize={f2}>가격 정보가 틀려요</Text>
+                    <Text fontSize={f2} color={fc1}>가격 정보가 틀려요</Text>
                     <Spacer/>
                     {Check6?
                         <Flex alignItems='center' justifyContent="center" onClick={()=>checking6()}>
@@ -229,7 +230,7 @@ import checkW from './images/checkW.png';
                 </Flex>
 
                 <Flex direction="row" alignItems="center" justifyContent="center" mb="6px">
-                    <Text fontSize={f2}>그 외 수정이 필요한 정보가 있어요</Text>
+                    <Text fontSize={f2} color={fc1}>그 외 수정이 필요한 정보가 있어요</Text>
                     <Spacer/>
                     {Check7?
                         <Flex alignItems='center' justifyContent="center" onClick={()=>checking7()}>
@@ -256,8 +257,8 @@ import checkW from './images/checkW.png';
             <Textarea fontSize={f2} placeholder='더 상세한 정보를 알려주고 싶으신가요?' variant="unstyled" p="10px" m="10px" h="100px" border="1px solid #E1E1E1 " resize='none' overflow="visible"/>
             
             <Flex direction="column" justifyContent="center">
-                <Text align="center" fontSize="10px" color="#A4A4A4">요청하신 정보는 내부 심사를 거쳐 처리되며,</Text>
-                <Text align="center" fontSize="10px" color="#A4A4A4">처리 내용은 알림 메시지로 알려드립니다.</Text>
+                <Text align="center" fontSize="10px" color={fc4}>요청하신 정보는 내부 심사를 거쳐 처리되며,</Text>
+                <Text align="center" fontSize="10px" color={fc4}>처리 내용은 알림 메시지로 알려드립니다.</Text>
             </Flex>
 
             {/* btn */}

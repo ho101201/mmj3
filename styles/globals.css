@@ -2,8 +2,16 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background: #FAFAFA;
+  /* background: rgb(100, 100, 100, 0.2); */
+  letter-spacing: -0.5px; 
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif, Noto Sans KR;
+}
+
+Text {
+  color: #303030;
+  font-size: 10px;
 }
 
 a {
@@ -11,18 +19,9 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .ist {
   overflow: scroll;
   -ms-overflow-style: none;
-}
-
-.list::-webkit-scrollbar { 
-  display: none;
-  width: 0 !important;
 }
 
 textarea::placeholder {
@@ -33,13 +32,22 @@ input::placeholder {
   color: #A4A4A4;
 }
 
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
-@import url(http://fonts.googleapis.com/earlyaccess/notosanssc.css);
-
-:lang(ko) {
-  font-family: 'Noto Sans KR', sans-serif;
+.addLocationSearchResult{
+  font-size: 14px;
+  color:  #A4A4A4;
 }
+
+
+
+/* .yellowBtn {
+  width: 90px;
+  height: 30px;
+  background: #F6E229;
+  border: 1px solid #303030;
+  border-radius: 100%;
+  font-size: 10px;
+  font-weight: normal;
+} */
 
 
 

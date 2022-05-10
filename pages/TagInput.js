@@ -36,11 +36,12 @@ import {
     const fc2 ="#333333"
     const fc3 ="#494949"
     const fc4 ="#A4A4A4"
+    const fc5 ="#565656"
 
     return(
         <div>
             <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD">
-                <Text fontSize={f1} fontWeight="bold" align="center">태그 입력</Text>
+                <Text fontSize={f1} color={fc2} fontWeight="bold" align="center">태그 입력</Text>
                 <Link href='/WritingRev' position="absolute" right="11px" w="20px" h="20px">
                     <Image src={btnX} alt="btnX"/>
                 </Link>
@@ -53,7 +54,7 @@ import {
             </Flex>
 
             <Flex mt="25px" direction="column" ml="10px" mr="10px">
-                <Text fontSize={f1} fontWeight="bold"  mb='15px'>최근 사용 태그</Text>
+                <Text fontSize={f1} color={fc2} fontWeight="bold" mb='15px'>최근 사용 태그</Text>
                 <Wrap spacing="9px">
                     <WrapItem>
                         <Box>
@@ -113,10 +114,10 @@ import {
                 <Flex direction="column" position="sticky" mr="10px"  w="100%" bottom="0"  mt="30px" pb="20px">
                     <Flex  w="100%" h="40px" mt="20px" position="sticky">
                         <Link w="100%" h="40px" mr="10px" ml="10px">
-                            <Button w="100%" borderRadius="full" bg="#ffffff" color="#303030" border="1px solid #303030" fontWeight={500} fontSize={f1}>초기화</Button>
+                            <Button w="100%" borderRadius="full" bg="#ffffff" color={fc1} border="1px solid #303030" fontWeight={500} fontSize={f1}>초기화</Button>
                         </Link>
                         <Link w="100%" h="40px" mr="10px" ml="10px">
-                            <Button w="100%" borderRadius="full" bg="#F6E229" color="#303030" fontWeight={500} fontSize={f1}>완료</Button>
+                            <Button w="100%" borderRadius="full" bg="#F6E229" color={fc1} fontWeight={500} fontSize={f1}>완료</Button>
                         </Link>
                     </Flex>
                 </Flex>
