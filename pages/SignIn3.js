@@ -92,7 +92,7 @@ export default function SignIn3() {
                         </Link>
                     </Flex>
                     <Spacer/>
-                    <Text fontWeight="extrabold" fontSize={f1} color={fc2} position="absolute">
+                    <Text className='headerTitle' position="absolute">
                         회원가입
                     </Text>
                 </Flex>

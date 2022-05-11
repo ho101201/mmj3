@@ -54,9 +54,9 @@ export default function Recommand() {
 
                                 <Flex direction="column-reverse" w="180px" position="relative" alignItems="center">
                                     <Box  position="absolute">
-                                        <Text className='userName'>닉네임최대글자수 </Text>
+                                        <Text className='recommand_userName'>닉네임최대글자수 </Text>
                                     </Box>
-                                    <Box className='borderLine' w="100%"/>
+                                    <Box className='recommand_borderLine' w="100%"/>
                                 </Flex>
 
                                 <Text fontSize="24px" fontWeight={700} color={fc2}>님</Text>

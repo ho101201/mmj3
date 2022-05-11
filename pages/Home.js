@@ -102,7 +102,7 @@ import {
             <Flex className='cover'>
                 
                 <Flex className='header'>
-                    <Link href='/SetLocation' display="flex" flexDirection="row" ml="10px">
+                    <Link href='/SetLocation' display="flex" flexDirection="row">
                         <Flex alignItems="center" justifyContent="center">
                             <Text className='currentLocation'>송파구 문정동</Text>
                             <Flex className='header_arrowB'>
@@ -116,7 +116,7 @@ import {
                                 <Image src={search} alt="search"/>
                             </Link>
                         </Box>
-                        <Box className='headerIcon' mr="22px">
+                        <Box className='headerIcon' mr="12px">
                             <Link href='/Alarm'>
                                 <Image src={bell} alt="bell"/>
                             </Link>

@@ -49,50 +49,50 @@ export default function LogIn() {
               <Box w="100%" >
                 {/* <Img src={require("./images/kakao.png").default} position="absolute" w="22px" h='22px' /> */}
                 <Link href='/Home'>
-                  <Flex bg="#FFFFFF" alignItems="center" justifyContent="center" w="100%" borderRadius="10px" h="40px" >
-                    <Box ml="43px" mt="6px">
+                  <Flex className='loginBtn' >
+                    <Flex ml="43px">
                       <Image src={kakao} alt="kakao"/>
-                    </Box>
+                    </Flex>
                     <Spacer/>
-                    <Text position="absolute" color={fc1} fontSize={f2}>
+                    <Text className='loginBtnText'>
                       카카오로 로그인
                     </Text>
                   </Flex>
                 </Link>
               </Box>
-              <Flex bg="#FFFFFF" alignItems="center" justifyContent="center" w="100%" borderRadius="10px" h="40px">
+              <Flex className='loginBtn'>
                   <Box ml="44px" mt="6px">
                     <Image src={naver} alt="naver"/>
                   </Box>
                   <Spacer/>
-                <Text  position="absolute" color={fc1} fontSize={f2}>
+                <Text  className='loginBtnText'>
                   NAVER로 로그인
                 </Text>
               </Flex>
-              <Flex bg="#FFFFFF" alignItems="center" justifyContent="center" w="100%" borderRadius="10px" h="40px">
+              <Flex className='loginBtn'>
                   <Box ml="43px" mt="6px">
                     <Image src={facebook} alt="facebook"/>
                   </Box>
                   <Spacer/>
-                <Text position="absolute" color={fc1} fontSize={f2}>
+                <Text className='loginBtnText'>
                   페이스북으로 로그인
                 </Text>
               </Flex>
-              <Flex bg="#FFFFFF" alignItems="center" justifyContent="center" w="100%" borderRadius="10px" h="40px">
+              <Flex className='loginBtn'>
                   <Box ml="49px" mt="6px">
                     <Image src={apple} alt="apple"/>
                   </Box>
                   <Spacer/>
-                <Text position="absolute" color={fc1} fontSize={f2}>
+                <Text className='loginBtnText'>
                   Apple로 로그인
                 </Text>
               </Flex>
-              <Flex bg="#FFFFFF" alignItems="center" justifyContent="center" w="100%" borderRadius="10px" h="40px">
+              <Flex className='loginBtn'>
                   <Box ml="48px" mt="6px">
                     <Image src={mail} alt="mail"/>
                   </Box>
                   <Spacer/>
-                <Text position="absolute" color={fc1} fontSize={f2}>
+                <Text className='loginBtnText'>
                   이메일로 로그인
                 </Text>
               </Flex>

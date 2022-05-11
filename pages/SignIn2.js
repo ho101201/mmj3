@@ -9,7 +9,7 @@ import {
   } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import Image from "next/image";
-import arrowL from './images/arrowL.svg';
+import arrowL from './images/arrowL.png';
 import circleY from './images/EllipseY.png';
 import file from './images/file.png';
 import camera from './images/camera.png';
@@ -36,29 +36,33 @@ export default function SignIn2() {
 
     return(
         <div>
+            <Flex className='cover'>
                 {/* header */}
-                <Flex w="vw" h="40px" alignItems="center" justifyContent="center" borderBottom="1px solid #DDDDDD">
-                    <Flex ml="18px" alignItems="center">
-                        <Link href='/SignIn' mt="4px">
-                            <Image src={arrowL} alt="arrowL"/>
+                <Flex className='header'>
+                    <Flex ml="8px" alignItems="center">
+                        <Link href='/SignIn'>
+                            <Flex className='header_arrowL'>
+                                <Image src={arrowL} alt="arrowL"/>
+                            </Flex>
                         </Link>
                     </Flex>
                     <Spacer/>
-                    <Text fontWeight="extrabold" fontSize={f1} color={fc2} position="absolute">
+                    <Text className='headerTitle' position="absolute">
                         회원가입
                     </Text>
                 </Flex>
 
                 {/* container */} 
-                <Flex w="100%" h="100vh" bg="#FAFAFA" direction="column" alignItems="center" p="10px">
-                    <Flex direction="column" m="10px" mt="10px" p="10px" borderRadius="30px" w="100%" h="394px" alignItems="center" justifyContent="center" bg="white">
-                        <Text fontSize={f1} fontWeight="bold" color={fc2}  mt="15px" mb="1px">
+                <Flex className='doubleBox_bg'>
+                    <Flex className='doubleBox_container'>
+                        
+                        <Text fontSize={f1} fontWeight="bold" color={fc2} mb="1px">
                             뭐먹지 정보 이용 안내
                         </Text>
                         <Text fontSize={f2} fontWeight="normal" color={fc3}>
                             뭐먹지 이용을 위해 아래의 권한을 허용해주세요
                         </Text>
-                        <Box w="100%" h='2px' mt="17px" bg='#303030' />
+                        <Box w="100%" h='2px' mt="17px" bg='#303030'/>
 
                         <Flex alignItems='center' justifyContent="center"  mt="37px" position="relative">
                             <Box h="40px">
@@ -82,7 +86,7 @@ export default function SignIn2() {
                         </Flex>
                         <Text fontSize={f3} color={fc1} fontWeight="bold" mt="5px">카메라</Text>
                         <Text fontSize={f3} color={fc3} fontWeight="light" maxW="246px" mt="3px" >내 기기에 카메라를 통하여 사진을 등록하기 위해</Text>
-                        <Text fontSize={f3} color={fc3} fontWeight="light" maxW="246px"  >카메라 접근이 필요합니다.</Text>
+                        <Text fontSize={f3} color={fc3} fontWeight="light" maxW="246px" >카메라 접근이 필요합니다.</Text>
                     </Flex>
 
                     {/* button */}
@@ -95,7 +99,8 @@ export default function SignIn2() {
                         </Link>
                     </Box>
                 </Flex>
-
+                
+            </Flex>
 
         </div>
     )

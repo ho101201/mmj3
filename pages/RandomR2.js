@@ -27,19 +27,19 @@ export default function Random2() {
 
     return(
         <div>
-            <Flex w="vw" h="40px" alignItems="center" justifyContent="center" borderBottom="1px solid #DDDDDD">
-                <Flex ml="18px" alignItems="center">
+            <Flex className='header'>
+                <Flex ml="8px" alignItems="center">
                     <Link href='/RandomR1' >
-                        <Flex w="7px" h="16px">
+                        <Flex className='header_arrowL'>
                             <Image src={arrowL} alt="arrowL"/>
                         </Flex>
                     </Link>
                 </Flex>
                 <Spacer/>
-                <Text fontWeight="extrabold" fontSize={f2} color={fc2} position="absolute">
+                <Text className='headerTitle' position="absolute">
                     랜덤추천
                 </Text>
-                <Flex w="20px" h="20px" mr="9px">
+                <Flex className='headerIcon'>
                     <Image src={exportBtn} alt="exportBtn"/>
                 </Flex>
             </Flex>

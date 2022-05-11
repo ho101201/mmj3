@@ -47,13 +47,15 @@ export default function Review() {
                 {/* header */}
                 <Flex className='header'>
                     <Link href='/AddLocation' display="flex" flexDirection="row">
-                        <Text id='location' fontSize={f2} fontWeight="bold" ml="10px" mr="7px" color="#333333" >전체지역</Text>
-                        <Box w="12px" h="20px" position="absolute" left="75px" top="4px" >
-                            <Image src={arrowB} alt="arrowB"/>
-                        </Box>
+                        <Flex alignItems="center" justifyContent="center">
+                            <Text className='selectedLocation'>전체지역</Text>
+                            <Flex className='header_arrowB'>
+                                <Image src={arrowB} alt="arrowB"/>
+                            </Flex>
+                        </Flex>
                     </Link>
                     <Spacer/>
-                    <Select defaultValue='A' w="86px" h="22px" fontSize={f3} p="0px" mr="10px" borderRadius="4px">
+                    <Select defaultValue='A' w="86px" h="22px" fontSize={f3} borderRadius="4px">
                         <option value='A'>최신순</option>
                         <option value='B'>별점높은순</option>
                         <option value='C'>별점낮은순</option>
@@ -120,11 +122,12 @@ export default function Review() {
                                 <Text fontSize={f2} color="#565656">댓글</Text>
                             </GridItem>
                         </Grid>
+
                     </Flex>
                 </Flex>
 
-                <Spacer/>
                 {/* NavBar */}
+                <Spacer/>
                 <Box className='doc'>
                     <Flex className='docArray' >
                         <Spacer/>

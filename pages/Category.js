@@ -131,7 +131,7 @@ import {
       
         <div>
                 <Flex className='header'>
-                    <Link href='/SetLocation' display="flex" flexDirection="row" ml="10px">
+                    <Link href='/SetLocation' display="flex" flexDirection="row">
                         <Flex alignItems="center" justifyContent="center">
                             <Text className='currentLocation'>송파구 문정동</Text>
                             <Flex className='header_arrowB'>
@@ -146,7 +146,7 @@ import {
                         </Box>
                     </Link>
                     <Link href='/Alarm'>
-                        <Box className='headerIcon' mr="22px">
+                        <Box className='headerIcon' mr="12px">
                             <Image src={bell} alt="bell"/>
                         </Box>
                     </Link>
@@ -182,19 +182,20 @@ import {
                                 </Text>
                             </Flex>
                             <Flex direction="row" alignItems="center" mt="5px">
-                                <Text fontWeight="bold" fontSize={f1}>카츠단식</Text>
+                                <Text className='category_itemName'>카츠단길</Text>
                                 <Spacer/>
-                                <Text fontSize={f3} color={fc5}>126m</Text>
+                                <Text className='category_distance'>126m</Text>
                             </Flex>
                             <Flex direction="row">
                                 <Box className='category_tag'>일식</Box>
                                 <Box className='category_tag'>치즈돈까스</Box>
                             </Flex>
                             <Flex mt="10px">
-                                <Flex w="12px" h="12px" mr="5px">
+                                <Flex className='category_star'>
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize="10px" color={fc5}>4.5 (10)</Text>
+                                <Text className='category_score'>4.5</Text>
+                                <Text className='category_count'>(10)</Text>
                             </Flex>
                         </Flex>
                     </WrapItem>
@@ -210,19 +211,20 @@ import {
                                 </Text>
                             </Flex>
                             <Flex direction="row" alignItems="center" mt="5px">
-                                <Text fontWeight="bold" fontSize={f1}>카츠단식</Text>
+                                <Text className='category_itemName'>카츠단길</Text>
                                 <Spacer/>
-                                <Text fontSize={f3} color={fc5}>126m</Text>
+                                <Text className='category_distance'>126m</Text>
                             </Flex>
                             <Flex direction="row">
-                                <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px" mr="5px">일식</Tag>
-                                <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px">치즈돈까스</Tag>
+                                <Box className='category_tag'>일식</Box>
+                                <Box className='category_tag'>치즈돈까스</Box>
                             </Flex>
                             <Flex mt="10px">
-                                <Flex w="12px" h="12px" mr="5px">
+                                <Flex className='category_star'>
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize="10px" color={fc5}>4.5 (10)</Text>
+                                <Text className='category_score'>4.5</Text>
+                                <Text className='category_count'>(10)</Text>
                             </Flex>
                         </Flex>
                     </WrapItem>
@@ -238,19 +240,20 @@ import {
                                 </Text>
                             </Flex>
                             <Flex direction="row" alignItems="center" mt="5px">
-                                <Text fontWeight="bold" fontSize={f1}>카츠단식</Text>
+                                <Text className='category_itemName'>카츠단길</Text>
                                 <Spacer/>
-                                <Text fontSize={f3} color={fc5}>126m</Text>
+                                <Text className='category_distance'>126m</Text>
                             </Flex>
                             <Flex direction="row">
-                                <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px" mr="5px">일식</Tag>
-                                <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px">치즈돈까스</Tag>
+                                <Box className='category_tag'>일식</Box>
+                                <Box className='category_tag'>치즈돈까스</Box>
                             </Flex>
                             <Flex mt="10px">
-                                <Flex w="12px" h="12px" mr="5px">
+                                <Flex className='category_star'>
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize="10px" color={fc5}>4.5 (10)</Text>
+                                <Text className='category_score'>4.5</Text>
+                                <Text className='category_count'>(10)</Text>
                             </Flex>
                         </Flex>
                     </WrapItem>
@@ -261,19 +264,20 @@ import {
                                 <Image src={p1} alt="p1"/>
                             </Flex>
                             <Flex direction="row" alignItems="center" mt="5px">
-                                <Text fontWeight="bold" fontSize={f1}>카츠단식</Text>
+                                <Text className='category_itemName'>카츠단길</Text>
                                 <Spacer/>
-                                <Text fontSize={f3} color={fc5}>126m</Text>
+                                <Text className='category_distance'>126m</Text>
                             </Flex>
                             <Flex direction="row">
-                                <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px" mr="5px">일식</Tag>
-                                <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px">치즈돈까스</Tag>
+                                <Box className='category_tag'>일식</Box>
+                                <Box className='category_tag'>치즈돈까스</Box>
                             </Flex>
-                            <Flex mt="10px">
-                                <Flex w="12px" h="12px" mr="5px">
+                            <Flex mt="10px" alignItems="center">
+                                <Flex className='category_star'>
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize="10px" color={fc5}>4.5 (10)</Text>
+                                <Text className='category_score'>4.5</Text>
+                                <Text className='category_count'>(10)</Text>
                             </Flex>
                         </Flex>
                     </WrapItem>
@@ -284,19 +288,20 @@ import {
                                 <Image src={p1} alt="p1"/>
                             </Flex>
                             <Flex direction="row" alignItems="center" mt="5px">
-                                <Text fontWeight="bold" fontSize={f1}>카츠단식</Text>
+                                <Text className='category_itemName'>카츠단길</Text>
                                 <Spacer/>
-                                <Text fontSize={f3} color={fc5}>126m</Text>
+                                <Text className='category_distance'>126m</Text>
                             </Flex>
                             <Flex direction="row">
-                                <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px" mr="5px">일식</Tag>
-                                <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px">치즈돈까스</Tag>
+                                <Box className='category_tag'>일식</Box>
+                                <Box className='category_tag'>치즈돈까스</Box>
                             </Flex>
                             <Flex mt="10px">
-                                <Flex w="12px" h="12px" mr="5px">
+                                <Flex className='category_star'>
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize="10px" color={fc5}>4.5 (10)</Text>
+                                <Text className='category_score'>4.5</Text>
+                                <Text className='category_count'>(10)</Text>
                             </Flex>
                         </Flex>
                     </WrapItem>
@@ -307,19 +312,20 @@ import {
                                 <Image src={p1} alt="p1"/>
                             </Flex>
                             <Flex direction="row" alignItems="center" mt="5px">
-                                <Text fontWeight="bold" fontSize={f1}>카츠단식</Text>
+                                <Text className='category_itemName'>카츠단길</Text>
                                 <Spacer/>
-                                <Text fontSize={f3} color={fc5}>126m</Text>
+                                <Text className='category_distance'>126m</Text>
                             </Flex>
                             <Flex direction="row">
-                                <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px" mr="5px">일식</Tag>
-                                <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px">치즈돈까스</Tag>
+                                <Box className='category_tag'>일식</Box>
+                                <Box className='category_tag'>치즈돈까스</Box>
                             </Flex>
                             <Flex mt="10px">
-                                <Flex w="12px" h="12px" mr="5px">
+                                <Flex className='category_star'>
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize="10px" color={fc5}>4.5 (10)</Text>
+                                <Text className='category_score'>4.5</Text>
+                                <Text className='category_count'>(10)</Text>
                             </Flex>
                         </Flex>
                     </WrapItem>

@@ -164,35 +164,35 @@ export default function Profile() {
             </Flex>
 
             {/* navBar */}
-            <Box borderTop="1px solid #E8E8E8" h="80px"  pl="7px" pr="7px" display="absolute" position="sticky" bottom="0px" bg="#ffffff">
-                    <Flex direction="row" w="vw" mt="13px" >
+            <Box className='doc'>
+                    <Flex className='docArray'>
                         <Spacer/>
-                        <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
-                            <Link href='/Home' w="24px" h="24px">
+                        <Flex className='docComp'>
+                            <Link href='/Home' className='docIcon'>
                                 <Image src={home} alt="home"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc1}>홈</Text>
+                            <Text className='docText_N'>홈</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
-                            <Link href='/Recommand' w="24px" h="24px">
+                        <Flex className='docComp'>
+                            <Link href='/Recommand' className='docIcon'>
                                 <Image src={rec} alt="rec"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc1}>추천</Text>
+                            <Text className='docText_N'>추천</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
-                            <Link href='/Review' w="24px" h="24px">
+                        <Flex className='docComp'>
+                            <Link href='/Review' className='docIcon'>
                                 <Image src={rev} alt="rev"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" align="center" color={fc1}>후기</Text>
+                            <Text className='docText_N'>후기</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
-                            <Link href='/Profile' w="24px" h="24px">
+                        <Flex className='docComp'>
+                            <Link href='/Profile' className='docIcon'>
                                 <Image src={myA} alt="myA"/>
                             </Link>
-                            <Text fontWeight="bold" fontSize="10px" align="center" color={fc1}>마이</Text>
+                            <Text className='docText_H' color={fc1}>마이</Text>
                         </Flex>
                         <Spacer/>
 
