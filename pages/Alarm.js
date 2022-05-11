@@ -27,37 +27,29 @@ import {
 
     return(
         <div>
-            <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD">
-                <Text fontSize={f1} fontWeight="bold" align="center" color={fc2}>알림</Text>
-                <Link href='/Home' position="absolute" right="11px" w="20px" h="20px">
-                    <Image src={btnX} alt="btnX" />
-                </Link>
-            </Flex>
-{/* 
-            <Flex m="10px" h="96px" direction="column" bg="gray.200" borderBottom="1px solid #F6F6F6">
-                <Flex direction="column" mt="5px" pr="10px" pl="10px" bg="gray.300" justifyContent="flex-start">
-                    <Text fontWeight="bold" fontSize={f1} >회원가입 완료</Text>
-                    <Text fontWeight="medium" fontSize={f2} >가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
-                    <Text fontSize="10px" color="#A4A4A4" mt="17px">1시간전</Text>
+            <Flex className='cover' bg="white">
+                <Flex className='header'>
+                    <Text className='headerTitle'>알림</Text>
+                    <Link href='/Home' className='headerIcon' position="absolute" right="11px">
+                        <Image src={btnX} alt="btnX" />
+                    </Link>
                 </Flex>
-                <Spacer/>
-                <Box w="100%" h="1px" bg="red"/>
-            </Flex> */}
 
-            <Flex direction="column" mt="15px" pr="20px" pl="20px" justifyContent="flex-start">
-                <Text fontWeight="bold" fontSize={f1} color={fc2}>회원가입 완료</Text>
-                <Text fontWeight="medium" fontSize={f2} color={fc3}>가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
-                <Text fontSize="10px" color={fc4} mt="17px" mb="20px">1시간전</Text>
+                <Flex className='alarmBox'>
+                    <Text className='alarm_tilte'>회원가입 완료</Text>
+                    <Text className='alarm_detail'>가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
+                    <Text className='alarm_arrivedTime'>1시간전</Text>
+                </Flex>
+
+                <Box w="vw" h="1px" ml="10px" mr="10px" bg="#F6F6F6"/>
+
+                <Flex className='alarmBox'>
+                    <Text className='alarm_tilte' >회원가입 완료</Text>
+                    <Text className='alarm_detail' >가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
+                    <Text className='alarm_arrivedTime'>1시간전</Text>
+                </Flex>
+                <Box w="vw" h="1px" ml="10px" mr="10px" bg="#F6F6F6"/>
             </Flex>
-            <Box w="vw" h="1px" ml="10px" mr="10px" bg="#F6F6F6"/>
-
-            <Flex direction="column" mt="15px" pr="20px" pl="20px" justifyContent="flex-start">
-                <Text fontWeight="bold" fontSize={f1} color={fc2} >회원가입 완료</Text>
-                <Text fontWeight="medium" fontSize={f2} color={fc3} >가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
-                <Text fontSize="10px" color={fc4} mt="17px" mb="20px">1시간전</Text>
-            </Flex>
-            <Box w="vw" h="1px" ml="10px" mr="10px" bg="#F6F6F6"/>
-
         </div>
     )
   }

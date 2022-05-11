@@ -9,12 +9,11 @@ import {
     Modal,
     ModalOverlay,
     ModalContent,
-    ModalHeader,
-    ModalFooter,
     ModalBody,
     ModalCloseButton,
     useDisclosure,
-    useMediaQuery
+    useMediaQuery,
+    background
   } from '@chakra-ui/react';
   // import { Link } from 'next/link';
   import Image from 'next/image';
@@ -22,7 +21,7 @@ import {
     useState, 
 } from 'react';
   
-  import styled from "styled-components";
+  import styled, { css } from 'styled-components'
   
   import bell from './images/Bell_Icon.png';
   import search from './images/Search_Icons.png';
@@ -84,269 +83,214 @@ import {
     const [Check, setCheck] = useState(true);
     const checkAlarm =()=> {
         setCheck( Check => !Check );
-    }
+    };
 
-    const SelectBoxWrapper = styled.div`
-	display: flex;
-`;
-
-    const IconSVG = styled.svg`
-	margin-left: -28px;
-	align-self: center;
-	width: 24px;
-	height: 24px;
-`;
     const [show1, setShow1] = useState(true);
     const [show2, setShow2] = useState(true);
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    // const { isOpen, onOpen, onClose } = useDisclosure()
+    const modal1 = useDisclosure();
+    const modal2 = useDisclosure();
 
     const [longW] = useMediaQuery(
         "(min-width: 600px)"
       );
-
   
     return (
       
         <div>
             {/* homeBody */}
-            <Flex direction="column" bg="#FAFAFA" h="100vh">
+            <Flex className='cover'>
                 
-                <Flex h="40px"  alignItems="center" borderBottom="1px solid #DDDDDD" position="sticky" bg="white">
+                <Flex className='header'>
                     <Link href='/SetLocation' display="flex" flexDirection="row" ml="10px">
-                        <Text id='location' fontSize={f2} color={fc2} fontWeight="bold" mr="7px">송파구 문정동</Text>
-                        <Box w="12px" h="20px" position="absolute" left="104px" top="4px" >
-                            <Image src={arrowB} alt="arrowB"/>
-                        </Box>
+                        <Flex alignItems="center" justifyContent="center">
+                            <Text className='currentLocation'>송파구 문정동</Text>
+                            <Flex className='header_arrowB'>
+                                <Image src={arrowB} alt="arrowB"/>
+                            </Flex>
+                        </Flex>
                     </Link>
                     <Spacer/>
-                        <Box w="20px" h="20px" mr="22px">
+                        <Box className='headerIcon' mr="22px">
                             <Link href='/Search'>
                                 <Image src={search} alt="search"/>
                             </Link>
                         </Box>
-                        <Box w="20px" h="20px" mr="22px">
+                        <Box className='headerIcon' mr="22px">
                             <Link href='/Alarm'>
                                 <Image src={bell} alt="bell"/>
                             </Link>
                         </Box>
                 </Flex>
 
-                {/* hide or fade out */}
                 {Check&&
                     <Box position="absolute" w="214px" h="28px" top="29px" left="11px" onClick={()=>checkAlarm()}>
                         <Image src={info} alt="info"/>
                     </Box>
                 }
+                    {/* squarcle? */}
+                    {/* <svg width="88px" height="88px" viewBox="0 0 88 88">
+                        <g id="Page-1" stroke="#303030" stroke-width="2" fill="none" fill-rule="evenodd" stroke-opacity="1">
+                                <path d="M44,0 C76.0948147,0 88,11.9051853 88,44 C88,76.0948147 76.0948147,88 44,88 C11.9051853,88 0,76.0948147 0,44 C0,11.9051853 11.9051853,0 44,0 Z" id="bg/profile/default" fill="#fae100"></path>
+                        </g>
+                    </svg> */}
 
-                <HStack overflow="hidden" mt='20px' spacing="14.5px" whiteSpace="nowrap" overflowX='auto' >
+                {/* category */}
+                <HStack className='horizontalScroll' pt='20px' pb="16px" spacing="14.5px">
                     {/* hilighted */}
                     <Link href='/Category'>
-                        <Flex alignItems="center" justifyContent="center" ml="10px" position="relative">
-                            <Box w="60px" h="60px">
+                        <Flex className='category' ml="10px">
+                            <Box className='categoryBody'>
                                 <Image src={iconBgA} alt="iconBgA"/>
                             </Box>
-                            <Box position="absolute" w="18px" h="12px" mb="20px">
+                            <Box className='categoryIcon' >
                                 <Image src={foodA1} alt="foodA1"/>
                             </Box>
-                            <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">전체</Text>
+                            <Text className='categoryText_H'>전체</Text>
                         </Flex>
                     </Link>
 
                     {/* normal */}
-                    <Flex alignItems="center" justifyContent="center" position="relative">
-                        <Box w="60px" h="60px" >
+                    <Flex className='category'>
+                        <Box className='categoryBody'>
                             <Image src={iconBgN} alt="iconBgN"/>
                         </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
+                        <Box className='categoryIcon'>
                             <Image src={foodN2} alt="foodN2"/>
                         </Box>
-                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">한식</Text>
+                        <Text className='categoryText_N'>한식</Text>
                     </Flex>
 
-                    <Flex alignItems="center" justifyContent="center" position="relative">
-                        <Box w="60px" h="60px" >
+                    <Flex className='category'>
+                        <Box className='categoryBody'>
                             <Image src={iconBgN} alt="iconBgN"/>
                         </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
+                        <Box className='categoryIcon'>
                             <Image src={foodN3} alt="foodN3" />
                         </Box>
-                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">일식</Text>
+                        <Text className='categoryText_N'>일식</Text>
                     </Flex>
 
-                    <Flex alignItems="center" justifyContent="center" position="relative">
-                        <Box w="60px" h="60px" >
+                    <Flex className='category'>
+                        <Box className='categoryBody'>
                             <Image src={iconBgN} alt="iconBgN"/>
                         </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
+                        <Box className='categoryIcon'>
                             <Image src={foodN4} alt="foodN4"/>
                         </Box>
-                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">중식</Text>
+                        <Text className='categoryText_N'>중식</Text>
                     </Flex>
 
-                    <Flex alignItems="center" justifyContent="center" position="relative">
-                        <Box w="60px" h="60px" >
+                    <Flex className='category'>
+                        <Box className='categoryBody'>
                             <Image src={iconBgN} alt="iconBgN"/>
                         </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
+                        <Box className='categoryIcon'>
                             <Image src={foodN5} alt="foodN5"/>
                         </Box>
-                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">양식</Text>
+                        <Text className='categoryText_N'>양식</Text>
                     </Flex> 
 
-                    <Flex alignItems="center" justifyContent="center" position="relative">
-                        <Box w="60px" h="60px" >
+                    <Flex className='category'>
+                        <Box className='categoryBody'>
                             <Image src={iconBgN} alt="iconBgN"/>
                         </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
+                        <Box className='categoryIcon'>
                             <Image src={foodN6} alt="foodN6"/>
                         </Box>
-                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">분식</Text>
+                        <Text className='categoryText_N'>분식</Text>
                     </Flex> 
 
-                    <Flex alignItems="center" justifyContent="center" position="relative">
-                        <Box w="60px" h="60px" >
+                    <Flex className='category'>
+                        <Box className='categoryBody'>
                             <Image src={iconBgN} alt="iconBgN"/>
                         </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
+                        <Box className='categoryIcon'>
                             <Image src={foodN7} alt="foodN7"/>
                         </Box>
-                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">퓨전</Text>
+                        <Text className='categoryText_N'>퓨전</Text>
                     </Flex> 
 
-                    <Flex alignItems="center" justifyContent="center" position="relative">
-                        <Box w="60px" h="60px" >
+                    <Flex className='category'>
+                        <Box className='categoryBody'>
                             <Image src={iconBgN} alt="iconBgN"/>
                         </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
+                        <Box className='categoryIcon'>
                             <Image src={foodN8} alt="foodN8"/>
                         </Box>
-                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">퓨전</Text>
+                        <Text className='categoryText_N'>동남아</Text>
                     </Flex> 
                     
-                    <Flex alignItems="center" justifyContent="center" position="relative">
-                        <Box w="60px" h="60px" >
+                    <Flex className='category'>
+                        <Box className='categoryBody'>
                             <Image src={iconBgN} alt="iconBgN"/>
                         </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="26px">
+                        <Box className='categoryIcon'>
                             <Image src={foodN9} alt="foodN9"/>
                         </Box>
-                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="16px">디저트</Text>
-                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="36px">베이커리</Text>
+                        <Text className='categoryText_N' mt="16px">디저트</Text>
+                        <Text className='categoryText_N' mt="36px">베이커리</Text>
                     </Flex> 
 
-                    <Flex alignItems="center" justifyContent="center" position="relative">
-                        <Box w="60px" h="60px" >
+                    <Flex className='category'>
+                        <Box className='categoryBody'>
                             <Image src={iconBgN} alt="iconBgN"/>
                         </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
+                        <Box className='categoryIcon'>
                             <Image src={foodN10} alt="foodN10"/>
                         </Box>
-                        <Text fontSize="10px" color={fc1} position="absolute" fontWeight="bold" mt="26px">기타</Text>
+                        <Text className='categoryText_N'>기타</Text>
                     </Flex> 
                 </HStack>
 
-                {/* <Flex overflow="hidden" ml="10px" mt='20px'>
-                    {/* hilighted */}
-                    {/* <Flex alignItems="center" justifyContent="center" mr="15px">
-                        <Box w="60px" h="60px" >
-                            <Image src={iconBgA}/>
-                        </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
-                            <Image src={foodA1}  />
-                        </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">전체</Text>
-                    </Flex> */}
+                <Text mt="10px" ml="10px" fontSize={f1} fontWeight="bold" color={fc2}>최근에 먹은 것들</Text>
+                
+                <Box w="100%" className='horizontalScroll' pl="10px" pb="10px" mt="11px">
+                    <Box className='recentlyEaten'>
+                        <Image src={p1} alt="p1"/>
+                    </Box>
+                    <Box className='recentlyEaten'>
+                        <Image src={p2} alt="p2"/>
+                    </Box>
+                    <Box className='recentlyEaten'>
+                        <Image src={p3} alt="p3"/>
+                    </Box>
+                    <Box className='recentlyEaten'>
+                        <Image src={pd} alt="pd"/>
+                    </Box>
+                </Box>
 
-                    {/* normal */}
-                    {/* <Flex alignItems="center" justifyContent="center" mr="15px">
-                        <Box w="60px" h="60px" >
-                            <Image src={iconBgN}/>
-                        </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
-                            <Image src={foodN2}  />
-                        </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">한식</Text>
-                    </Flex>
-
-                    <Flex alignItems="center" justifyContent="center" mr="15px">
-                        <Box w="60px" h="60px" >
-                            <Image src={iconBgN}/>
-                        </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
-                            <Image src={foodN3}  />
-                        </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">일식</Text>
-                    </Flex>
-
-                    <Flex alignItems="center" justifyContent="center" mr="15px">
-                        <Box w="60px" h="60px" >
-                            <Image src={iconBgN}/>
-                        </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
-                            <Image src={foodN4}  />
-                        </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">중식</Text>
-                    </Flex>
-
-                    <Flex alignItems="center" justifyContent="center" mr="15px">
-                        <Box w="60px" h="60px" >
-                            <Image src={iconBgN}/>
-                        </Box>
-                        <Box position="absolute" w="18px" h="12px" mb="20px">
-                            <Image src={foodN5}  />
-                        </Box>
-                        <Text fontSize="10px" position="absolute" fontWeight="bold" mt="26px">양식</Text>
-                    </Flex>
-
-                </Flex> */}
-
-                    <Text mt="26px" ml="10px" fontSize={f1} fontWeight="bold" color={fc2}>최근에 먹은 것들</Text>
-                    
-                    <HStack w="max-content" spacing="10px" ml="10px" mt="11px" whiteSpace="nowrap" overflow='hidden' overflowX="auto">
-                        <Box w="90px" h="90px" >
-                            <Image src={p1} alt="p1"/>
-                        </Box>
-                        <Box w="90px" h="90px">
-                            <Image src={p2} alt="p2"/>
-                        </Box>
-                        <Box w="90px" h="90px">
-                            <Image src={p3} alt="p3"/>
-                        </Box>
-                        <Box w="90px" h="90px">
-                            <Image src={pd} alt="pd"/>
-                        </Box>
-                    </HStack>
-
-                <Flex direction="column" w="vw" h="120px" justifyContent="center" alignItems="center" ml="10px" mr="10px" mt="40px" border="3px solid #F6E229"
-                 borderTopLeftRadius="30px" borderTopRightRadius="30px" borderBottomLeftRadius="30px" bg="white">
+                <Flex className='styledContainer'>
                      <Flex position="absolute" alignItems="center" justifyContent="center" mb="115px">
                          <Flex position="absolute" w="40px" h="40px">
                              <Image src={circleB} alt="fcircleB"/>
                          </Flex>
-                         <Flex position="absolute" w="24px" h="24px">
+                         <Flex position="absolute" className="docIcon">
                              <Image src={ranking} alt="ranking"/>
                          </Flex>
                      </Flex>
-                    <Text fontSize={f2} color={fc3} fontWeight="bold" align="center">갑작스럽게 혼밥을 해야할 때 당신은?</Text>
+                    <Text fontSize={f2} color={fc3} fontWeight="bold" align="center" mt="10px">갑작스럽게 혼밥을 해야할 때 당신은?</Text>
                     <Flex direction="row" justifyContent="center" mt="9px">
-                        <Button w="90px" h="30px" bg={fc1} color="#ffffff" borderRadius="full" fontSize="10px" fontWeight="medium" mr="5px">죽어도 싫어</Button>
-                        <Button w="90px" h="30px" bg="#F6E229" border="1px solid #303030" borderRadius="full" fontSize="10px" fontWeight="medium" ml="5px">오히려 좋아</Button>
+                        <Flex className='smallBlackBtn' mr="5px">죽어도 싫어</Flex>
+                        <Flex className='smallYellowBtn' ml="5px">오히려 좋아</Flex>
+                        {/* <Button className='blackBtn' w="90px" h="30px" bg={fc1} color="white" borderRadius="full" fontSize="10px" mr="5px" fontWeight="medium">죽어도 싫어</Button>
+                        <Button className='yellowBtn' w="90px" h="30px" bg="#F6E229" border="1px solid #303030" borderRadius="full" fontSize="10px" fontWeight="medium" ml="5px">오히려 좋아</Button> */}
                     </Flex>
                 </Flex>
 
                 <Flex direction="row" w="vw" h="60px" ml="10px" mr="10px" mt="30px" mb="30px" borderRadius="full" bg="#F6E229" justifyContent="center" alignItems="center" >
-                    <Text fontSize={f2} fontWeight="bold" letterSpacing="-1px" align="center" mr="5px" color={fc3}>아직도 뭐 먹을까 고민하세요 ?</Text>
+                    <Text fontSize={f2} fontWeight="medium" letterSpacing="-1px" align="center" mr="5px" color={fc3}>아직도 뭐 먹을까 고민하세요 ?</Text>
                     <Link href='/RandomR1'>
-                        <Button fontSize={f3} fontWeight="medium" color="#ffffff" w="96px" h="30px" bg={fc1} borderRadius="full" ml="5px">랜덤 추천받기</Button>
+                        <Flex className='smallBlackBtn' fontSize={f3} w="100px" ml="5px">랜덤 추천받기</Flex>
                     </Link>
 
                 </Flex>
                 
                 {/* Modal1 */}
-                <Button onClick={onOpen} bg="yellow.200">
+                <Button onClick={modal1.onOpen} bg="yellow.200">
                     modal test
                 </Button>
-                <Modal id='alarm' isOpen={isOpen} onClose={onClose} show={show1} onHide={() => setShow1(false)}>
+                <Modal id='alarm' isOpen={modal1.isOpen} onClose={modal1.onClose} show={show1} onHide={() => setShow1(false)}>
                     <ModalOverlay/>
                     <ModalContent  borderRadius="30px">
                         <ModalBody >
@@ -358,17 +302,15 @@ import {
                                 설정에서 이를 구성할 수 있습니다.
                             </Text>
                             <Flex direction="row" justifyContent="center" mt="15px" mb="25px">
-                                <Button w="90px" h="30px" bg="#303030" color="#ffffff" borderRadius="full" fontSize="10px" fontWeight="medium" mr="5px" onClick={onClose}>허용 안 함</Button>
-                                <Button w="90px" h="30px" bg="#F6E229" border="1px solid #303030" borderRadius="full" fontSize="10px" fontWeight="medium" ml="5px" >허용</Button>
+                                <Flex className='smallBlackBtn' mr="5px" onClick={modal1.onClose}>허용 안 함</Flex>
+                                <Flex className='smallYellowBtn' ml="5px" onClick={modal2.onOpen}>허용</Flex>
                             </Flex>
                         </ModalBody>
-                        {/* <ModalFooter>
-                        </ModalFooter> */} 
                     </ModalContent>
                 </Modal>
 
                 {/* Modal2 */}
-                {/* <Modal id='alarm' isOpen={isOpen} onClose={onClose} show={show2} onHide={() => setShow2(false)}>
+                <Modal id='alarm' isOpen={modal2.isOpen} onClose={modal2.onClose} show={show2} onHide={() => setShow2(false)}>
                     <ModalOverlay/>
                     <ModalContent  borderRadius="30px">
                         <ModalCloseButton w="20px" h="20px" fontSize="20px" m="10px"/>
@@ -381,43 +323,43 @@ import {
                                 근처 식당을 랜덤으로 추천해드립니다.
                             </Text>
                             <Flex direction="row" justifyContent="center" mt="15px" mb="25px">
-                                <Button w="90px" h="30px" bg="#F6E229" border="1px solid #303030" borderRadius="full" fontSize="10px" fontWeight="medium" ml="5px" >식당 둘러보기</Button>
+                                <Flex className='smallYellowBtn' >식당 둘러보기</Flex>
                             </Flex>
                         </ModalBody>
                     </ModalContent>
-                </Modal> */}
+                </Modal>
 
                 {/* footer */}
                 <Spacer/>
-                <Box borderTop="1px solid #E8E8E8" h="80px"  pl="7px" pr="7px" display="absolute" position="sticky" bottom="0px" bg="#ffffff">
-                    <Flex direction="row" w="vw" mt="13px" >
+                <Box className='doc'>
+                    <Flex className='docArray' >
                         <Spacer/>
-                        <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
-                            <Link href='/Home' w="24px" h="24px">
+                        <Flex className='docComp'>
+                            <Link href='/Home' className="docIcon">
                                 <Image src={homeA} alt="homeA"/>
                             </Link>
-                            <Text fontWeight="bold" fontSize="10px" color={fc3} align="center" >홈</Text>
+                            <Text className='docText_H' >홈</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
-                            <Link href='/Recommand' w="24px" h="24px">
+                        <Flex className='docComp'>
+                            <Link href='/Recommand' className="docIcon">
                                 <Image src={rec} alt="rec"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" color={fc3} align="center" >추천</Text>
+                            <Text className='docText_N' >추천</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
-                            <Link href='/Review' w="24px" h="24px">
+                        <Flex className='docComp'>
+                            <Link href='/Review' className="docIcon">
                                 <Image src={rev} alt="rev"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" color={fc3} align="center" >후기</Text>
+                            <Text className='docText_N'>후기</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex direction="column" justifyContent="center" ml="33px" mr="33px">
-                            <Link href='/Profile' w="24px" h="24px">
+                        <Flex className='docComp'>
+                            <Link href='/Profile' className="docIcon">
                                 <Image src={my} alt="my"/>
                             </Link>
-                            <Text fontWeight="medium" fontSize="10px" color={fc3} align="center" >마이</Text>
+                            <Text className='docText_N'>마이</Text>
                         </Flex>
                         <Spacer/>
                     </Flex>
@@ -425,7 +367,6 @@ import {
             </Flex>
 
         </div>
-  
     )
   }
   

@@ -49,7 +49,7 @@ export default function Situation() {
                     </Link>
                 </Flex>
                 <Spacer/>
-                <Text fontWeight="extrabold" fontSize={f1} color={fc2} position="absolute">
+                <Text fontWeight="bold" fontSize={f1} color={fc2} position="absolute">
                     상황따라
                 </Text>
                 <Flex w="20px" h="20px" mr="9px">

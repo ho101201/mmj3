@@ -21,15 +21,9 @@ function MyApp({ Component, pageProps }) {
       },
       body: 'Noto Sans KR, sans-serif',
       baseStyle:{
-        letterSpacing: "-1px",
-        fontWeight: 'light',
+        fontWeight: 500,
         color: "#303030"
       },
-      Text: {
-        baseStyle:{
-          color: "#303030"
-        }
-      }
     },
   })
   

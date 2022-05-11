@@ -26,23 +26,25 @@ import {
 
     return(
         <div>
-            <Flex w="vw" h="42px" justifyContent="center" alignItems="center">
-                <Text fontSize={f1} fontWeight="bold" align="center" color={fc2}>위치 설정</Text>
-                <Link href='/Home' position="absolute" right="11px" w="20px" h="20px">
-                    <Image src={btnX} alt="btnX"/>
-                </Link>
-            </Flex>
-            <Flex h="40px" p="5px" alignItems="center" borderBottom="1px solid #DDDDDD">
-                <Box w="20px" h="20px" mr="10px" ml="12px">
-                    <Image src={Search_Icons} alt="search"/>
-                </Box>
-                <Input fontSize={f2} color="#A4A4A4" placeholder='동명(읍,면)으로 검색 (ex. 문정동)' bg="#F6F6F6" mr="5px" h="30px" border="none"/>
-            </Flex>
-            <Flex justifyContent="center" mt="16px" alignItems="center">
-                <Flex w="11px" h="13px" mr="6px">
-                    <Image src={location} alt="location"/>
+            <Flex className='cover' bg="white">
+                <Flex className='header' border="none">
+                    <Text className='headerTitle'>위치 설정</Text>
+                    <Link href='/Home'  className='headerIcon' position="absolute" right="11px">
+                        <Image src={btnX} alt="btnX"/>
+                    </Link>
                 </Flex>
-                <Text fontSize={f2} color={fc3}>내 주변 지역으로 검색</Text>
+                <Flex className='header' p="5px">
+                    <Box className='headerIcon' mr="10px" ml="12px">
+                        <Image src={Search_Icons} alt="search"/>
+                    </Box>
+                    <Input fontSize={f2} color="#A4A4A4" placeholder='동명(읍,면)으로 검색 (ex. 문정동)' bg="#F6F6F6" mr="5px" h="30px" border="none"/>
+                </Flex>
+                <Flex justifyContent="center" mt="16px" alignItems="center">
+                    <Flex w="11px" h="13px" mr="6px">
+                        <Image src={location} alt="location"/>
+                    </Flex>
+                    <Text fontSize={f2} color={fc3}>내 주변 지역으로 검색</Text>
+                </Flex>
             </Flex>
 
         </div>

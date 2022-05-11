@@ -30,7 +30,6 @@ export default function LogIn() {
   const fc4 ="#A4A4A4"
   const fc5 ="#565656"
   
-  
   return (
     
       <div>  
@@ -38,7 +37,7 @@ export default function LogIn() {
           <Flex direction="column" w="100%" h="100%" >
             
             <Flex direction="column" alignItems="center" justifyContent="center" flex='1'>
-              <Text fontSize="36px" lang='ko' fontWeight={900} color={fc2} >
+              <Text fontSize="36px" fontWeight="bold" color={fc2} >
                 오늘 뭐 먹지?
               </Text>
               <Text fontSize="24px" color={fc2}>

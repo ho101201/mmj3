@@ -130,25 +130,23 @@ import {
     return (
       
         <div>
-                <Flex h="40px"  alignItems="center" borderBottom="1px solid #DDDDDD" position="sticky">
-                    {/* <SelectBoxWrapper >
-                        <Select variant="unstyled" style={styles} placeholder="송파구 문정동" letterSpacing='-1px' ml="10px" fontSize={f2} iconSize='20px' w="115px" >
-                        </Select>
-                    </SelectBoxWrapper> */}
+                <Flex className='header'>
                     <Link href='/SetLocation' display="flex" flexDirection="row" ml="10px">
-                        <Text id='location' fontSize={f2} fontWeight="bold" mr="7px" >송파구 문정동</Text>
-                        <Box w="12px" h="20px" position="absolute" left="104px" top="4px" >
-                            <Image src={arrowB} alt="arrowB"/>
-                        </Box>
+                        <Flex alignItems="center" justifyContent="center">
+                            <Text className='currentLocation'>송파구 문정동</Text>
+                            <Flex className='header_arrowB'>
+                                <Image src={arrowB} alt="arrowB"/>
+                            </Flex>
+                        </Flex>
                     </Link>
                     <Spacer/>
                     <Link href='/Search'>
-                        <Box w="20px" h="20px" mr="22px">
+                        <Box className='headerIcon' mr="22px">
                             <Image src={search} alt="search"/>
                         </Box>
                     </Link>
                     <Link href='/Alarm'>
-                        <Box w="20px" h="20px" mr="22px">
+                        <Box className='headerIcon' mr="22px">
                             <Image src={bell} alt="bell"/>
                         </Box>
                     </Link>
@@ -175,10 +173,10 @@ import {
                 <Wrap ml="10px" mr="10px" spacing="10px" justify="center">
                     <WrapItem>
                         <Flex direction="column">
-                            <Flex w="165px" h="165px" borderRadius="10px" overflow="hidden">
+                            <Flex className='category_itemImage'>
                                 <Image src={p1} alt="p1"/>
                             </Flex>
-                            <Flex bg="#F6E229" border="1px solid #FFF061" w="46px" h="20px" borderRadius="4px" m="10px" justifyContent="center" alignItems="center" position="absolute" >
+                            <Flex className='category_yellowTag' >
                                 <Text fontSize="10px" align="center" fontWeight="bold" letterSpacing="-0.5px">
                                     영업중
                                 </Text>
@@ -189,8 +187,8 @@ import {
                                 <Text fontSize={f3} color={fc5}>126m</Text>
                             </Flex>
                             <Flex direction="row">
-                                <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px" mr="5px">일식</Tag>
-                                <Tag border="1px solid #E1E1E1" bg='white' color="#A4A4A4" fontSize="10px">치즈돈까스</Tag>
+                                <Box className='category_tag'>일식</Box>
+                                <Box className='category_tag'>치즈돈까스</Box>
                             </Flex>
                             <Flex mt="10px">
                                 <Flex w="12px" h="12px" mr="5px">
@@ -203,7 +201,7 @@ import {
 
                     <WrapItem>
                         <Flex direction="column">
-                            <Flex w="165px" h="165px" borderRadius="10px" overflow="hidden">
+                            <Flex className='category_itemImage'>
                                 <Image src={p1} alt="starF"/>
                             </Flex>
                             <Flex bg="#333333" border="1px solid #FFF061" w="55px" h="20px" borderRadius="4px" m="10px" justifyContent="center" alignItems="center" position="absolute" >
@@ -231,7 +229,7 @@ import {
 
                     <WrapItem>
                         <Flex direction="column">
-                            <Flex w="165px" h="165px" borderRadius="10px" overflow="hidden">
+                            <Flex className='category_itemImage'>
                                 <Image src={p1} alt="p1"/>
                             </Flex>
                             <Flex bg="#333333" border="1px solid #FFF061" w="40px" h="20px" borderRadius="4px" m="10px" justifyContent="center" alignItems="center" position="absolute" >
@@ -259,7 +257,7 @@ import {
 
                     <WrapItem>
                         <Flex direction="column">
-                            <Flex w="165px" h="165px" borderRadius="10px" overflow="hidden">
+                            <Flex className='category_itemImage'>
                                 <Image src={p1} alt="p1"/>
                             </Flex>
                             <Flex direction="row" alignItems="center" mt="5px">
@@ -282,7 +280,7 @@ import {
 
                     <WrapItem>
                         <Flex direction="column">
-                            <Flex w="165px" h="165px" borderRadius="10px" overflow="hidden">
+                            <Flex className='category_itemImage'>
                                 <Image src={p1} alt="p1"/>
                             </Flex>
                             <Flex direction="row" alignItems="center" mt="5px">
@@ -305,7 +303,7 @@ import {
 
                     <WrapItem>
                         <Flex direction="column">
-                            <Flex w="165px" h="165px" borderRadius="10px" overflow="hidden">
+                            <Flex className='category_itemImage'>
                                 <Image src={p1} alt="p1"/>
                             </Flex>
                             <Flex direction="row" alignItems="center" mt="5px">
