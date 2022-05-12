@@ -41,14 +41,14 @@ import {
                     <Text className='alarm_arrivedTime'>1시간전</Text>
                 </Flex>
 
-                <Box w="vw" h="1px" ml="10px" mr="10px" bg="#F6F6F6"/>
+                <Box className='borderlineG' ml="10px" mr="10px"/>
 
                 <Flex className='alarmBox'>
                     <Text className='alarm_tilte' >회원가입 완료</Text>
                     <Text className='alarm_detail' >가입을 축하드립니다. 지금 바로 뭐먹지를 시작해보세요.</Text>
                     <Text className='alarm_arrivedTime'>1시간전</Text>
                 </Flex>
-                <Box w="vw" h="1px" ml="10px" mr="10px" bg="#F6F6F6"/>
+                <Box className='borderlineG' ml="10px" mr="10px"/>
             </Flex>
         </div>
     )

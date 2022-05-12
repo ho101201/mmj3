@@ -15,7 +15,7 @@ import {
     CheckIcon,
 } from '@chakra-ui/icons'
 import Image from "next/image";
-import arrowL from './images/arrowL.svg';
+import arrowL from './images/arrowL.png';
 import check from './images/check.svg';
 
 
@@ -63,24 +63,24 @@ export default function SignIn() {
     //     setPasswordConfirm(e.target.value);
     // };
 
-    const validation = () => {
-        if(!name) setIsName(true);
-        if(!email) setIsEmail(true);
-        if(!password) setIsPassword(true);
-        // if(!passwordConfirm) setPasswordConfirm(true);
+    // const validation = () => {
+    //     if(!name) setIsName(true);
+    //     if(!email) setIsEmail(true);
+    //     if(!password) setIsPassword(true);
+    //     // if(!passwordConfirm) setPasswordConfirm(true);
 
-        if(name && email && password) return true;
-        // if(name && email && password && passwordConfirm) return true;
-        else return false;
-    }
+    //     if(name && email && password) return true;
+    //     // if(name && email && password && passwordConfirm) return true;
+    //     else return false;
+    // }
 
-    const onSubmit = (e) => {
-        if(validation()) return;
-        // API Call
-    }
+    // const onSubmit = (e) => {
+    //     if(validation()) return;
+    //     // API Call
+    // }
 
-    const [show, setShow] = React.useState(false)
-    const inputted = () => setShow(!show)
+    // const [show, setShow] = React.useState(false)
+    // const inputted = () => setShow(!show)
 
     const f1 ="16px";
     const f2 ="14px";
@@ -94,112 +94,127 @@ export default function SignIn() {
 
     return(
         <div>
-            <Flex direction="column" h="100vh">
+            <Flex className='cover' bg="white">
 
-            {/* header */}
-            <Flex w="vw" h="40px" alignItems="center" justifyContent="center" borderBottom="1px solid #DDDDDD">
-                <Flex ml="18px" alignItems="center">
-                    <Link href='/' mt="4px">
-                        <Image src={arrowL} alt="arrowL"/>
-                    </Link>
-                </Flex>
-                <Spacer/>
-                <Text fontWeight="extrabold" fontSize={f1} color={fc2} position="absolute">
-                    회원가입
-                </Text>
-            </Flex>
-            {/* container1 */}
-            <Flex mt="21px" h="40px" p="10px" alignItems="center">
-                <Box w="133px">
-                    <Text fontWeight="bold" color={fc2} fontSize={f2}>
-                        닉네임
-                    </Text>
-                </Box>
-                <Flex w="100%" alignItems="center" direction="row-reverse">
-                    <Input placeholder='한글,영문/숫자로 4~16자 이내' border="1px solid #E1E1E1" borderRadius="10px" w="100%" fontSize={f3} value={name} onChange={onChangeName}/>
-                    <Flex position="absolute" mr="11px">
-                        {!isName&&
-                        <Image src={check} alt="check"/>
-                        }
+                {/* header */}
+                <Flex className='header'>
+                    <Flex ml="8px" alignItems="center">
+                        <Link href='/'>
+                            <Flex className='header_arrowL'>
+                                <Image src={arrowL} alt="arrowL"/>
+                            </Flex>
+                        </Link>
                     </Flex>
-                    {/* <Icon as={CheckIcon} w="20px"  position="absolute" mr="17px" /> */}
-                </Flex>
-                    {/* 유효성검사 */}
-                    {isName? 
-                        <Text id='' fontSize="10px" color="red" position="absolute" ml="113px" mt="66px" >
-                            닉네임은 한글,영문/숫자로 4~16자 이내야 합니다.
-                        </Text>
-                    :
-                        <Text id='' fontSize="10px" color="#494949" position="absolute" ml="113px" mt="66px"  >
-                            사용하실 수 있는 닉네임입니다.
-                        </Text>
-                    }
-            </Flex>
-
-            {/* container2 */}
-            <Flex mt="28px" h="40px" p="10px" alignItems="center">
-                <Box w="133px">
-                    <Text fontWeight="bold" fontSize={f2} color={fc2}>
-                        이메일
+                    <Spacer/>
+                    <Text className='headerTitle' position="absolute">
+                        회원가입
                     </Text>
-                </Box>
-                <Flex w="100%" alignItems="center" direction="row-reverse">
-                    <Input placeholder='이메일을 입력해주세요' border="1px solid #E1E1E1" borderRadius="10px" w="100%" fontSize={f3} value={email} onChange={onChangeEmail}/>
                 </Flex>
-                    {/* 유효성검사 */}
-                    {isEmail?
-                        <Text id='' fontSize="10px" color="red" position="absolute" ml="113px" mt="66px" >
-                            유효하지 않은 이메일입니다.
-                        </Text>
-                    :
-                        <Text id='' fontSize="10px" color={fc3} position="absolute" ml="113px" mt="66px" >
-                            사용하실 수 있는 이메일입니다.
-                        </Text>
-                    }
-            </Flex>
 
-            {/* container3 */}
-            <Flex mt="28px" h="40px" p="10px" alignItems="center">
-                <Box w="133px">
-                    <Text fontWeight="bold" fontSize={f2}>
-                        비밀번호
-                    </Text>
-                </Box>
-                <Flex w="100%" alignItems="center" direction="row-reverse">
-                    <InputGroup>
-                        <Input type="password" placeholder='8~16자리 영대/소문자, 숫자, 특수문자 조합' border="1px solid #E1E1E1" borderRadius="10px" w="100%" fontSize={f3} value={password} onChange={onChangePassword}/>
-                    </InputGroup>
+                {/* container1 */}
+                <Flex className='inputContainer' mt="21px">
+                        <Text className='inputDemand'>
+                            닉네임
+                        </Text>
+                        <Flex className='inputArray'>
+                            <input className='inputBox' placeholder='한글,영문/숫자로 4~16자 이내' value={name} onChange={onChangeName}/>
+                            <Flex position="absolute" mr="11px">
+                                {!isName&&name&&
+                                <Image src={check} alt="check"/>
+                            }
+                            </Flex>
+                        </Flex>
+                        {/* <Flex className='inputArray'>
+                            <Input placeholder='한글,영문/숫자로 4~16자 이내' border="1px solid #E1E1E1" borderRadius="10px" bg="white" w="100%" h="40px" fontSize={f3} value={name} onChange={onChangeName}/>
+                            <Flex position="absolute" mr="11px">
+                                {!isName&&name&&
+                                <Image src={check} alt="check"/>
+                                }
+                            </Flex>
+                        </Flex> */}
+
+                        {/* 유효성검사 */}
+
+                        {!name?
+                        <Box></Box>
+                        :
+                        isName? 
+                            <Text className='inputResult_F' >
+                                닉네임은 한글,영문/숫자로 4~16자 이내야 합니다.
+                            </Text>
+                        :
+                            <Text className='inputResult_P'  >
+                                사용하실 수 있는 닉네임입니다.
+                            </Text>
+                        }
                 </Flex>
-                    {/* 유효성검사 */}
-                    {isPassword?
-                        <Text id='' fontSize="10px" color="red" position="absolute" ml="113px" mt="66px" >
-                            비밀번호는 8~16자리 영대/소문자, 숫자, 특수문자를 포함해야합니다.
-                        </Text>
-                    :
-                        <Text id='' fontSize="10px" color="#494949" position="absolute" ml="113px" mt="66px" >
-                            사용하실 수 있는 비밀번호입니다.
-                        </Text>
-                    }
-            </Flex>
 
-            {/* container4 */}
-                <Flex mt="28px" h="40px" p="10px" alignItems="center">
-                    <Box w="133px">
-                        <Text  fontSize={f2} fontWeight="bold" color={fc2}>
-                            친구 초대 코드
+                {/* container2 */}
+                <Flex className='inputContainer' mt="28px">
+                        <Text className='inputDemand'>
+                            이메일
+                        </Text>
+                    <Flex className='inputArray'>
+                        <input className='inputBox' placeholder='이메일을 입력해주세요' value={email} onChange={onChangeEmail}/>
+                    </Flex>
+                        {/* 유효성검사 */}
+                        {!email?
+                        <Box></Box>
+                        :
+                        isEmail?
+                            <Text className='inputResult_F' >
+                                유효하지 않은 이메일입니다.
+                            </Text>
+                        :
+                            <Text className='inputResult_P' >
+                                사용하실 수 있는 이메일입니다.
+                            </Text>
+                        }
+                </Flex>
+
+                {/* container3 */}
+                <Flex className='inputContainer' mt="28px">
+                        <Text className='inputDemand'>
+                            비밀번호
+                        </Text>
+                    <Flex className='inputArray'>
+                        <InputGroup>
+                            <input className='inputBox' type="password" placeholder='8~16자리 영대/소문자, 숫자, 특수문자 조합' value={password} onChange={onChangePassword}/>
+                        </InputGroup>
+                    </Flex>
+                        {/* 유효성검사 */}
+                        {!password?
+                        <Box></Box>
+                        :
+                        isPassword?
+                            <Text className='inputResult_F' >
+                                비밀번호는 8~16자리 영대/소문자, 숫자, 특수문자를 포함해야합니다.
+                            </Text>
+                        :
+                            <Text className='inputResult_P' >
+                                사용하실 수 있는 비밀번호입니다.
+                            </Text>
+                        }
+                </Flex>
+
+                {/* container4 */}
+                <Flex className='inputContainer' mt="28px">
+                    <Flex direction="column" w="133px">
+                        <Text fontSize={f2} fontWeight="bold" color={fc2}>
+                            초대 코드
                         </Text>
                         <Text fontSize={f2} fontWeight="bold" color={fc2}>
                             (선택)
                         </Text>
-                    </Box>
-                    <Flex w="100%" alignItems="center" direction="row-reverse">
-                        <Input placeholder='친구에게 받은 코드를 입력해주세요' border="1px solid #E1E1E1" borderRadius="10px" w="100%" fontSize={f3} color={fc4}/>
+                    </Flex>
+                    <Flex className='inputArray'>
+                        <input className='inputBox' placeholder='친구에게 받은 코드를 입력해주세요' color={fc4}/>
                         <Text id='timeLeft' fontSize={f3} color={fc4} position="absolute" mr="11px">00:00</Text>
                     </Flex>
                 </Flex>
                 <Flex mt="10px" h="40px" p="10px" alignItems="center">
                     <Box w="133px"/>
-                    <Flex w="100%" alignItems="center" direction="row-reverse">
+                    <Flex className='inputArray'>
                         <Button w="100%" border="1px solid #303030" borderRadius="10px" bg="#ffffff" fontSize={f2} fontWeight="medium" color="#303030">
                             인증 번호 확인
                         </Button>
@@ -211,8 +226,8 @@ export default function SignIn() {
                 {/* sign in button */}
                 <Box p="10px" w="100vw" h="40px" mb="30px">
                     {/* 유효성검사  */}
-                    {name&&email&&password?
-                        <Link w="100%" href='/SignIn2' >
+                    {name&&email&&password&&!isName&&!isEmail&&!isPassword?
+                        <Link w="100%" href='/SignIn2'>
                             <Button w="100%" borderRadius="full" bg="#F6E229" fontSize={f1} color={fc1} fontWeight="bold" type='submit' >
                                 가입하기
                             </Button>

@@ -48,48 +48,61 @@ export default function RInfo() {
 
     return(
         <div>
-            <Flex w="vw" h="40px" alignItems="center" justifyContent="center" borderBottom="1px solid #DDDDDD">
-                <Flex ml="18px" alignItems="center">
+            <Flex className='header'>
                     <Link href='/RandomR2' >
-                        <Flex w="7px" h="16px">
+                        <Flex ml="8px" className='header_arrowL'>
                             <Image src={arrowL} alt="arrowL"/>
                         </Flex>
                     </Link>
-                </Flex>
                 <Spacer/>
                 <Text fontWeight="extrabold" fontSize={f1} color={fc2} position="absolute">
                     카츠단길
                 </Text>
-                <Flex w="20px" h="20px" mr="9px">
+                <Flex className='headerIcon'>
                     <Image src={exportBtn} alt="exportBtn"/>
                 </Flex>
             </Flex>
 
             <Flex justifyContent="center">
-                <Grid templateRows='repeat( 2, 1fr )' templateColumns='repeat( 4, 1fr )' gap={0} maxW="900px" justifyContent="center" >
+                <Grid templateRows='repeat( 2, 1fr )' templateColumns='repeat( 4, 1fr )' gap={0} maxW="900px" >
                     <GridItem colSpan={2} rowSpan={2} >
-                        <Image src={p1} alt="p1"/>
+                        <Flex className='gridSize'>
+                            <Image src={p1} alt="p1"/>
+                        </Flex>
+                    </GridItem>
+                    <GridItem colSpan={1} rowSpan={1}  >
+                        <Flex className='gridSize'>
+                            <Image src={p2} alt="p2" />
+                        </Flex>
                     </GridItem>
                     <GridItem colSpan={1} rowSpan={1} >
-                        <Image src={p2} alt="p2"/>
+                        <Flex className='gridSize'>
+                            <Image src={p3} alt="p3"/>
+                        </Flex>
                     </GridItem>
                     <GridItem colSpan={1} rowSpan={1} >
-                        <Image src={p3} alt="p3"/>
+                        <Flex className='gridSize'>
+                            <Image src={p4} alt="p4"/>
+                        </Flex>
                     </GridItem>
-                    <GridItem colSpan={1} rowSpan={1} mt="-5px">
-                        <Image src={p4} alt="p4"/>
-                    </GridItem>
-                    <GridItem colSpan={1} rowSpan={1} mt="-5px"  w="100%" h="100%" position="relative">
-                            
-                        <Link href='/'>
-                            <Image src={p5} alt="p5"/>
-                        </Link>
-                        
-                    </GridItem>
+                    <Link href='/'>
+                        <GridItem colSpan={1} rowSpan={1}  className="gridSize" position="relative">
+                                <Box className='galleryIconBox_mask'/>
+
+                                <Flex direction="column" justifyContent="center" alignItems="center" w="100%" h="100%" position="absolute">
+                                    <Flex w="24px" h="24px">
+                                        <Image src={gallery}/>
+                                    </Flex>
+                                    <Text fontSize="10px" color="white" mt="4px">999+ 더보기</Text>
+
+                                </Flex>
+                                <div className="seeMore"/>
+                        </GridItem>
+                    </Link>
                 </Grid>
             </Flex>
 
-            <Flex direction="row" ml="10px" mr="10px" mt="6px">
+            <Flex direction="row" ml="10px" mr="10px" mt="16px">
                 <Flex direction="column" justifyContent="center">
                     <Flex direction='row' alignItems="flex-end">
                         <Text fontSize={f1} color={fc2} fontWeight='bold'>카츠단길</Text>
@@ -98,7 +111,7 @@ export default function RInfo() {
                     <Text fontSize={f2} color={fc5}>서울 송파구 송파대로 201 A동 1층 117호</Text>
                 </Flex>
                 <Spacer/>
-                <Flex direction="row" alignItems="center">
+                <Flex direction="row" alignItems="center" mb="15px">
                     <Flex w="13px" h="13px" mr="5px">
                         <Image src={starF} alt="starF"/>
                     </Flex>

@@ -37,10 +37,10 @@ import {
                     <Box className='headerIcon' mr="10px" ml="12px">
                         <Image src={Search_Icons} alt="search"/>
                     </Box>
-                    <Input fontSize={f2} color="#A4A4A4" placeholder='동명(읍,면)으로 검색 (ex. 문정동)' bg="#F6F6F6" mr="5px" h="30px" border="none"/>
+                    <input className='searchBar' placeholder='동명(읍,면)으로 검색 (ex. 문정동)'/>
                 </Flex>
                 <Flex justifyContent="center" mt="16px" alignItems="center">
-                    <Flex w="11px" h="13px" mr="6px">
+                    <Flex className='locationIcon'>
                         <Image src={location} alt="location"/>
                     </Flex>
                     <Text fontSize={f2} color={fc3}>내 주변 지역으로 검색</Text>

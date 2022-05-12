@@ -20,6 +20,48 @@ import FNK from './images/F&K.png';
 
 export default function Random1() {
 
+    const [select1, setSelect1] = useState(false);
+    const [select2, setSelect2] = useState(false);
+    const [select3, setSelect3] = useState(false);
+    const [select4, setSelect4] = useState(false);
+    const [select5, setSelect5] = useState(false);
+    const [select6, setSelect6] = useState(false);
+    const [select7, setSelect7] = useState(false);
+    const [select8, setSelect8] = useState(false);
+    const [select9, setSelect9] = useState(false);
+    const [select10, setSelect10] = useState(false);
+
+    const pushSelect1 =()=>{
+        setSelect1(select1=>!select1);
+    }
+    const pushSelect2 =()=>{
+        setSelect2(select2=>!select2);
+    }
+    const pushSelect3 =()=>{
+        setSelect3(select3=>!select3);
+    }
+    const pushSelect4 =()=>{
+        setSelect4(select4=>!select4);
+    }
+    const pushSelect5 =()=>{
+        setSelect5(select5=>!select5);
+    }
+    const pushSelect6 =()=>{
+        setSelect6(select6=>!select6);
+    }
+    const pushSelect7 =()=>{
+        setSelect7(select7=>!select7);
+    }
+    const pushSelect8 =()=>{
+        setSelect8(select8=>!select8);
+    }
+    const pushSelect9 =()=>{
+        setSelect9(select9=>!select9);
+    }
+    const pushSelect10 =()=>{
+        setSelect10(select10=>!select10);
+    }
+
     const f1 ="16px";
     const f2 ="14px";
     const f3 ="12px";
@@ -51,17 +93,18 @@ export default function Random1() {
                     </Flex>
                 </Flex>
             
-                <Flex direction="column" w="100vw" p="10px">
-                    <Flex direction="column" alignItems="center" bg="white" borderRadius="30px" w="100%" mt="30px" pl="20px" pr="20px">
-                        <Flex w="40px" h="40px" position="absolute" mt="-20px">
+                <Flex className='doubleBox_bg'>
+                    <Flex className='doubleBox_container2'>
+                        
+                        <Flex className='yellowIcon_bg' position="absolute" mt="-20px">
                             <Image src={circleY} alt="circleY"/>
-                            <Flex  w="18px" h="18px" mt="11px" ml="11px" position="absolute" >
+                            <Flex  className='yellowIcon2'>
                                 <Image src={FNK} alt="FNK"/>
                             </Flex>
                         </Flex>
 
-                        <Text fontSize={f1} color={fc2} fontWeight="bold" mt="35px">원하는 카테고리를 선택해주세요</Text>
-                        <Text fontSize={f2} color={fc3}>중복 선택 가능합니다</Text>
+                        <Text className='signIn_h1' mt="35px">원하는 카테고리를 선택해주세요</Text>
+                        <Text className='signIn_p1'>중복 선택 가능합니다</Text>
 
                         <Flex w="100%" h="8px" mt="17px" mb="30px" justifyContent="center">
                             <Flex w="100%" h="2px" bg="#303030" borderRadius="full">
@@ -69,50 +112,48 @@ export default function Random1() {
                         </Flex>
 
                         <Wrap spacing="10px" justify="center" mb="30px" >
-                                <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#F6E229" borderRadius="full" border="1px solid #303030">
-                                    <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                            
+                                <Flex  className={select1? 'option_H' : 'option_N'} onClick={()=>pushSelect1()}>
+                                    <Text className="option_text" >메뉴</Text>
                                 </Flex>
-                                <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                                    <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                                <Flex className={select2? 'option_H' : 'option_N'} onClick={()=>pushSelect2()}>
+                                    <Text className="option_text" >메뉴</Text>
                                 </Flex>
-                                <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                                    <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                                <Flex className={select3? 'option_H' : 'option_N'} onClick={()=>pushSelect3()}>
+                                    <Text className="option_text" >메뉴</Text>
                                 </Flex>
-                                <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                                    <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                                <Flex className={select4? 'option_H' : 'option_N'} onClick={()=>pushSelect4()}>
+                                    <Text className="option_text" >메뉴</Text>
                                 </Flex>
-                                <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                                    <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                                <Flex className={select5? 'option_H' : 'option_N'} onClick={()=>pushSelect5()}>
+                                    <Text className="option_text" >메뉴</Text>
                                 </Flex>
-                                <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                                    <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                                <Flex className={select6? 'option_H' : 'option_N'} onClick={()=>pushSelect6()}>
+                                    <Text className="option_text" >메뉴</Text>
                                 </Flex>
-                                <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                                    <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                                <Flex className={select7? 'option_H' : 'option_N'} onClick={()=>pushSelect7()}>
+                                    <Text className="option_text" >메뉴</Text>
                                 </Flex>
-                                <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                                    <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                                <Flex className={select8? 'option_H' : 'option_N'} onClick={()=>pushSelect8()}>
+                                    <Text className="option_text" >메뉴</Text>
                                 </Flex>
-                                <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                                    <Text  fontSize={f2} >메뉴</Text>
+                                <Flex className={select9? 'option_H' : 'option_N'} onClick={()=>pushSelect9()}>
+                                    <Text className="option_text" >메뉴</Text>
                                 </Flex>
-                                <Flex justifyContent="center" alignItems="center" w="64px" h="34px" bg="#ffffff" borderRadius="full" border="1px solid #E1E1E1">
-                                    <Text  fontSize={f2} color={fc1}>메뉴</Text>
+                                <Flex className={select10? 'option_H' : 'option_N'} onClick={()=>pushSelect10()}>
+                                    <Text className="option_text" >메뉴</Text>
                                 </Flex>
                         </Wrap>
                     </Flex>
 
                     {/* <Spacer/> */}
-                    <Flex direction="column" position="sticky" w="100%" bottom="0" mt="25px" pb="20px">
-                        <Flex  w="100%" h="40px">
+                    <Flex className='blackBtn_cover' bottom="20px" mt="25px">
                             <Link href='/RandomR2' w="100%">
-                                <Button w="100%" borderRadius="full" bg="#303030" color="#ffffff" fontWeight={500} fontSize={f1} >시작</Button>
+                                <button className='blackBtn'>시작</button>
                             </Link>
-                        </Flex>
                     </Flex>
                     
                 </Flex>
-
              </Flex>
         </div>
     )

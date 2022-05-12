@@ -138,8 +138,8 @@ import {
                 {/* category */}
                 <HStack className='horizontalScroll' pt='20px' pb="16px" spacing="14.5px">
                     {/* hilighted */}
-                    <Link href='/Category'>
-                        <Flex className='category' ml="10px">
+                    <Link href='/Category' ml="10px">
+                        <Flex className='category'>
                             <Box className='categoryBody'>
                                 <Image src={iconBgA} alt="iconBgA"/>
                             </Box>
@@ -262,10 +262,10 @@ import {
 
                 <Flex className='styledContainer'>
                      <Flex position="absolute" alignItems="center" justifyContent="center" mb="115px">
-                         <Flex position="absolute" w="40px" h="40px">
+                         <Flex className='styledContainer_iconBg'>
                              <Image src={circleB} alt="fcircleB"/>
                          </Flex>
-                         <Flex position="absolute" className="docIcon">
+                         <Flex className="styledContainer_icon">
                              <Image src={ranking} alt="ranking"/>
                          </Flex>
                      </Flex>

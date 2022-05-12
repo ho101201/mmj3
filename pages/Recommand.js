@@ -59,7 +59,7 @@ export default function Recommand() {
                                     <Box className='recommand_borderLine' w="100%"/>
                                 </Flex>
 
-                                <Text fontSize="24px" fontWeight={700} color={fc2}>님</Text>
+                                <Text fontSize="24px" fontWeight="bold" color={fc2}>님</Text>
                             </Flex>
                             <Text align="center" fontSize="24px" color={fc2}>오늘 뭐 먹고 싶어요?</Text>
                         </Flex>
@@ -67,10 +67,10 @@ export default function Recommand() {
 
                     <Flex direction="row" justifyContent="center" m="15px" mb="25px" position="sticky" bottom="100px" >
                         <Link href='/Situation' w="100%" mr="5px">
-                            <Button w="100%" h="40px" bg="#ffffff" color={fc1} border="1px solid #303030" borderRadius="full" fontSize={f1} fontWeight="bold" >상황 따라</Button>
+                            <button className='whiteBtn' >상황 따라</button>
                         </Link>
-                        <Link  w="100%"  ml="5px">
-                            <Button w="100%" h="40px" bg="#303030" color="#ffffff"  borderRadius="full" fontSize={f1} fontWeight="bold">기분 따라</Button>
+                        <Link  w="100%" ml="5px">
+                            <button className='blackBtn'>기분 따라</button>
                         </Link>
                     </Flex>
                 </Flex>    

@@ -27,46 +27,53 @@ export default function Random2() {
 
     return(
         <div>
-            <Flex className='header'>
-                <Flex ml="8px" alignItems="center">
-                    <Link href='/RandomR1' >
-                        <Flex className='header_arrowL'>
-                            <Image src={arrowL} alt="arrowL"/>
-                        </Flex>
-                    </Link>
-                </Flex>
-                <Spacer/>
-                <Text className='headerTitle' position="absolute">
-                    랜덤추천
-                </Text>
-                <Flex className='headerIcon'>
-                    <Image src={exportBtn} alt="exportBtn"/>
-                </Flex>
-            </Flex>
-            <Flex w="vw" direction="column" alignItems='center' justifyContent="center" mt="20px">
-                <Flex w="40px" h="40px">
-                    <Image src={circleY} alt="circleY"/>
-                    <Flex  w="18px" h="18px" mt="11px" ml="11px" position="absolute" >
-                        <Image src={store} alt="store"/>
-                    </Flex>
-                </Flex>
-                <Text fontSize={f1} color={fc2} fontWeight="bold" mt="15px">가츠단길 문정점</Text>
-                <Text fontSize={f2} color={fc3} fontWeight="medium">음식점 ▶ 일식 ▶ 돈까스</Text>
-
-                <Flex alignItems="center" justifyContent="center">
-                    <Link href='/CutletInfo'>
-                        <Button h="30px" mt="17px" fontSize={f3} color={fc1} bg="#F6E229" border="1px solid #303030" borderRadius="full">상세정보 보기</Button>
-                    </Link>
-                </Flex>
-
-                <Flex direction="column" position="sticky" mr="10px" ml="10px" w="100%" bottom="0"  mt="55px" pb="20px">
-                    <Flex  w="100%" h="40px">
-                        <Link href='/RandomR1' w="100%" mr="10px" ml="10px">
-                            <Button w="100%" borderRadius="full" bg="#303030" color="#ffffff" fontWeight={500} fontSize={f1} >다시하기</Button>
+            <Flex className='cover'>
+                {/* header */}
+                <Flex className='header'>
+                    <Flex ml="8px" alignItems="center">
+                        <Link href='/RandomR1' >
+                            <Flex className='header_arrowL'>
+                                <Image src={arrowL} alt="arrowL"/>
+                            </Flex>
                         </Link>
                     </Flex>
+                    <Spacer/>
+                    <Text className='headerTitle' position="absolute">
+                        랜덤추천
+                    </Text>
+                    <Flex className='headerIcon'>
+                        <Image src={exportBtn} alt="exportBtn"/>
+                    </Flex>
                 </Flex>
-             </Flex>
+
+                <Flex className='doubleBox_bg'>
+                    <Flex className='doubleBox_container2'>
+
+                        <Flex className='yellowIcon_bg' position="absolute" mt="-20px">
+                            <Image src={circleY} alt="circleY"/>
+                            <Flex  className='yellowIcon2' h="16px" >
+                                <Image src={store} alt="store"/>
+                            </Flex>
+                        </Flex>
+
+                        <Text className='signIn_h1' mt="35px">가츠단길 문정점</Text>
+                        <Text className='signIn_p1'>음식점 &gt; 일식 &gt; 돈까스</Text>
+
+                        <Flex alignItems="center" justifyContent="center">
+                            <Link href='/CutletInfo'>
+                                <Button h="30px" mt="17px" mb="30px" fontSize={f3} color={fc1} bg="#F6E229" border="1px solid #303030" borderRadius="full">상세정보 보기</Button>
+                            </Link>
+                        </Flex>
+
+                    </Flex>
+
+                        <Flex className='blackBtn_cover' bottom="20px" mt="25px">
+                            <Link href='/RandomR1' w="100%">
+                                <button className='blackBtn'>다시하기</button>
+                            </Link>
+                        </Flex>
+                </Flex>
+            </Flex>
         </div>
     )
 }

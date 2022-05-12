@@ -62,27 +62,31 @@ export default function Review() {
                     </Select>
                 </Flex>
 
-                <Flex direction='column' bg="#FAFAFA">
+                <Flex w="100%" direction='column' bg="#FAFAFA" pb="80px">
                     {/* container1 */}
-                    <Flex w="vw" pl="10px" pr="10px" pt="10px" mb="10px" direction="column" bg="White">
+                    <Flex w="100%" pl="10px" pr="10px" pt="10px" mb="10px" direction="column" bg="White">
                         <Text fontSize={f1} fontWeight="bold" mt="18px" mb="16px" >카츠단길 문정역</Text>
+                        
                         <Flex direction="row">
                             {/* squarcle 추가 필요 */}
                             <Flex w="50px" h="50px" >
                                 <Image src={user} alt="user"/>
                             </Flex>
+
                             <Flex ml="12px" direction="column" justifyContent="center">
-                                <Text fontSize={f2} >유저닉네임</Text>
-                                <Text fontSize="10px" color="#565656">2022.03.01  1번째 방문</Text>
+                                <Text fontSize={f2} color={fc2}>유저닉네임</Text>
+                                <Text fontSize="10px" color={fc5}>2022.03.01  1번째 방문</Text>
                             </Flex>
                             <Spacer/>
-                            <Flex direction="row" alignItems="center">
-                                <Flex w="13px" h="13px" mr="5px">
+
+                            <Flex direction="row" alignItems="center" mb="15px">
+                                <Flex className='category_star'>
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontWeight="bold" fontSize={f2}>4.5</Text>
+                                <Text fontWeight="bold" fontSize={f2} color={fc1}>4.5</Text>
                             </Flex>
                         </Flex>
+
                         <Flex mt="12px">
                             <Image src={p0} alt="p0"/>
                         </Flex>
@@ -95,10 +99,10 @@ export default function Review() {
                         </Text>
 
                         <Flex mt="41px">
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">후기태그</Tag>
+                            <Text className='tags' mr="5px">점심식사</Text>
+                            <Text className='tags' mr="5px">후기태그</Text>
                             <Link href='/AllTags'>
-                                <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">+더보기</Tag>
+                                <Text className='tags' mr="5px">+더보기</Text>
                             </Link>
                         </Flex>
 

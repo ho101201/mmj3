@@ -89,7 +89,7 @@ export default function Profile() {
                     <Spacer/>
                 </Flex>
 
-                <Flex direction="column" bg="white" pt="30px">
+                <Flex direction="column" bg="white" pt="30px" mb="80px">
                     <Text fontSize="16px" color={fc2} ml="10px" mb="15px" fontWeight="bold">사진</Text>
                     <Link href='/MyPhoto'>
                         <Box w="100%"   whiteSpace="nowrap" overflowX='auto' >
