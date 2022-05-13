@@ -218,21 +218,21 @@ export default function RWork() {
                         <Link href='/WritingRev' className='exTabIcon'>
                             <Image src={review} alt="review"/>
                         </Link>
-                        <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>후기쓰기</Text>
+                        <Text className='exTabText'>후기쓰기</Text>
                     </Flex>
                     <Spacer/>
                     <Flex className='exTabComp'>
                         <Link className='exTabIcon'>
                             <Image src={call} alt="call"/>
                         </Link>
-                        <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>전화</Text>
+                        <Text className='exTabText'>전화</Text>
                     </Flex>
                     <Spacer/>
                     <Flex className='exTabComp'>
                         <Link className='exTabIcon'>
                             <Image src={location} alt="location"/>
                         </Link>
-                        <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>길찾기</Text>
+                        <Text className='exTabText'>길찾기</Text>
                     </Flex>
                     <Spacer/>
                 </Flex>
