@@ -48,146 +48,135 @@ export default function RInfo() {
 
     return(
         <div>
-            <Flex className='header'>
-                    <Link href='/RandomR2' >
-                        <Flex ml="8px" className='header_arrowL'>
-                            <Image src={arrowL} alt="arrowL"/>
-                        </Flex>
-                    </Link>
-                <Spacer/>
-                <Text fontWeight="extrabold" fontSize={f1} color={fc2} position="absolute">
-                    카츠단길
-                </Text>
-                <Flex className='headerIcon'>
-                    <Image src={exportBtn} alt="exportBtn"/>
+            <Flex direction='column' bg="#FAFAFA">
+                <Flex className='header'>
+                        <Link href='/RandomR2' >
+                            <Flex ml="8px" className='header_arrowL'>
+                                <Image src={arrowL} alt="arrowL"/>
+                            </Flex>
+                        </Link>
+                    <Spacer/>
+                    <Text fontWeight="extrabold" fontSize={f1} color={fc2} position="absolute">
+                        카츠단길
+                    </Text>
+                    <Flex className='headerIcon'>
+                        <Image src={exportBtn} alt="exportBtn"/>
+                    </Flex>
                 </Flex>
-            </Flex>
 
-            <Flex justifyContent="center">
-                <Grid templateRows='repeat( 2, 1fr )' templateColumns='repeat( 4, 1fr )' gap={0} maxW="900px" >
-                    <GridItem colSpan={2} rowSpan={2} >
-                        <Flex className='gridSize'>
-                            <Image src={p1} alt="p1"/>
-                        </Flex>
-                    </GridItem>
-                    <GridItem colSpan={1} rowSpan={1}  >
-                        <Flex className='gridSize'>
-                            <Image src={p2} alt="p2" />
-                        </Flex>
-                    </GridItem>
-                    <GridItem colSpan={1} rowSpan={1} >
-                        <Flex className='gridSize'>
-                            <Image src={p3} alt="p3"/>
-                        </Flex>
-                    </GridItem>
-                    <GridItem colSpan={1} rowSpan={1} >
-                        <Flex className='gridSize'>
-                            <Image src={p4} alt="p4"/>
-                        </Flex>
-                    </GridItem>
-                    <Link href='/'>
-                        <GridItem colSpan={1} rowSpan={1}  className="gridSize" position="relative">
+                <Flex justifyContent="center">
+                    <Grid templateRows='repeat( 2, 1fr )' templateColumns='repeat( 4, 1fr )' gap={0} maxW="900px" >
+                        <GridItem colSpan={2} rowSpan={2} >
+                            <Flex className='gridSize'>
+                                <Image src={p1} alt="p1"/>
+                            </Flex>
+                        </GridItem>
+                        <GridItem colSpan={1} rowSpan={1}  >
+                            <Flex className='gridSize'>
+                                <Image src={p2} alt="p2" />
+                            </Flex>
+                        </GridItem>
+                        <GridItem colSpan={1} rowSpan={1} >
+                            <Flex className='gridSize'>
+                                <Image src={p3} alt="p3"/>
+                            </Flex>
+                        </GridItem>
+                        <GridItem colSpan={1} rowSpan={1} >
+                            <Flex className='gridSize'>
+                                <Image src={p4} alt="p4"/>
+                            </Flex>
+                        </GridItem>
+                        <Link href=''>
+                            <GridItem colSpan={1} rowSpan={1}  className="gridSize" position="relative">
                                 <Box className='galleryIconBox_mask'/>
-
                                 <Flex direction="column" justifyContent="center" alignItems="center" w="100%" h="100%" position="absolute">
                                     <Flex w="24px" h="24px">
                                         <Image src={gallery}/>
                                     </Flex>
                                     <Text fontSize="10px" color="white" mt="4px">999+ 더보기</Text>
-
                                 </Flex>
                                 <div className="seeMore"/>
-                        </GridItem>
-                    </Link>
-                </Grid>
-            </Flex>
-
-            <Flex direction="row" ml="10px" mr="10px" mt="16px">
-                <Flex direction="column" justifyContent="center">
-                    <Flex direction='row' alignItems="flex-end">
-                        <Text fontSize={f1} color={fc2} fontWeight='bold'>카츠단길</Text>
-                        <Text fontSize={f3} color={fc5} ml="6px">126m</Text>
-                    </Flex>
-                    <Text fontSize={f2} color={fc5}>서울 송파구 송파대로 201 A동 1층 117호</Text>
+                            </GridItem>
+                        </Link>
+                    </Grid>
                 </Flex>
-                <Spacer/>
-                <Flex direction="row" alignItems="center" mb="15px">
-                    <Flex w="13px" h="13px" mr="5px">
-                        <Image src={starF} alt="starF"/>
-                    </Flex>
-                    <Text fontWeight="bold" fontSize={f2} color={fc2}>4.5</Text>
-                    <Text fontWeight="medium" fontSize={f2} color={fc3} ml="2px">(10)</Text>
-                </Flex>
-            </Flex>
-            <Flex direction="row" justifyContent="center" mt="19px" mb='30px'>
-                <Link>
-                    <Button w="90px" h="30px" bg="#303030" color="#ffffff" borderRadius="full" fontSize="10px" fontWeight="medium" mr="5px">가볼래요</Button>
-                </Link>
-                <Link href='/CutletWentRev1'>
-                    <Button class="yellowBtn" w="90px" h="30px" bg="#F6E229" border="1px solid #303030" borderRadius="full" fontSize="10px" fontWeight="medium" ml="5px">가봤어요</Button>
-                </Link>
-            </Flex>
 
-            <Grid templateColumns="repeat(5,1fr)" h="50px">
-                <GridItem display="flex" alignItems="center" justifyContent="center" borderBottom="2px solid #F6E229">
-                    <Link href='/CutletInfo'>
-                        <Text fontSize={f2} color={fc2} fontWeight="bold" align="center">정보</Text>
-                    </Link>
-                </GridItem>
-                <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
-                    <Link href='/CutletWork'>
-                        <Text fontSize={f2} color={fc2} fontWeight="medium" align="center">영업</Text>
-                    </Link>
-                </GridItem>
-                <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
-                    <Link href='/CutletMenu'>
-                        <Text fontSize={f2} color={fc2} fontWeight="medium" align="center">메뉴</Text>
-                    </Link>
-                </GridItem>
-                <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
-                    <Link href='/CutletPhoto'>
-                        <Text fontSize={f2} color={fc2} fontWeight="medium" align="center">사진</Text>
-                    </Link>
-                </GridItem>
-                <GridItem display="flex" alignItems="center" justifyContent="center"  borderBottom="2px solid #303030">
-                    <Link href='/CutletReview'>
-                        <Text fontSize={f2} color={fc2} fontWeight="medium" align="center">후기</Text>
-                    </Link>
-                </GridItem>
-            </Grid>
-
-            <Flex direction='column' bg="#FAFAFA">
-                
-                <Flex p="10px" pb="0px" pt="25px" direction="column" bg="white">
-                    <Flex direction="column"  h="79px" borderBottom='1px solid #F6F6F6' bg="white">
-                        <Text fontSize={f1} color={fc2} fontWeight="bold" >매장 소개</Text>
-                        <Text fontSize={f2} color={fc2} mt="8px">&#34;상위1% 프리미엄 돈카츠입니다.&#34;</Text>
-
-                    </Flex>
-
-                    <Flex direction="column" h="79px" mt='25px' borderBottom='1px solid #F6F6F6' bg="white" >
-                        <Flex direction="row" alignItems="center" >
-                            <Text fontSize={f1} color={fc2} fontWeight="bold">매장 Tip</Text>
-                            <Spacer/>
-                            <Text fontSize="10px" color={fc5} letterSpacing="-1px">마지막 업데이트 : 2021-11-09</Text>
+                <Flex className='store_container1'>
+                    <Flex direction="column" justifyContent="center">
+                        <Flex direction='row' alignItems="flex-end">
+                            <Text className='store_name'>카츠단길</Text>
+                            <Text className='store_distance'>126m</Text>
                         </Flex>
-                        <Text fontSize={f2} color={fc2} mt="8px">카레 추가 시 무한리필 됩니다.</Text>
+                        <Text className='store_address'>서울 송파구 송파대로 201 A동 1층 117호</Text>
+                    </Flex>
+                    <Spacer/>
+                    <Flex className='store_container2'>
+                        <Flex className='category_star'>
+                            <Image src={starF} alt="starF"/>
+                        </Flex>
+                        <Text className='category_score' fontSize={f2}>4.5</Text>
+                        <Text className='category_count' fontSize={f2} ml="2px">(10)</Text>
+                    </Flex>
+                </Flex>
+
+                <Flex className='btnBox'>
+                    <Link href='' mr="5px">
+                        <button className='smallBlackBtn'>가볼래요</button>
+                    </Link>
+                    <Link href='/CutletWentRev1' ml="5px">
+                        <button class="smallYellowBtn" >가봤어요</button>
+                    </Link>
+                </Flex>
+
+                <Flex className='nav'>
+                    <Link href='/CutletInfo' className='navBtn_H'>
+                        <Text className='navText_H'>정보</Text>
+                    </Link>
+                    <Link href='/CutletWork' className='navBtn_N'>
+                        <Text className='navText_N'>영업</Text>
+                    </Link>
+                    <Link href='/CutletMenu' className='navBtn_N'>
+                        <Text className='navText_N'>메뉴</Text>
+                    </Link>
+                    <Link href='/CutletPhoto' className='navBtn_N'>
+                        <Text className='navText_N'>사진</Text>
+                    </Link>
+                    <Link href='/CutletReview' className='navBtn_N'>
+                        <Text className='navText_N'>후기</Text>
+                    </Link>
+                </Flex>
+
+                    
+                <Flex className='infoComp'>
+                    <Flex className='infoBox'>
+                        <Text className='example_h1' >매장 소개</Text>
+                        <Text className='exmaple_p1'>&#34;상위1% 프리미엄 돈카츠입니다.&#34;</Text>
 
                     </Flex>
 
-                    <Flex direction="column" bg="white" mt="25px">
-                        <Text fontSize={f1} color={fc2} fontWeight="bold">편의정보</Text>
+                    <Flex className='infoBox'>
+                        <Flex direction="row" alignItems="center" >
+                            <Text className='example_h1'>매장 Tip</Text>
+                            <Spacer/>
+                            <Text className='example_updateLog'>마지막 업데이트 : 2021-11-09</Text>
+                        </Flex>
+                        <Text className='exmaple_p1'>카레 추가 시 무한리필 됩니다.</Text>
+
+                    </Flex>
+
+                    <Flex direction="column" bg="white">
+                        <Text className='example_h1'>편의정보</Text>
                         <Wrap mt='16px'>
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">예약가능</Tag>
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">포장</Tag>
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">주차가능</Tag>
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">1~2만원</Tag>
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">발렛파킹</Tag>
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">제로페이</Tag>
-                            <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">국민지원금</Tag>
+                            <Text className='tags'>예약가능</Text>
+                            <Text className='tags'>포장</Text>
+                            <Text className='tags'>주차가능</Text>
+                            <Text className='tags'>1~2만원</Text>
+                            <Text className='tags'>발렛파킹</Text>
+                            <Text className='tags'>제로페이</Text>
+                            <Text className='tags'>국민지원금</Text>
                         </Wrap>
-                        <Flex justifyContent="center" alignItems='center' mt='23px' mb='30px'>
-                            <Text bg="#F6F6F6" fontSize='10px' color={fc2} w="232px" h="20px" borderRadius="4px" align='center' pt="2px">
+                        <Flex className='lastReservBox'>
+                            <Text className='lastReserv'>
                                 마지막 예약시간 00월00일 오전00시 00분 00초
                             </Text>
                         </Flex>
@@ -196,41 +185,41 @@ export default function RInfo() {
 
                 </Flex>
 
-                    <Link href='/FixInfo' p="10px" mt="10px" mb="20px" bg="white">
-                        <Flex alignItems='center' h='30px'>
-                            <Flex w="15px" h="15px" mr='11px'>
-                                <Image src={Exclamation} alt="exclamation"/>
-                            </Flex>
-                            <Text fontSize={f3} letterSpacing="-1px">잘못된 정보를 알려주세요</Text>
-                            <Spacer/>
-                            <Flex w="6px" h="10px">
-                                <Image src={arrowR} alt="arrowR"/>
-                            </Flex>
+                <Link href='/FixInfo' className='fixInfo'>
+                    <Flex alignItems='center' h='30px'>
+                        <Flex className='exclamationIcon'>
+                            <Image src={Exclamation} alt="exclamation"/>
                         </Flex>
-                    </Link>
+                        <Text fontSize={f3} letterSpacing="-1px">잘못된 정보를 알려주세요</Text>
+                        <Spacer/>
+                        <Flex className='smallArrowR'>
+                            <Image src={arrowR} alt="arrowR"/>
+                        </Flex>
+                    </Flex>
+                </Link>
 
             </Flex>
 
-            {/* tapbar */}
-            <Box borderTop="1px solid #E8E8E8" h="80px"  pl="7px" pr="7px" display="absolute" position="sticky" bottom="0px" bg="#ffffff">
-                    <Flex direction="row" w="vw" mt="13px" >
+                {/* tapbar */}
+                <Box className='exTab'>
+                    <Flex className='exTabArray' >
                         <Spacer/>
-                        <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
-                            <Link href='/WritingRev' w="24px" h="24px">
+                        <Flex className='exTabComp'>
+                            <Link href='/WritingRev' className='exTabIcon'>
                                 <Image src={review} alt="review"/>
                             </Link>
                             <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>후기쓰기</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
-                            <Link w="24px" h="24px">
+                        <Flex className='exTabComp'>
+                            <Link className='exTabIcon'>
                                 <Image src={call} alt="call"/>
                             </Link>
                             <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>전화</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex direction="column" alignItems="center" justifyContent="center" ml="40px" mr="40px">
-                            <Link w="24px" h="24px">
+                        <Flex className='exTabComp'>
+                            <Link className='exTabIcon'>
                                 <Image src={location} alt="location"/>
                             </Link>
                             <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>길찾기</Text>

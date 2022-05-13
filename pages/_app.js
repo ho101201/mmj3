@@ -24,6 +24,7 @@ function MyApp({ Component, pageProps }) {
         fontWeight: 500,
         color: "#303030"
       },
+      
     },
   })
   
