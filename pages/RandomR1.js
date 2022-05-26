@@ -147,7 +147,7 @@ export default function Random1() {
                     </Flex>
 
                     {/* <Spacer/> */}
-                    <Flex className='blackBtn_cover' bottom="20px" mt="25px">
+                    <Flex className='btn_cover' bottom="20px" mt="25px">
                             <Link href='/RandomR2' w="100%">
                                 <button className='blackBtn'>시작</button>
                             </Link>

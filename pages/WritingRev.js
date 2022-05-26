@@ -88,63 +88,63 @@ import {
 
     return(
         <div>
-            <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD">
-                <Text fontSize={f1} color={fc2} fontWeight="bold" align="center">후기 쓰기</Text>
-                <Link href='/CutletInfo' position="absolute" right="11px" w="20px" h="20px">
+            <Flex className='header'>
+                <Text className='headerTitle'>후기 쓰기</Text>
+                <Link href='/CutletInfo' className='headerIcon' position="absolute" right="11px">
                     <Image src={btnX} alt="btnX"/>
                 </Link>
             </Flex>
 
-            <Flex direction='row' m="10px" mt="0px" alignItems="center" h="126px" borderBottom="1px solid #F6F6F6">
-                <Flex w="85px" h="85px" borderRadius="10px" overflow="hidden">
+            <Flex className='wr_storeInfoBox'>
+                <Flex className='wr_storePicture'>
                     <Image src={p1} alt="p1"/>
                 </Flex>
                 <Flex direction="column" ml='10px'>
-                    <Text fontWeight="bold" fontSize={f2} color={fc2}>카츠단길</Text>
+                    <Text className='wr_storeName'>카츠단길</Text>
                     <Flex direction="row" alignItems="center" mb='10px'>
-                        <Flex w="13px" h="13px">
+                        <Flex className='category_star'>
                             <Image src={starF} alt="starF"/>
                         </Flex>
-                        <Text fontSize={f2} fontWeight="bold" color={fc2} ml="4px">4.5</Text>
-                        <Text fontSize={f2} color={fc3} ml="4px"> (10)</Text>
+                        <Text className='review_score'>4.5</Text>
+                        <Text className='review_count'> (10)</Text>
                     </Flex>
-                    <Text fontSize={f2}>신천/잠실 · 한식코스</Text>
+                    <Text className='review_p1'>신천/잠실 · 한식코스</Text>
                 </Flex>
                 <Spacer/>
             </Flex> 
 
-            <Text fontSize={f2} color={fc1} fontWeight="bold" align="center" mb="5px" mt="30px">매장의 어떤점이 좋았나요?</Text>
+            <Text className='wr_question'>매장의 어떤점이 좋았나요?</Text>
 
-            <Flex direction="row" alignItems="center" justifyContent="center" mb="25px">
-                <Flex w="30px" h="30px" onClick={()=>checking1()} m="5px">
+            <Flex className='starBox'>
+                <Flex className='star' onClick={()=>checking1()} m="5px">
                     {Check1?
                         <Image src={starF} alt="starf"/>
                     :
                         <Image src={starB} alt="starB"/>
                     }
                 </Flex>
-                <Flex w="30px" h="30px" onClick={()=>checking2()} m="5px">
+                <Flex className='star' onClick={()=>checking2()} m="5px">
                     {Check2?
                         <Image src={starF} alt="starF"/>
                     :
                         <Image src={starB} alt="starB"/>
                     }
                 </Flex>
-                <Flex w="30px" h="30px" onClick={()=>checking3()} m="5px">
+                <Flex className='star' onClick={()=>checking3()} m="5px">
                     {Check3?
                         <Image src={starF} alt="starF"/>
                     :
                         <Image src={starB} alt="starB"/>
                     }
                 </Flex>
-                <Flex w="30px" h="30px" onClick={()=>checking4()} m="5px">
+                <Flex className='star' onClick={()=>checking4()} m="5px">
                     {Check4?
                         <Image src={starF} alt="starF"/>
                     :
                         <Image src={starB} alt="starB"/>
                     }
                 </Flex>
-                <Flex w="30px" h="30px" onClick={()=>checking5()} >
+                <Flex className='star' onClick={()=>checking5()} >
                     {Check5?
                         <Image src={starF} alt="starF"/>
                     :
@@ -154,7 +154,7 @@ import {
 
             </Flex>
             
-            <Flex pr="10px" pl="10px" h="175px">
+            <Flex className='wr_input'>
                 <Textarea fontSize={f2} placeholder="최소 5자 이상 입력해주세요.&#13;&#10;(ex. 이 메뉴가 제일 맛있었어요, 친절해요, 깔끔해요.주차가 편리해요 등)" 
                 variant="unstyled"  border="1px solid #E1E1E1 " p="10px" resize='none' overflow="visible"/>
             </Flex>
@@ -162,8 +162,8 @@ import {
                 <Text fontSize={f2} color="#A4A4A4">0/3,000</Text>
             </Flex>
 
-            <Flex direction="row" p="10px" mt='24px'>
-                <Flex w="60px" h="60px">
+            <Flex className='attachFile'>
+                <Flex className='cameraIcon'>
                     <Image src={camera} alt="camera"/>
                 </Flex>
                 <Flex direction="column" ml="10px">
@@ -174,7 +174,7 @@ import {
             </Flex>
 
             <Link href='/TagInput'>
-                <Flex alignItems="center" justifyContent="center" mr="10px" ml="10px" h="50px" mt="30px" mb="30px" borderTop="1px solid #F6F6F6" borderBottom="1px solid #F6F6F6">
+                <Flex className='tagInput'>
                     <Text fontSize={f2} color={fc2}># 태그 입력</Text>
                     <Spacer/>
                     <Flex w="7px" h="10px">
@@ -183,12 +183,10 @@ import {
                 </Flex>
             </Link>
 
-            <Flex direction="column" position="sticky" mr="10px"  w="100%" bottom="0"  mt="30px" pb="20px">
-                <Flex  w="100%" h="40px">
-                    <Link href='/CutletInfo' w="100%" mr="10px" ml="10px">
-                        <Button w="100%" borderRadius="full" bg="#F6E229" color="#303030" fontWeight={700} fontSize={f1} >등록</Button>
+            <Flex className='btn_cover' mt="30px" pb="20px">
+                    <Link href='/CutletInfo'>
+                        <button className='yellowBtn' >등록</button>
                     </Link>
-                </Flex>
             </Flex>
 
 

@@ -92,14 +92,14 @@ export default function RMenu() {
                         </GridItem>
                         <Link href=''>
                             <GridItem colSpan={1} rowSpan={1}  className="gridSize" position="relative">
-                                    <Box className='galleryIconBox_mask'/>
-                                    <Flex direction="column" justifyContent="center" alignItems="center" w="100%" h="100%" position="absolute">
-                                        <Flex w="24px" h="24px">
-                                            <Image src={gallery}/>
-                                        </Flex>
-                                        <Text fontSize="10px" color="white" mt="4px">999+ 더보기</Text>
+                                <Box className='galleryIconBox_mask'/>
+                                <Flex className='galleryIconBox'>
+                                    <Flex className='galleryIcon'>
+                                        <Image src={gallery}/>
                                     </Flex>
-                                    <div className="seeMore"/>
+                                    <Text className='seeMore_text'>999+ 더보기</Text>
+                                </Flex>
+                                <div className="seeMore_bg"/>
                             </GridItem>
                         </Link>
                     </Grid>
@@ -150,9 +150,9 @@ export default function RMenu() {
                     </Link>
                 </Flex>
 
-                <Flex direction="column" bg="#FAFAFA" pb="30px">
-                    <Flex direction="column" p="10px" pt="25px" pb="0px" bg="white">
-                        <Text fontSize={f1} fontWeight="bold" color={fc2} >대표메뉴</Text>
+                <Flex direction="column" pb="30px">
+                    <Flex className='exTextCont'>
+                        <Text className='example_h1' >대표메뉴</Text>
                         <Grid templateColumns="repeat(3, 1fr)" mt='9px'>
                             <GridItem>
                                 <Image src={p7} alt="p7"/>
@@ -167,64 +167,76 @@ export default function RMenu() {
 
                         <Flex direction="row" mb="25px">
                             <Flex direction="column">
-                                <Text fontSize={f2} color={fc2} mt="8px">안심카츠(160g)</Text>
-                                <Text fontSize={f2} color={fc2} mt="8px">블랙 안심카츠(160g)</Text>
-                                <Text fontSize={f2} color={fc2} mt="8px">카레추가(리필)</Text>
+                                <Text className='exmaple_p1'>안심카츠(160g)</Text>
+                                <Text className='exmaple_p1'>블랙 안심카츠(160g)</Text>
+                                <Text className='exmaple_p1'>카레추가(리필)</Text>
                             </Flex>
                             <Spacer/>
                             <Flex direction="column">
-                                <Text fontSize={f2} color={fc2} mt="8px" align="end">11,000원</Text>
-                                <Text fontSize={f2} color={fc2} mt="8px" align="end">13,000원</Text>
-                                <Text fontSize={f2} color={fc2} mt="8px" align="end">5,000원</Text>
+                                <Text className='exmaple_p1' align="end">11,000원</Text>
+                                <Text className='exmaple_p1' align="end">13,000원</Text>
+                                <Text className='exmaple_p1' align="end">5,000원</Text>
                             </Flex>
                         </Flex>
                         <Box h="1px" bg="#F6F6F6"/>
                     </Flex>
 
-                    <Flex direction="column" p="10px" pt="25px" pb="0px" bg="white">
+                    <Flex className='exTextCont' bg="white">
                         <Text fontSize={f1} fontWeight="bold">전체메뉴 (100)</Text>
                         <Flex direction="row">
                             <Flex direction="column">
-                                <Text fontSize={f2} color={fc2} mt="8px">경양 카츠(160g)</Text>
-                                <Text fontSize={f2} color={fc2} mt="8px">등심카츠(170g)</Text>
-                                <Text fontSize={f2} color={fc2} mt="8px">안심카츠(160g)</Text>
+                                <Text className='exmaple_p1'>경양 카츠(160g)</Text>
+                                <Text className='exmaple_p1'>등심카츠(170g)</Text>
+                                <Text className='exmaple_p1'>안심카츠(160g)</Text>
                             </Flex>
                             <Spacer/>
                             <Flex direction="column">
-                                <Text fontSize={f2} color={fc2} mt="8px" align="end">13,000원</Text>
-                                <Text fontSize={f2} color={fc2} mt="8px" align="end">13,000원</Text>
-                                <Text fontSize={f2} color={fc2} mt="8px" align="end">11,000원</Text>
+                                <Text className='exmaple_p1' align="end">13,000원</Text>
+                                <Text className='exmaple_p1' align="end">13,000원</Text>
+                                <Text className='exmaple_p1' align="end">11,000원</Text>
                             </Flex>
                         </Flex>
 
-                        <Flex direction="column" justifyContent="center" alignItems='center' w="vw" h="50px" mr="10px" ml='10px' mt='23px' border="2px solid #F6F6F6">
-                            <Text  fontSize={f2} color={fc5} borderRadius="4px" align='center'>
+                        <Flex className='seeMoreBtn' >
+                            <Text fontSize={f2} color={fc5}  align='center'>
                                 더보기
                             </Text>
                         </Flex>
                     </Flex>
 
-                    <Flex direction="column" p="10px" pt="25px" pb="0px" bg="white">
-                        <Text fontSize={f1} fontWeight="bold" color={fc2}>메뉴사진 (100)</Text>
+                    <Flex className='exTextCont' bg="white">
+                        <Text className='example_h1'>메뉴사진 (100)</Text>
                         
                         <Grid templateColumns="repeat(3, 1fr)" templateRows="repeat(2, 1fr)" mt='16px' mb="30px">
                             <GridItem>
-                                <Image src={p2} alt="p2"/>
+                                <Flex className='gridSize'>
+                                    <Image src={p2} alt="p2"/>
+                                </Flex>
                             </GridItem>
                             <GridItem>
-                                <Image src={p4} alt="p4"/>
+                                <Flex className='gridSize'>
+                                    <Image src={p4} alt="p4"/>
+                                </Flex>
                             </GridItem>
                             <GridItem>
-                                <Image src={p6} alt="p6"/>
+                                <Flex className='gridSize'>
+                                    <Image src={p6} alt="p6"/>
+                                </Flex>
                             </GridItem>
-                            <GridItem mt='-5px'>
-                                <Image src={p7} alt="p7"/>
+                            <GridItem>
+                                <Flex className='gridSize'>
+                                    <Image src={p7} alt="p7"/>
+                                </Flex>
                             </GridItem>
-                            <GridItem mt='-5px'>
-                                <Image src={p3} alt="p3"/>
+                            <GridItem>
+                                <Flex className='gridSize'>
+                                    <Image src={p3} alt="p3"/>
+                                </Flex>
                             </GridItem>
-                            <GridItem mt='-5px'>
-                                <Image src={p1} alt="p1"/>
+                            <GridItem>
+                                <Flex className='gridSize'>
+                                    <Image src={p1} alt="p1"/>
+                                </Flex>
                             </GridItem>
                         </Grid>
                     </Flex>
@@ -239,25 +251,25 @@ export default function RMenu() {
                         <Link href='/WritingRev' className='exTabIcon'>
                             <Image src={review} alt="review"/>
                         </Link>
-                        <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>후기쓰기</Text>
+                        <Text className='exTabText'>후기쓰기</Text>
                     </Flex>
                     <Spacer/>
                     <Flex className='exTabComp'>
                         <Link className='exTabIcon'>
                             <Image src={call} alt="call"/>
                         </Link>
-                        <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>전화</Text>
+                        <Text className='exTabText'>전화</Text>
                     </Flex>
                     <Spacer/>
                     <Flex className='exTabComp'>
                         <Link className='exTabIcon'>
                             <Image src={location} alt="location"/>
                         </Link>
-                        <Text fontWeight="medium" fontSize="10px" align="center" color={fc2}>길찾기</Text>
+                        <Text className='exTabText'>길찾기</Text>
                     </Flex>
                     <Spacer/>
                 </Flex>
             </Box>
-        </div>
+    </div>
     )
 }

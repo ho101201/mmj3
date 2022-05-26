@@ -62,20 +62,20 @@ export default function Review() {
                     </Select>
                 </Flex>
 
-                <Flex w="100%" direction='column' bg="#FAFAFA" pb="80px">
+                <Flex className='reviewBg' pb="80px">
                     {/* container1 */}
-                    <Flex w="100%" pl="10px" pr="10px" pt="10px" mb="10px" direction="column" bg="White">
-                        <Text fontSize={f1} fontWeight="bold" mt="18px" mb="16px" >카츠단길 문정역</Text>
+                    <Flex className='reviewContainer'>
+                        <Text className='reviewStoreName' >카츠단길 문정역</Text>
                         
                         <Flex direction="row">
                             {/* squarcle 추가 필요 */}
-                            <Flex w="50px" h="50px" >
+                            <Flex className='squarcle' >
                                 <Image src={user} alt="user"/>
                             </Flex>
 
                             <Flex ml="12px" direction="column" justifyContent="center">
-                                <Text fontSize={f2} color={fc2}>유저닉네임</Text>
-                                <Text fontSize="10px" color={fc5}>2022.03.01  1번째 방문</Text>
+                                <Text className='writerName'>유저닉네임</Text>
+                                <Text className='revLog'>2022.03.01  1번째 방문</Text>
                             </Flex>
                             <Spacer/>
 
@@ -98,7 +98,7 @@ export default function Review() {
                             후기텍스트
                         </Text>
 
-                        <Flex mt="41px">
+                        <Flex mt="41px" mb="30px">
                             <Text className='tags' mr="5px">점심식사</Text>
                             <Text className='tags' mr="5px">후기태그</Text>
                             <Link href='/AllTags'>
@@ -106,66 +106,69 @@ export default function Review() {
                             </Link>
                         </Flex>
 
-                        <Grid templateColumns="repeat(3,1fr)" borderTop="1px solid #F6F6F6" h="62px" mt="30px">
-                            <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
-                                <Flex w="12px" h="12px" mr="7px">
+                        <Flex className='picked_feedback'>
+                            <Flex className='pocked_feedbackComp'>
+                                <Flex className='revDockIcon'>
                                     <Image src={starB} alt="starB"/>
                                 </Flex>
-                                <Text fontSize={f2} color="#565656">가볼래요</Text>
-                            </GridItem>
-                            <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
-                                <Flex w="12px" h="12px" mr="7px">
+                                <Text className='revDockText'>가볼래요</Text>
+                                <Text className='revDockText' ml="4px">(99)</Text>
+                            </Flex>
+                            <Flex className='pocked_feedbackComp'>
+                                <Flex className='revDockIcon'>
                                     <Image src={heart} alt="heart"/>
                                 </Flex>
-                                <Text fontSize={f2} color="#565656">좋아요</Text>
-                            </GridItem>
-                            <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
-                                <Flex w="12px" h="12px" mr="7px">
+                                <Text className='revDockText'>좋아요</Text>
+                                <Text className='revDockText' ml="4px">(99)</Text>
+                            </Flex>
+                            <Flex className='pocked_feedbackComp'>
+                                <Flex className='revDockIcon'>
                                     <Image src={comment} alt="comment"/>
                                 </Flex>
-                                <Text fontSize={f2} color="#565656">댓글</Text>
-                            </GridItem>
-                        </Grid>
+                                <Text className='revDockText'>댓글</Text>
+                                <Text className='revDockText' ml="4px">(99)</Text>
+                            </Flex>
+                        </Flex>
 
                     </Flex>
                 </Flex>
 
                 {/* NavBar */}
                 <Spacer/>
-                <Box className='doc'>
-                    <Flex className='docArray' >
+            </Flex>
+                <Box className='dock'>
+                    <Flex className='dockArray' >
                         <Spacer/>
-                        <Flex className='docComp'>
-                            <Link href='/Home' className='docIcon'>
+                        <Flex className='dockComp'>
+                            <Link href='/Home' className='dockIcon'>
                                 <Image src={home} alt="home"/>
                             </Link>
-                            <Text className='docText_N' >홈</Text>
+                            <Text className='dockText_N' >홈</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex className='docComp'>
-                            <Link href='/Recommand' className='docIcon'>
+                        <Flex className='dockComp'>
+                            <Link href='/Recommand' className='dockIcon'>
                                 <Image src={rec} alt="rec"/>
                             </Link>
-                            <Text className='docText_N' >추천</Text>
+                            <Text className='dockText_N' >추천</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex className='docComp'>
-                            <Link href='/Review' className='docIcon'>
+                        <Flex className='dockComp'>
+                            <Link href='/Review' className='dockIcon'>
                                 <Image src={revA} alt="revA"/>
                             </Link>
-                            <Text className='docText_H' >후기</Text>
+                            <Text className='dockText_H' >후기</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex className='docComp'>
-                            <Link href='/Profile' className='docIcon'>
+                        <Flex className='dockComp'>
+                            <Link href='/Profile' className='dockIcon'>
                                 <Image src={my} alt="my"/>
                             </Link>
-                            <Text className='docText_N' >마이</Text>
+                            <Text className='dockText_N' >마이</Text>
                         </Flex>
                         <Spacer/>
                     </Flex>
                 </Box>
-            </Flex>
         </div>
     )
 };        

@@ -7,15 +7,25 @@ import {
     Spacer,
   } from '@chakra-ui/react';
   import Image from 'next/image';
-  import React from 'react';
+  import React, { useState } from 'react';
 
   import btnX from './images/btnX.png';
   import starF from './images/starF.png';
-  import starB from './images/starB.png';
+  import starB from './images/starB2.png';
   import arrowR from './images/arrowR.png';
   import p1 from './images/photo/photoEx1.png';
 
   export default function WillGo() {
+
+    const [star1,setStar1] = useState(true);
+    const [star2,setStar2] = useState(true);
+
+    const star1Click=()=>{
+        setStar1(star1=>!star1);
+    }
+    const star2Click=()=>{
+        setStar2(star2=>!star2);
+    }
 
     const f1 ="16px";
     const f2 ="14px";
@@ -29,75 +39,85 @@ import {
 
     return(
         <div>
-            <Flex direction='column' bg="#FAFAFA" h="100vh">
+            <Flex className='cover'>
 
-                <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD" bg="white">
-                    <Text fontSize={f1} color={fc2} fontWeight="bold" align="center">가볼래요</Text>
-                    <Link href='/Profile' position="absolute" right="11px" w="20px" h="20px">
+                <Flex className='header'>
+                    <Text className='headerTitle'>가볼래요</Text>
+                    <Link href='/Profile' className='headerIcon' position="absolute" right="11px">
                         <Image src={btnX} alt="btnX"/>
                     </Link>
                 </Flex>
 
-                <Flex direction="column" bg="white" mb="10px">
-                    <Flex direction='row' p="10px" alignItems="center" h="126px">
-                        <Flex w="85px" h="85px" borderRadius="10px" overflow="hidden">
+                <Flex className='picked_container'>
+                    <Flex className='picked_storeBox'>
+                        <Flex className='picked_store'>
                             <Image src={p1} alt="p1"/>
                         </Flex>
                         <Flex direction="column" ml='10px'>
-                            <Text fontWeight="bold" fontSize={f2} color={fc2}>카츠단길</Text>
-                            <Flex direction="row" mb='10px' alignItems="center">
-                                <Flex w="13px" h="13px">
+                            <Text className='review_h1'>카츠단길</Text>
+                            <Flex direction="row" alignItems="center" mb='10px'>
+                                <Flex className='category_star'>
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize={f2} color={fc2} ml="4px">4.5</Text>
-                                <Text fontSize={f2} color={fc5} ml="4px"> (10)</Text>
+                                <Text className='review_score'>4.5</Text>
+                                <Text className='review_count'> (10)</Text>
                             </Flex>
-                            <Text fontSize={f2} color={fc2}>신천/잠실 · 한식코스</Text>
+                            <Text className='review_p1'>신천/잠실 · 한식코스</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex w="30px" h="30px">
-                            <Image src={starF} alt="starF"/>
+                        <Flex className='star' onClick={()=>star1Click()}>
+                            {star1?
+                                <Image src={starF} alt="starF"/>
+                            :
+                                <Image src={starB} alt="starF"/>
+                            }
                         </Flex>
                     </Flex>
-                    <Box bg="#F6F6F6" h="1px" ml="10px" mr="10px" />
+
+                    <Box className='borderlineG'/>
+
                     <Link href='/Memo'>
-                        <Flex p="10px" h="52px" alignItems="center">
-                            <Text fontSize={f2} color={fc2}>가고싶은 이유가 있나요?</Text>
+                        <Flex className='picked_reason' >
+                            <Text className='review_p1'>가고싶은 이유가 있나요?</Text>
                             <Spacer/>
-                            <Flex w="7px" h="10px">
+                            <Flex className='smallArrowR'>
                                 <Image src={arrowR} alt="arrowR"/>
                             </Flex>
                         </Flex>
                     </Link>
                 </Flex>
 
-                <Flex direction="column" bg="white"  mb="10px">
-                    <Flex direction='row' p="10px" alignItems="center" h="126px">
-                        <Flex w="85px" h="85px" borderRadius="10px" overflow="hidden">
+                <Flex className='picked_container'>
+                    <Flex className='picked_storeBox'>
+                        <Flex className='picked_store'>
                             <Image src={p1} alt="p1"/>
                         </Flex>
                         <Flex direction="column" ml='10px'>
-                            <Text fontWeight="bold" fontSize={f2} color={fc2}>카츠단길</Text>
-                            <Flex direction="row" mb='10px' alignItems="center">
-                                <Flex w="13px" h="13px">
+                            <Text className='review_h1'>카츠단길</Text>
+                            <Flex direction="row" alignItems="center" mb='10px'>
+                                <Flex className='category_star'>
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize={f2} color={fc2} ml="4px">4.5</Text>
-                                <Text fontSize={f2} color={fc5} ml="4px"> (10)</Text>
+                                <Text className='review_score'>4.5</Text>
+                                <Text className='review_count'> (10)</Text>
                             </Flex>
-                            <Text fontSize={f2} color={fc2}>신천/잠실 · 한식코스</Text>
+                            <Text className='review_p1'>신천/잠실 · 한식코스</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex w="30px" h="30px">
-                            <Image src={starF} alt="starF"/>
+                        <Flex className='star' onClick={()=>star2Click()}>
+                            {star2?
+                                <Image src={starF} alt="starF"/>
+                            :
+                                <Image src={starB} alt="starF"/>
+                            }
                         </Flex>
                     </Flex>
-                    <Box bg="#F6F6F6" h="1px" ml="10px" mr="10px" />
+                    <Box className='borderlineG'/>
                     <Link href='/Memo'>
-                        <Flex p="10px" h="52px" alignItems="center">
-                            <Text fontSize={f2} color={fc2}>가고싶은 이유가 있나요?</Text>
+                        <Flex p="10px" className='picked_reason' >
+                            <Text className='review_p1'>가고싶은 이유가 있나요?</Text>
                             <Spacer/>
-                            <Flex w="7px" h="10px">
+                            <Flex className='smallArrowR'>
                                 <Image src={arrowR} alt="arrowR"/>
                             </Flex>
                         </Flex>

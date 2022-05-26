@@ -331,35 +331,35 @@ import {
 
                 {/* footer */}
                 <Spacer/>
-                <Box className='doc'>
-                    <Flex className='docArray' >
+                <Box className='dock'>
+                    <Flex className='dockArray' >
                         <Spacer/>
-                        <Flex className='docComp'>
-                            <Link href='/Home' className="docIcon">
+                        <Flex className='dockComp'>
+                            <Link href='/Home' className="dockIcon">
                                 <Image src={homeA} alt="homeA"/>
                             </Link>
-                            <Text className='docText_H' >홈</Text>
+                            <Text className='dockText_H' >홈</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex className='docComp'>
-                            <Link href='/Recommand' className="docIcon">
+                        <Flex className='dockComp'>
+                            <Link href='/Recommand' className="dockIcon">
                                 <Image src={rec} alt="rec"/>
                             </Link>
-                            <Text className='docText_N' >추천</Text>
+                            <Text className='dockText_N' >추천</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex className='docComp'>
-                            <Link href='/Review' className="docIcon">
+                        <Flex className='dockComp'>
+                            <Link href='/Review' className="dockIcon">
                                 <Image src={rev} alt="rev"/>
                             </Link>
-                            <Text className='docText_N'>후기</Text>
+                            <Text className='dockText_N'>후기</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex className='docComp'>
-                            <Link href='/Profile' className="docIcon">
+                        <Flex className='dockComp'>
+                            <Link href='/Profile' className="dockIcon">
                                 <Image src={my} alt="my"/>
                             </Link>
-                            <Text className='docText_N'>마이</Text>
+                            <Text className='dockText_N'>마이</Text>
                         </Flex>
                         <Spacer/>
                     </Flex>

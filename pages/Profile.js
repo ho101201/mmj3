@@ -50,112 +50,112 @@ export default function Profile() {
     return(
         <div>
             <Flex direction="column" bg="#FAFAFA">
-                <Flex w="vw" h="140px" direction="column" alignItems="center" justifyContent="center" mb="10px" bg="white">
-                    <Flex w="50px" h="50px">
+                <Flex className='profileCont1'>
+                    <Flex className='squarcle'>
                         <Image src={user} alt="user"/>
                     </Flex>
                     <Text fontSize={f2} fontWeight="bold" color={fc2} mt="4px" mb="4px">유저닉네임</Text>
                     <Link href='/ProfileSetting'>
-                        <Button fontSize="10px" bg="#303030" color="#ffffff" h="20px" w="70px">프로필설정</Button>
+                        <button className='profileSettingBtn'>프로필설정</button>
                     </Link>
                 </Flex>
 
-                <Flex h="92px" mb="10px" bg="white">
+                <Flex className='profileCont2'>
                     <Spacer/>
                         <Flex w="67px" direction="column" justifyContent="center">
                             <Link href='/Willgo'>
-                                <Text fontSize={f1} color={fc2} fontWeight="bold" align="center">999</Text>
-                                <Text fontSize="10px" align="center" color={fc5}>가볼래요</Text>
+                                <Text className='profile_h1' align="center">999</Text>
+                                <Text className='profile_p2' align="center">가볼래요</Text>
                             </Link>
                         </Flex>
                         <Flex w="67px" direction="column" justifyContent="center">
                             <Link href='/Went'>
-                                <Text fontSize={f1} color={fc2} fontWeight="bold" align="center">999</Text>
-                                <Text fontSize="10px" align="center" color={fc2}>가봤어요</Text>
+                                <Text className='profile_h1' align="center">999</Text>
+                                <Text className='profile_p2' align="center">가봤어요</Text>
                             </Link>
                         </Flex>
                         <Flex w="67px" direction="column" justifyContent="center">
                             <Link href='/Review'>
-                                <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
-                                <Text fontSize="10px" align="center" color={fc5}>후기</Text>
+                                <Text className='profile_h1' align="center">999</Text>
+                                <Text className='profile_p2' align="center">후기</Text>
                             </Link> 
                         </Flex>
                         <Flex w="67px" direction="column" justifyContent="center">
                             <Link href='/Like'>
-                                <Text fontSize={f1} fontWeight="bold" align="center">999</Text>
-                                <Text fontSize="10px" align="center" color={fc5}>좋아요</Text>
+                                <Text className='profile_h1' align="center">999</Text>
+                                <Text className='profile_p2' align="center">좋아요</Text>
                             </Link>
                         </Flex>
                     <Spacer/>
                 </Flex>
 
-                <Flex direction="column" bg="white" pt="30px" mb="80px">
-                    <Text fontSize="16px" color={fc2} ml="10px" mb="15px" fontWeight="bold">사진</Text>
+                <Flex className='profileCont3'>
+                    <Text className='profile_h1' ml="10px" mb="15px">사진</Text>
                     <Link href='/MyPhoto'>
-                        <Box w="100%"   whiteSpace="nowrap" overflowX='auto' >
-                            <Flex w="110px" h='110px' ml="10px"  display="inline-block" >
+                        <Box className='profile_photoScroll' >
+                            <Flex className='profile_photo' display="inline-block" ml="10px">
                                 <Image src={p8} alt="p8"/>
                             </Flex>
-                            <Flex w="110px" h='110px' display="inline-block">
+                            <Flex className='profile_photo' display="inline-block">
                                 <Image src={p9} alt="p9"/>
                             </Flex>
-                            <Flex w="110px" h='110px'  display="inline-block">
+                            <Flex className='profile_photo' display="inline-block">
                                 <Image src={p3} alt="p3"/>
                             </Flex>
-                            <Flex w="110px" h='110px' display="inline-block">
+                            <Flex className='profile_photo' display="inline-block">
                                 <Image src={p4} alt="p4"/>
                             </Flex>
-                            <Flex w="110px" h='110px' display="inline-block">
+                            <Flex className='profile_photo' display="inline-block">
                                 <Image src={p5} alt="p5"/>
                             </Flex>
-                            <Flex w="110px" h='110px' display="inline-block">
+                            <Flex className='profile_photo' display="inline-block">
                                 <Image src={p6} alt="p6"/>
                             </Flex>
-                            <Flex w="110px" h='110px' display="inline-block">
+                            <Flex className='profile_photo' display="inline-block">
                                 <Image src={p7} alt="p7"/>
                             </Flex>
                         </Box>
                     </Link>
                     
-                    <Link href='/Taste' mt="30px">
-                        <Flex alignItems="center" p="10px" h="50px" borderTop="1px solid #F6F6F6" borderBottom="1px solid #F6F6F6" >
-                            <Text fontSize={f2} color={fc2}>입맛 설정</Text>
+                    <Link href='/Taste' mt="30px" className='borderline_padding'>
+                        <Flex className='profile_linedBox' borderTop="1px solid #F6F6F6"  >
+                            <Text className='profile_p1'>입맛 설정</Text>
                             <Spacer/>
-                            <Flex w="7px" h="10px">
+                            <Flex className='smallArrowR'>
                                 <Image src={arrowR} alt="arrowR"/>
                             </Flex>
                         </Flex>
                     </Link>
 
-                    <Link href='/Setting'>
-                        <Flex alignItems="center" p="10px" h="50px" borderBottom="1px solid #F6F6F6">
-                            <Text fontSize={f2} color={fc2} >앱 설정</Text>
+                    <Link href='/Setting' className='borderline_padding'>
+                        <Flex className='profile_linedBox'>
+                            <Text className='profile_p1'>앱 설정</Text>
                             <Spacer/>
-                            <Flex w="7px" h="10px">
+                            <Flex className='smallArrowR'>
                                 <Image src={arrowR} alt="arrowR"/>
                             </Flex>
                         </Flex>
                     </Link>
 
-                    <Link href='/Service'>
-                        <Flex alignItems="center" p="10px" h="50px" borderBottom="1px solid #F6F6F6">
-                            <Text fontSize={f2} color={fc2}>고객센터</Text>
+                    <Link href='/Service' className='borderline_padding'>
+                        <Flex className='profile_linedBox'>
+                            <Text className='profile_p1'>고객센터</Text>
                             <Spacer/>
-                            <Flex w="7px" h="10px">
+                            <Flex className='smallArrowR'>
                                 <Image src={arrowR} alt="arrowR"/>
                             </Flex>
                         </Flex>
                     </Link>
 
                     <Link href='/'>
-                        <Flex w="vw" mr="10px" ml="10px" mt="10px" h="50px" alignItems="center" justifyContent="center" color="#565656" border="2px solid #F6F6F6" borderRadius="10px">
-                            <Text fontSize={f2} color={fc5}>로그아웃</Text>
+                        <Flex className='profile_button'>
+                            <Text className='profile_btnFont'>로그아웃</Text>
                         </Flex>
                     </Link>
 
                     <Link href='/Withdrawal'>
-                        <Flex w="vw" mr="10px" ml="10px" mt="10px" mb="30px" h="50px" alignItems="center" justifyContent="center" color="#565656" border="2px solid #F6F6F6" borderRadius="10px">
-                            <Text fontSize={f2} color={fc5}>회원탈퇴</Text>
+                        <Flex className='profile_button' mb="30px">
+                            <Text className='profile_btnFont'>회원탈퇴</Text>
                         </Flex>
                     </Link>
                     
@@ -164,35 +164,35 @@ export default function Profile() {
             </Flex>
 
             {/* navBar */}
-            <Box className='doc'>
-                    <Flex className='docArray'>
+            <Box className='dock'>
+                    <Flex className='dockArray'>
                         <Spacer/>
-                        <Flex className='docComp'>
-                            <Link href='/Home' className='docIcon'>
+                        <Flex className='dockComp'>
+                            <Link href='/Home' className='dockIcon'>
                                 <Image src={home} alt="home"/>
                             </Link>
-                            <Text className='docText_N'>홈</Text>
+                            <Text className='dockText_N'>홈</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex className='docComp'>
-                            <Link href='/Recommand' className='docIcon'>
+                        <Flex className='dockComp'>
+                            <Link href='/Recommand' className='dockIcon'>
                                 <Image src={rec} alt="rec"/>
                             </Link>
-                            <Text className='docText_N'>추천</Text>
+                            <Text className='dockText_N'>추천</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex className='docComp'>
-                            <Link href='/Review' className='docIcon'>
+                        <Flex className='dockComp'>
+                            <Link href='/Review' className='dockIcon'>
                                 <Image src={rev} alt="rev"/>
                             </Link>
-                            <Text className='docText_N'>후기</Text>
+                            <Text className='dockText_N'>후기</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex className='docComp'>
-                            <Link href='/Profile' className='docIcon'>
+                        <Flex className='dockComp'>
+                            <Link href='/Profile' className='dockIcon'>
                                 <Image src={myA} alt="myA"/>
                             </Link>
-                            <Text className='docText_H' color={fc1}>마이</Text>
+                            <Text className='dockText_H' color={fc1}>마이</Text>
                         </Flex>
                         <Spacer/>
 

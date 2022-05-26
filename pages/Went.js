@@ -9,7 +9,7 @@ import {
     GridItem
   } from '@chakra-ui/react';
   import Image from 'next/image';
-  import React from 'react';
+  import { useMediaQuery } from "react-responsive"
 
   import btnX from './images/btnX.png';
   import arrowL from './images/arrow-left.png';
@@ -20,9 +20,15 @@ import {
   import heart from './images/heart.png';
   import comment from './images/comment.png';
   import del from './images/del.png';
+import { useState } from 'react';
 
 
   export default function Went() {
+
+    const isMobile = useMediaQuery({
+        query : "(max-width:767px)"
+      });
+
 
     const f1 ="16px";
     const f2 ="14px";
@@ -36,106 +42,133 @@ import {
 
     return(
         <div>
-            <Flex direction="column" h="100vh" bg="#FAFAFA">
+            <Flex className='cover'>
 
-                <Flex w="vw" h="40px" justifyContent="center" alignItems="center" border="1px solid #DDDDDD" bg="white">
-                    <Text fontSize={f1} color={fc2} fontWeight="bold" align="center">가봤어요</Text>
-                    <Link href='/Profile' position="absolute" left="11px" w="20px" h="20px">
+                <Flex className='header'>
+                    <Text className='headerTitle'>가봤어요</Text>
+                    <Link href='/Profile' position="absolute" left="11px" className='headerIcon'>
                         <Image src={arrowL} alt="arrowL"/>
                     </Link>
                 </Flex>
 
-                <Flex direction="column" bg="white" mb="10px">
-                    <Flex direction='row' p="10px" alignItems="center" h="126px" >
-                        <Flex w="85px" h="85px" borderRadius="10px" overflow="hidden">
+                <Flex className='picked_container'>
+                    <Flex className='picked_storeBox' >
+                        <Flex className='picked_store'>
                             <Image src={p1} alt="p1"/>
                         </Flex>
                         <Flex direction="column" ml='10px'>
-                            <Text fontWeight="bold" fontSize={f2} color={fc2}>카츠단길</Text>
-                            <Flex direction="row" mb='10px' alignItems="center">
-                                <Flex w="13px" h="13px">
+                            <Text className='review_h1'>카츠단길</Text>
+                            <Flex direction="row" mb='6px' alignItems="center">
+                                <Flex className='category_star'>
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize={f2} color={fc2} ml="4px">4.5</Text>
-                                <Text fontSize={f2} color={fc5} ml="4px"> (10)</Text>
+                                <Text className='review_score'>4.5</Text>
+                                <Text className='review_count'> (10)</Text>
                             </Flex>
                             <Text fontSize={f2} color={fc2}>신천/잠실 · 한식코스</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex w="30px" h="30px">
+                        <Flex className='deleteBtn'>
                             <Image src={del} alt="del"/>
                         </Flex>
                     </Flex>
 
-                    <Grid templateColumns="repeat(3,1fr)" borderTop="1px solid #F6F6F6" borderBottom="1px solid #F6F6F6" h="50px" ml="10px" mr="10px">
+                    {/* <Grid templateColumns="repeat(3,1fr)" borderTop="1px solid #F6F6F6" borderBottom="1px solid #F6F6F6" h="50px" ml="10px" mr="10px">
                         <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
-                            <Flex w="12px" h="12px" mr="7px">
+                            <Flex className='revDockIcon'>
                                 <Image src={starB} alt="starB"/>
                             </Flex>
-                            <Text fontSize={f2} color={fc5}>가볼래요</Text>
-                            <Text fontSize={f2} color={fc5} ml="4px">(99)</Text>
+                            <Text className='revDockText'>가볼래요</Text>
+                            <Text className='revDockText' ml="4px">(99)</Text>
                         </GridItem>
                         <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
-                            <Flex w="12px" h="12px" mr="7px">
+                            <Flex className='revDockIcon'>
                                 <Image src={heart} alt="heart"/>
                             </Flex>
-                            <Text fontSize={f2} color={fc5}>좋아요</Text>
-                            <Text fontSize={f2} color={fc5} ml="4px">(99)</Text>
+                            <Text className='revDockText'>좋아요</Text>
+                            <Text className='revDockText' ml="4px">(99)</Text>
                         </GridItem>
                         <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
-                            <Flex w="12px" h="12px" mr="7px">
+                            <Flex className='revDockIcon'>
                                 <Image src={comment} alt="comment"/>
                             </Flex>
-                            <Text fontSize={f2} color={fc5}>댓글</Text>
-                            <Text fontSize={f2} color={fc5} ml="4px">(99)</Text>
+                            <Text className='revDockText'>댓글</Text>
+                            <Text className='revDockText' ml="4px">(99)</Text>
                         </GridItem>
-                    </Grid>
+                    </Grid> */}
+
+                    <Flex className='picked_feedback'>
+                        <Flex className='pocked_feedbackComp'>
+                            <Flex className='revDockIcon'>
+                                <Image src={starB} alt="starB"/>
+                            </Flex>
+                            <Text className='revDockText'>가볼래요</Text>
+                            <Text className='revDockText' ml="4px">(99)</Text>
+                        </Flex>
+                        <Flex className='pocked_feedbackComp'>
+                            <Flex className='revDockIcon'>
+                                <Image src={heart} alt="heart"/>
+                            </Flex>
+                            <Text className='revDockText'>좋아요</Text>
+                            <Text className='revDockText' ml="4px">(99)</Text>
+                        </Flex>
+                        <Flex className='pocked_feedbackComp'>
+                            <Flex className='revDockIcon'>
+                                <Image src={comment} alt="comment"/>
+                            </Flex>
+                            <Text className='revDockText'>댓글</Text>
+                            <Text className='revDockText' ml="4px">(99)</Text>
+                        </Flex>
+                    </Flex>
+                    
                 </Flex>
 
-                <Flex direction="column" bg="white" mb="10px">
-                    <Flex direction='row' p="10px" alignItems="center" h="126px" >
-                        <Flex w="85px" h="85px" borderRadius="10px" overflow="hidden">
+                <Flex className='picked_container'>
+                    <Flex className='picked_storeBox' >
+                        <Flex className='picked_store'>
                             <Image src={p1} alt="p1"/>
                         </Flex>
                         <Flex direction="column" ml='10px'>
                             <Text fontWeight="bold" fontSize={f2}>카츠단길</Text>
-                            <Flex direction="row" mb='10px' alignItems="center">
-                                <Flex w="13px" h="13px">
+                            <Flex direction="row" mb='6px' alignItems="center">
+                                <Flex className='category_star'>
                                     <Image src={starF} alt="starF"/>
                                 </Flex>
-                                <Text fontSize={f2} ml="5px">4.5 (10)</Text>
+                                <Text className='review_score'>4.5</Text>
+                                <Text className='review_count'> (10)</Text>
                             </Flex>
                             <Text fontSize={f2}>신천/잠실 · 한식코스</Text>
                         </Flex>
                         <Spacer/>
-                        <Flex w="30px" h="30px">
+                        <Flex className='deleteBtn'>
                             <Image src={del} alt="del"/>
                         </Flex>
                     </Flex>
 
-                    <Grid templateColumns="repeat(3,1fr)" borderTop="1px solid #F6F6F6" borderBottom="1px solid #F6F6F6" h="50px" ml="10px" mr="10px">
-                        <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
-                            <Flex w="12px" h="12px" mr="7px">
+                    <Flex className='picked_feedback'>
+                        <Flex className='pocked_feedbackComp'>
+                            <Flex className='revDockIcon'>
                                 <Image src={starB} alt="starB"/>
                             </Flex>
-                            <Text fontSize={f2} color={fc5} >가볼래요</Text>
-                            <Text fontSize={f2} color={fc5} ml="4px">(99)</Text>
-                        </GridItem>
-                        <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
-                            <Flex w="12px" h="12px" mr="7px">
+                            <Text className='revDockText'>가볼래요</Text>
+                            <Text className='revDockText' ml="4px">(99)</Text>
+                        </Flex>
+                        <Flex className='pocked_feedbackComp'>
+                            <Flex className='revDockIcon'>
                                 <Image src={heart} alt="heart"/>
                             </Flex>
-                            <Text fontSize={f2} color={fc5}>좋아요</Text>
-                            <Text fontSize={f2} color={fc5} ml="4px">(99)</Text>
-                        </GridItem>
-                        <GridItem display="flex" flexDirection="row" alignItems="center" justifyContent='center'>
-                            <Flex w="12px" h="12px" mr="7px">
+                            <Text className='revDockText'>좋아요</Text>
+                            <Text className='revDockText' ml="4px">(99)</Text>
+                        </Flex>
+                        <Flex className='pocked_feedbackComp'>
+                            <Flex className='revDockIcon'>
                                 <Image src={comment} alt="comment"/>
                             </Flex>
-                            <Text fontSize={f2} color={fc5}>댓글</Text>
-                            <Text fontSize={f2} color={fc5} ml="4px">(99)</Text>
-                        </GridItem>
-                    </Grid>
+                            <Text className='revDockText'>댓글</Text>
+                            <Text className='revDockText' ml="4px">(99)</Text>
+                        </Flex>
+                    </Flex>
+
                 </Flex>
             </Flex>
         </div>

@@ -45,51 +45,51 @@ export default function PfSet() {
 
     return(
         <div>
-            <Flex w="vw" h="40px" alignItems="center" justifyContent="center" borderBottom="1px solid #DDDDDD">
-                <Flex ml="18px" alignItems="center">
+            <Flex className='header'>
+                <Flex ml="8px" alignItems="center">
                     <Link href='/Profile' >
-                        <Flex w="7px" h="16px">
+                        <Flex className='header_arrowL'>
                             <Image src={arrowL} alt="arrowL"/>
                         </Flex>
                     </Link>
                 </Flex>
                 <Spacer/>
-                <Text fontWeight="extrabold" fontSize={f1} color={fc2} position="absolute">
+                <Text className='headerTitle' position="absolute">
                     프로필 설정
                 </Text>
             </Flex>
 
-            <Flex alignItems="center" justifyContent='center' mt="20px" mb="20px">
-                <Flex w="50px" h='50px' alignItems="center" justifyContent='center' >
+            <Flex alignItems="center" justifyContent='center' m="20px">
+                <Flex className='squarcle' alignItems="center" justifyContent='center' >
                     <Image src={addphoto2} alt="addphoto2"/>
-                    <Flex w="24px" h='18px' ml="1px" mt="-1px" position="absolute">
+                    <Flex className='addProfileIcon'>
                         <Image src={addphoto1} alt="addphoto1"/>
                     </Flex>
                 </Flex>
             </Flex>
 
-            <Flex direction="row" h="50px" alignItems='center' pr="10px" pl="10px">
+            <Flex className='pSetting_inputContainer'>
                 <Text fontSize={f2} fontWeight="bold" color={fc2}>닉네임</Text>
                 <Spacer/>
-                <Input w="80%" h="40px" fontSize={f2} placeholder='닉네임' border="1px solid #E1E1E1">
-                </Input>
+                <input className='pSetting_input' border="1px solid #E1E1E1" placeholder='닉네임' >
+                </input>
             </Flex>
 
-            <Flex direction="row" h="50px" alignItems='center' pr="10px" pl="10px">
-                <Text fontSize={f2} fontWeight="bold" color={fc2}v>생년월일</Text>
+            <Flex className='pSetting_inputContainer'>
+                <Text fontSize={f2} fontWeight="bold" color={fc2}>생년월일</Text>
                 <Spacer/>
-                <Input w="80%" h="40px" fontSize={f2} placeholder='생년월일' border="1px solid #E1E1E1">
-                </Input>
+                <input className='pSetting_input' placeholder='생년월일' border="1px solid #E1E1E1">
+                </input>
             </Flex>
 
-            <Flex direction="row" h="50px" alignItems='center' pr="10px" pl="10px">
+            <Flex className='pSetting_inputContainer'>
                 <Text fontSize={f2} fontWeight="bold" >성별</Text>
                 <Spacer/>
-                <Input w="80%" h="40px" fontSize={f2} placeholder='성별' border="1px solid #E1E1E1">
-                </Input>
+                <input className='pSetting_input' placeholder='성별' border="1px solid #E1E1E1">
+                </input>
             </Flex>
 
-            <Flex h="1px" mt="15px" mr="10px" ml="10px" bg="#F6F6F6" />
+            <Flex className='borderlineG' />
 
             <Text fontSize={f2} fontWeight="bold" color={fc2} mt="26px" ml="10px">자주 가는 지역</Text>
             <Wrap mt="10px" ml="10px">

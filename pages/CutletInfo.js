@@ -89,13 +89,13 @@ export default function RInfo() {
                         <Link href=''>
                             <GridItem colSpan={1} rowSpan={1}  className="gridSize" position="relative">
                                 <Box className='galleryIconBox_mask'/>
-                                <Flex direction="column" justifyContent="center" alignItems="center" w="100%" h="100%" position="absolute">
-                                    <Flex w="24px" h="24px">
+                                <Flex className='galleryIconBox'>
+                                    <Flex className='galleryIcon'>
                                         <Image src={gallery}/>
                                     </Flex>
-                                    <Text fontSize="10px" color="white" mt="4px">999+ 더보기</Text>
+                                    <Text className='seeMore_text'>999+ 더보기</Text>
                                 </Flex>
-                                <div className="seeMore"/>
+                                <div className="seeMore_bg"/>
                             </GridItem>
                         </Link>
                     </Grid>

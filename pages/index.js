@@ -12,6 +12,7 @@ import Image from "next/image";
 // import { Link } from 'next/link';
 
 
+
 import kakao from './images/kakao.svg';
 import naver from './images/naver.svg';
 import facebook from './images/facebook.svg';

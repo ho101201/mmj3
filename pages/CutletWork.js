@@ -90,14 +90,14 @@ export default function RWork() {
                         </GridItem>
                         <Link href=''>
                             <GridItem colSpan={1} rowSpan={1}  className="gridSize" position="relative">
-                                    <Box className='galleryIconBox_mask'/>
-                                    <Flex direction="column" justifyContent="center" alignItems="center" w="100%" h="100%" position="absolute">
-                                        <Flex w="24px" h="24px">
-                                            <Image src={gallery}/>
-                                        </Flex>
-                                        <Text fontSize="10px" color="white" mt="4px">999+ 더보기</Text>
+                                <Box className='galleryIconBox_mask'/>
+                                <Flex className='galleryIconBox'>
+                                    <Flex className='galleryIcon'>
+                                        <Image src={gallery}/>
                                     </Flex>
-                                    <div className="seeMore"/>
+                                    <Text className='seeMore_text'>999+ 더보기</Text>
+                                </Flex>
+                                <div className="seeMore_bg"/>
                             </GridItem>
                         </Link>
                     </Grid>
@@ -148,63 +148,63 @@ export default function RWork() {
                 </Link>
             </Flex>
 
-                <Flex direction='column' bg='white' p="10px" pb="0px" pt="25px">
-                    <Text fontSize={f1} fontWeight="bold" color={fc2}>영업시간</Text>
+                <Flex className='exTextCont'>
+                    <Text className='example_h1'>영업시간</Text>
                     <Flex direction="row">
                         <Flex direction="column">
-                            <Text fontSize={f2} mt="8px" color={fc2}>평일</Text>
-                            <Text fontSize={f2} mt="8px" color={fc2}>주말</Text>
-                            <Text fontSize={f2} mt="8px" color={fc2}>브레이크</Text>
-                            <Text fontSize={f2} mt="8px" color={fc2}>휴무일</Text>
-                            <Text fontSize={f2} mt="8px" color={fc2}>라스트오더</Text>
+                            <Text className='exmaple_p1'>평일</Text>
+                            <Text className='exmaple_p1'>주말</Text>
+                            <Text className='exmaple_p1'>브레이크</Text>
+                            <Text className='exmaple_p1'>휴무일</Text>
+                            <Text className='exmaple_p1'>라스트오더</Text>
                         </Flex>
                         <Spacer/>
                         <Flex direction="column">
-                            <Text fontSize={f2} mt="8px" color={fc2} align="end">11:00 ~ 22:00</Text>
-                            <Text fontSize={f2} mt="8px" color={fc2} align="end">11:00 ~ 20:00</Text>
-                            <Text fontSize={f2} mt="8px" color={fc2} align="end">15:00 ~ 17:00</Text>
-                            <Text fontSize={f2} mt="8px" color={fc2} align="end">공휴일 영업, 명절 당일 휴무</Text>
-                            <Text fontSize={f2} mt="8px" color={fc2} align="end">매장19:00 / 포장 21:00</Text>
+                            <Text className='exmaple_p1' align="end">11:00 ~ 22:00</Text>
+                            <Text className='exmaple_p1' align="end">11:00 ~ 20:00</Text>
+                            <Text className='exmaple_p1' align="end">15:00 ~ 17:00</Text>
+                            <Text className='exmaple_p1' align="end">공휴일 영업, 명절 당일 휴무</Text>
+                            <Text className='exmaple_p1' align="end">매장19:00 / 포장 21:00</Text>
                         </Flex>
                     </Flex>
                 
-                    <Flex direction="column" justifyContent="center" alignItems='center' w="vw" h="36px" mr="20px" ml='20px' mt='13px' mb="30px" bg="#F6F6F6">
-                        <Text  fontSize='10px' borderRadius="4px" align='center' color={fc5}>
+                    <Flex className='coronaAlert'>
+                        <Text  className='coronaAlertText'>
                             코로나 19의 영향으로 식당 운영에 변동이 있을수 있습니다.
                         </Text>
-                        <Text  fontSize='10px' borderRadius="4px" align='center' color={fc5} >
+                        <Text  className='coronaAlertText' >
                             식당으로 문의 후 방문 부탁드립니다.
                         </Text>
                     </Flex>
                     <Spacer/>
-                    <Box h="1px" bg="#F6F6F6"/>
+                    <Box className='borderlineG'/>
                 </Flex>
 
-                <Flex direction="column" bg="white" p="10px" pb="0px" pt="35px">
-                    <Text fontSize={f1} fontWeight="bold">상황 / 분위기</Text>
+                <Flex className='exTextCont'>
+                    <Text className='example_h1'>상황 / 분위기</Text>
                     <Wrap mt='16px' mb="30px">
-                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">점심식사</Tag>
-                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">혼밥</Tag>
-                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">직장인</Tag>
-                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">데이트</Tag>
-                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">연인</Tag>
-                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">모던한</Tag>
-                        <Tag border="1px solid #E1E1E1" color="#A4A4A4" bg="#ffffff" mr="5px">숨은맛집</Tag>
+                        <Text className='tags'>점심식사</Text>
+                        <Text className='tags'>혼밥</Text>
+                        <Text className='tags'>직장인</Text>
+                        <Text className='tags'>데이트</Text>
+                        <Text className='tags'>연인</Text>
+                        <Text className='tags'>모던한</Text>
+                        <Text className='tags'>숨은맛집</Text>
                     </Wrap>
                     <Spacer/>
-                    <Box h="1px" bg="#F6F6F6"/>
+                    <Box className='borderlineG'/>
                 </Flex>
 
-                <Flex direction="column"  bg="white" p="10px" pb="0px" pt="35px">
-                    <Text fontSize={f1} fontWeight="bold" color={fc2}>주차</Text>
-                    <Text fontSize={f2} mt="8px" mb="27px" color={fc2}>건물 내 주차장 ( 2시간 무료주차 )</Text>
-                    <Box h="1px" bg="#F6F6F6"/>
+                <Flex className='exTextCont'>
+                    <Text className='example_h1'>주차</Text>
+                    <Text className='exmaple_p1' mb="27px">건물 내 주차장 ( 2시간 무료주차 )</Text>
+                    <Box className='borderlineG'/>
                 </Flex>
 
-                <Flex direction="column"  bg="white" p="10px" pb="0px"  pt="35px" mb="30px">
-                    <Text fontSize={f1} fontWeight="bold" color={fc2}>단체 예약</Text>
-                    <Text fontSize={f2} mt="8px" mb="27px" color={fc2}>홀 최대 66석, 룸 최대 32석 예약가능</Text>
-                    <Box h="1px" bg="#F6F6F6"/>
+                <Flex className='exTextCont' mb="30px">
+                    <Text className='example_h1'>단체 예약</Text>
+                    <Text className='exmaple_p1' mb="27px">홀 최대 66석, 룸 최대 32석 예약가능</Text>
+                    <Box className='borderlineG'/>
                 </Flex>
 
                     
